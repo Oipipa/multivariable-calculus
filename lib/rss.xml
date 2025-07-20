@@ -1,0 +1,1003 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[multivariable-calculus]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>multivariable-calculus</title><link></link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 20 Jul 2025 13:45:36 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 20 Jul 2025 13:43:31 GMT</pubDate><ttl>60</ttl><dc:creator></dc:creator><item><title><![CDATA[A01_Vectors]]></title><description><![CDATA[ 
+ <br>
+<br>(1-Q36) 
+
+<br>Find the curve of intersection of the surfaces  in parametric form.
+<br>Find the angle of intersection of these two surfaces at the point . (The angle of intersection of two surfaces is defined to be the angle made by their tangent planes.)
+<br>Check that the tangent vector to the curve of intersection found in part (a) at the point  lies in (i.e., is parallel to) the tangent plane of each of the two surfaces.
+
+
+<br>Solution:<br>The surfaces are given by  and . Setting the expressions for  equal gives:<br><br>Expanding the right side:<br><br>so:<br><br>Rearranging terms:<br><br>Multiplying by :<br><br>Dividing by 2:<br><br>Solving for  in terms of :<br><br>Substituting into the first surface equation to find :<br><br>Using  as the parameter, where , the parametric equations are:<br><br>This parameterization is valid for all real , and it satisfies both surface equations. The curve is defined for , which is consistent with the parameterization.<br>The parametric form of the curve of intersection is:<br><br>The angle of intersection of the two surfaces  and  at the point  is defined as the angle between their tangent planes at that point. This angle is found using the normal vectors to the surfaces.<br>Define the surfaces as level surfaces:<br>
+<br>First surface: 
+<br>Second surface: 
+<br>The gradient vectors are normal to the surfaces:<br>
+<br>
+<br>
+<br>At the point :<br>
+<br>
+<br>
+<br>The angle  between the normal vectors is given by:<br><br>where the dot product and magnitudes are:<br>
+<br>
+<br>
+<br>
+<br>Thus,<br><br>Rationalize the denominator:<br><br>Since the dot product is positive,  is acute, and the angle between the planes is . Therefore, the angle of intersection satisfies:<br><br>The parametric equations for the curve of intersection are , ,  for . At the point , .<br>The tangent vector to the curve is found by differentiating the parametric equations with respect to :<br><br>At :<br><br>Thus, the tangent vector is .<br>For the surface , define . The gradient is . At :<br><br>A vector lies in the tangent plane if it is perpendicular to the normal vector, i.e., . Compute:<br><br>The dot product is zero, so the tangent vector lies in the tangent plane of the first surface.<br>For the surface , define . The gradient is . At :<br><br>Check if :<br><br>The dot product is zero, so the tangent vector lies in the tangent plane of the second surface.<br>Thus, the tangent vector  is parallel to the tangent plane of each surface at the point .<br><br>
+<br>(2-Q3) Find the specified parametrization of the first quadrant part of the circle : 
+
+<br>In terms of the  coordinate.
+<br>In terms of the angle between the tangent line and the positive -axis.
+<br>In terms of the arc length from .
+
+
+<br>To parametrize the first quadrant part of the circle  in terms of the -coordinate, let the parameter  represent the -coordinate. Since the circle is in the first quadrant,  and , and the radius is .<br>From the equation , solve for :<br><br>because  is non-negative in the first quadrant.<br>Set , so:<br><br>The parameter  ranges from 0 to , corresponding to the points from  to :<br>
+<br>When , , so the point is .
+<br>When , , so the point is .
+<br>Thus, the parametric equations are:<br><br>In vector form, the parametrization is:<br><br><br>To parametrize the first quadrant part of the circle  in terms of the angle between the tangent line and the positive -axis, let  be this angle. The parametric equations are derived as follows.<br>The slope of the tangent line to the circle at any point is given by the derivative. For , implicit differentiation yields:<br><br>Since the slope is also , where  is the angle with the positive -axis, we have:<br><br>Solving for  and  using the circle equation and the relation above:<br><br>Substituting into :<br><br>Since , and  in the first quadrant:<br><br>as  for . Then:<br><br>As the point moves from  to  in the first quadrant, the tangent angle  ranges from  to :<br>
+<br>At , , .
+<br>At , , .
+<br>Thus, the parametric equations are:<br><br>To parametrize the first quadrant part of the circle  in terms of the arc length  from the point , consider the standard parametric equations for a circle of radius :<br><br>where  is the angle from the positive -axis, measured counterclockwise.<br>The point  corresponds to , and the point  corresponds to . Moving from  to  in the first quadrant involves decreasing  from  to , which is a clockwise traversal.<br>The arc length  from  to a point at angle  is given by the radius multiplied by the absolute angle traversed. Since  decreases from  to , the angle traversed is . Thus,<br><br>Solving for ,<br><br>Substitute  into the parametric equations:<br><br>Using the identities  and , with ,<br><br>The arc length  ranges from  at  to  at . For  in ,  ranges from  to , where both  and  are non-negative, ensuring the curve lies in the first quadrant.<br>Thus, the parametric equations in terms of the arc length  from  are:<br><br><br>
+<br>(2-Q4) The curve  is defined to be the intersection of the hyperboloid<br>
+	and the plane<br>
+	When  is very close to 0, and  is negative, find an expression giving  in terms of . 
+<br>Solution:<br>The curve  is the intersection of the hyperboloid  and the plane . To express  in terms of  when  is close to 0 and  is negative, solve the system of equations.<br>From the plane equation, solve for :<br><br>Substitute this into the hyperboloid equation:<br><br>Expand and simplify:<br><br><br><br>Rearrange into a quadratic equation in :<br><br>Multiply through by 4 to eliminate the fraction:<br><br>Solve for  using the quadratic formula, where , , and :<br><br>Compute the discriminant:<br><br>Thus,<br><br>At , the solutions are . Since  is negative when  is close to 0, take the negative sign:<br><br>Simplify the expression under the square root:<br><br>so<br><br>This expression is valid for , and when  is close to 0,  is negative.<br><br>
+<br>(2-Q5) A particle traces out a curve in space, so that its position at time  is 
+<br>	for . Let the positive -axis point vertically upwards, as usual. When is the particle moving upwards, and when is it moving downwards? Is it moving faster at time  or at time ?<br>Solution:<br>The velocity vector is found by differentiating the position vector  with respect to time . The derivative of the -component is . Thus, the velocity vector is:<br><br>The -component of velocity is . The sign of  determines the direction of motion in the vertical direction (since the positive -axis points upwards).<br>
+<br>The particle is moving upwards when .
+<br>The particle is moving downwards when .
+<br>The roots of  are at , , and . Analyzing the sign of  in the intervals , , , and :<br>
+<br>For ,  (downwards).
+<br>For ,  (upwards).
+<br>For ,  (downwards).
+<br>For ,  (upwards).
+<br>At , , and , , so the particle is not moving upwards or downwards at these instants.<br>The speed is the magnitude of the velocity vector, . At  and , , so:<br>
+<br>At , , so speed is .
+<br>At , , so speed is .
+<br>Comparing the squares of the speeds:<br><br>The difference is:<br><br>Since  and , the difference is positive, so the speed at  is greater than at .<br>Thus:<br>
+<br>The particle is moving upwards for .
+<br>The particle is moving downwards for .
+<br>The particle is moving faster at  than at .
+<br><br><br>
+<br>(2-Q6) Let
+<br>	- Find the unit tangent vector to this parametrized curve at , pointing in the direction of increasing .<br>
+- Find the arc length of the curve from the previous question between the points  and .<br>Solution:<br>The position vector is given by .<br>To find the unit tangent vector at , first compute the derivative of  with respect to :<br><br>Evaluate  at :<br><br>The magnitude of  is:<br><br>The unit tangent vector is the derivative vector divided by its magnitude:<br><br>This vector points in the direction of increasing  since it is derived from the derivative with respect to .<br><br>The curve is given by . The points of interest are  and .<br>
+<br>At , .
+<br>At , .
+<br>The arc length is computed from  to , as this corresponds to the segment between the given points.<br>The velocity vector is the derivative of :<br><br>The speed is the magnitude of the velocity vector:<br><br>For ,  is negative, so . Thus:<br><br>The arc length  is given by:<br><br>Use the substitution . Then , so  and .<br>
+<br>When , .
+<br>When , .
+<br>The integral becomes:<br><br>Switching the limits of integration to make it increasing:<br><br>Integrate :<br><br>Thus:<br><br>Compute the values:<br>
+<br>,
+<br>.
+<br>So:<br><br>The arc length between the points  and  is .<br><br><br>
+<br>(2-Q8) A curve in  is given by the vector equation . 
+
+<br>Find the length of the curve between  and .
+<br>Find the parametric equations of the tangent line to the curve at .
+
+
+<br>Solution:<br>The position vector is given by .<br>To find the arc length from  to , compute the derivative :<br>
+<br>, so 
+<br>, so 
+<br>, so 
+<br>Thus, .<br>The magnitude of  is:<br><br>Factor out the 2 in the first two components:<br><br>Expand the squares:<br><br><br>Add them:<br><br>The terms  and  cancel, leaving:<br><br>So:<br><br>Thus:<br><br>Since  for all real , .<br>The arc length is:<br><br>Integrate:<br><br>Evaluate from 0 to 2:<br><br>The length of the curve is .<br>The curve is given by the vector equation .<br>To find the tangent line at , first compute the point on the curve at :<br><br>Next, compute the derivative , which gives the direction vector of the tangent line:<br><br>Differentiate each component:<br>
+<br>For the -component: .
+<br>For the -component: .
+<br>For the -component: .
+<br>Thus,<br><br>Evaluate at :<br><br>Substitute  and :<br>
+<br>-component: .
+<br>-component: .
+<br>-component: .
+<br>So,<br><br>The parametric equations of the tangent line at the point  with direction vector  are given by:<br><br>where  is a real parameter.<br><br><br>
+<br>(2-Q15) The position of a particle at time  (measured in seconds) is given by
+<br>	- Show that the path of the particle lies on the cone .<br>
+- Find the velocity vector and the speed at time .<br>
+- Suppose that at time  the particle flies off the path on a line  in the direction tangent to the path. Find the equation of the line .<br>
+- How long does it take for the particle to hit the plane  after it started moving along the straight line ?<br>Solution:<br>The position vector of the particle is given by:<br><br>This corresponds to the parametric equations:<br><br>To show that the path lies on the cone , compute :<br><br>Factor out :<br><br>Using the Pythagorean identity  with :<br><br>Now, compute :<br><br>Thus, for all :<br><br>Therefore, the path satisfies  for all , meaning the path lies on the cone .<br>The velocity vector  is the derivative of the position vector  with respect to time .<br>Given:<br><br>The components are:<br>
+<br>
+<br>
+<br>
+<br>Differentiating each component with respect to :<br>
+<br>
+For :
+
+using the product rule and chain rule.
+
+<br>
+For :
+
+using the product rule and chain rule.
+
+<br>
+For :
+
+
+<br>Thus, the velocity vector is:<br><br>The speed is the magnitude of the velocity vector:<br><br>Substitute the components:<br><br>Simplify the expression inside the square root. Let , so:<br>
+<br>
+<br>
+<br>
+<br>Now compute:<br><br><br>The cross terms cancel:<br><br>So:<br><br>Since :<br><br>Thus:<br><br>Add the -component:<br><br>So:<br><br>Therefore:<br><br>The velocity vector and speed are:<br><br><br>The position of the particle at time  is found by substituting  into the position vector :<br><br><br><br>Thus, the position is .<br>The velocity vector is the derivative of the position vector. From previous calculations, the velocity vector is:<br><br>Substituting :<br><br><br><br><br>Thus, the velocity vector at  is .<br>The line  is tangent to the path at  and passes through the point  in the direction of the velocity vector . Parametric equations for the line are given by:<br><br>where  and  is a real parameter. Substituting the components:<br><br><br><br>Thus, the parametric equations for the line  are:<br><br>The particle flies off the path at time  and moves along the line  with constant velocity. The position at  is , and the velocity vector at this point is .<br>The position as a function of time for  is given by:<br><br>So the components are:<br><br>The particle hits the plane . Set :<br><br>Solving for :<br><br>The time taken after the particle starts moving along the line  (at ) is  seconds.<br>Thus, the time taken to hit the plane  is  seconds.<br><br>
+<br>(2-Q16)
+
+<br>The curve  and  intersect at the point . Find the angle of intersection between the curves at the point .
+<br>Find the distance between the line of intersection of the planes  and  and the line .
+
+
+<br>Solution:<br>The curves are given by  and , and they intersect at the point .<br>To find the angle of intersection at , compute the tangent vectors to each curve at this point.<br>For :<br>
+<br>The derivative is .
+<br>The curve passes through  when  (since , , ).
+<br>Thus, the tangent vector at  is .
+<br>For :<br>
+<br>The derivative is .
+<br>The curve passes through  when  (since , , ).
+<br>Thus, the tangent vector at  is .
+<br>The angle  between the curves is the angle between their tangent vectors, given by the dot product formula:<br><br>where  and .<br>Compute the dot product:<br><br>Compute the magnitudes:<br><br>Substitute into the formula:<br><br>Thus, the angle of intersection between the curves at  is  radians.<br>The normal vector to the plane  is .  The normal vector to the plane  is .  <br>The direction vector  of the line of intersection is the cross product of  and :<br><br>A point on the line of intersection is found by solving the system of equations. Setting :<br>
+<br> gives ,
+<br> gives .  
+<br>Thus, point .<br>Parametric equations for the line are:<br><br>The line  has direction vector . A point on this line is found by setting , so .<br>The direction vectors  and  are not parallel since there is no scalar  such that .<br>To check for intersection, set the parametric equations equal:<br><br>Solving:<br>
+<br>,
+<br>,
+<br>.
+<br>Substituting  into the second equation: , so . Then .  <br>Check the third equation: . No solution, so the lines do not intersect.<br>Thus, the lines are skew.<br>Vector . Cross product :<br><br>Magnitude of : <br><br>Dot product . Absolute value: . Distance:<br><br><br><br>
+<br>A ladybug is climbing on a Volkswagen Bug (= VW). In its starting position, the surface of the VW is represented by the unit semicircle  
+<br><br>in the $xy$-plane. The road is represented as the $x$-axis. At time $t = 0$, the ladybug starts at the front bumper, $(1,0)$, and walks counterclockwise around the VW at unit speed relative to the VW. At the same time, the VW moves to the right at speed 10.
+- Find the parametric formula for the trajectory of the ladybug, and find its position when it reaches the rear bumper. (At $t = 0$, the rear bumper is at $(-1,0)$.)
+- Compute the speed of the bug, and find where it is largest and smallest. Hint: It is easier to work with the square of the speed. 
+<br>Solution:<br>The Volkswagen Bug is represented by the unit semicircle , , with the road as the -axis. At time , the center of the semicircle is at . The VW moves to the right at speed 10, so at time , the center is at .<br>The ladybug starts at the front bumper  relative to the center and walks counterclockwise at unit speed relative to the VW. The radius of the semicircle is 1, so the angular speed is  radian per second. At time , the angular position relative to the center is  radians. The position relative to the center is .<br>In the fixed coordinate system, the position of the ladybug is the sum of the position of the center and the relative position:<br>
+<br>
+<br>
+<br>The rear bumper is at  relative to the center at . The ladybug reaches the rear bumper when  radians (since the arc length from front to rear is  units, and speed is 1 unit per second). At :<br>
+<br>
+<br>
+<br>Thus, the position when the ladybug reaches the rear bumper is .<br>The parametric equations for the trajectory are given for .<br><br><br>The parametric equations for the trajectory of the ladybug are given by:<br><br>for .<br>The velocity vector is obtained by differentiating the position vector with respect to time:<br><br>Thus, the velocity vector is .<br>The speed is the magnitude of the velocity vector:<br><br>Simplifying the expression inside the square root:<br><br>since . Therefore,<br><br>To find where the speed is largest and smallest, consider the square of the speed, , as the square root is an increasing function and the extrema occur at the same points. The domain is , and  ranges from 0 to 1 in this interval, with  at  and , and  at .<br>Since the coefficient of  is negative,  is minimized when  is maximized and maximized when  is minimized:<br>
+<br>Minimum  at .
+<br>Maximum  at  and .
+<br>Thus, the minimum speed is  and the maximum speed is .<br>The positions corresponding to these times are:<br>
+<br>At : , , so the point is .
+<br>At : , , so the point is .
+<br>At : , , so the point is .
+<br>The critical points are confirmed by the derivative of : , which is zero at  (minimum by second derivative test), and the maximum occurs at the endpoints  and .<br>Therefore, the minimum speed of 9 occurs at the point , and the maximum speed of  occurs at the points  and .<br><br><br>
+<br>(3-Q13) Let  be the point where the curve
+
+intersects the surface
+
+Find the (acute) angle between the curve and the surface at .
+<br>Solution:<br>The curve is given by  for , and the surface is defined by . To find the intersection point , substitute the parametric equations , ,  into the surface equation:<br><br>Solving  gives , so  or . Since , . At , , , , so .<br>The tangent vector to the curve at  is the derivative of  evaluated at :<br><br>The normal vector to the surface at  is the gradient of :<br><br>At :<br><br>The angle  between the curve and the surface is the acute angle between the tangent vector and the tangent plane, given by:<br><br>where  and . Compute the dot product and magnitudes:<br><br><br>Thus,<br><br><br>The acute angle  satisfies , so:<br><br>]]></description><link>problem_appendix/a01_vectors.html</link><guid isPermaLink="false">Problem_Appendix/A01_Vectors.md</guid><pubDate>Sat, 19 Jul 2025 21:07:35 GMT</pubDate></item><item><title><![CDATA[A02_Multivariable_Differenciation]]></title><description><![CDATA[ 
+ <br>
+<br>(1-Q42)  Find the point on the plane  
+<br><br>which is closest to the origin, by using Lagrange multipliers.
+<br>Solution:<br>To find the point on the plane  closest to the origin using Lagrange multipliers, minimize the square of the distance to the origin, , subject to the constraint .<br>The gradients are:<br><br>Set :<br><br>Solving for , , and :<br><br>Substitute into the constraint :<br><br>Thus, . Then:<br><br>The point  lies on the plane since .<br>The distance to the origin is , which is consistent with the distance formula for a plane.<br>Thus, the point on the plane closest to the origin is .<br><br><br>
+<br>(3-Q5) Assume that the function  satisfies the equation<br>
+and the mixed partial derivatives  and  are equal. Let  be some constant and let<br>
+Find the value of  such that<br>
+Solution:
+<br>The function  satisfies the partial differential equation<br><br>with equal mixed partial derivatives .<br>The function  is defined as<br><br>where , , and . The goal is to find the constant  such that<br><br>Using the chain rule, the partial derivatives of  are computed as follows:<br>
+<br>
+The partial derivative of  with respect to  is
+
+
+<br>
+The second partial derivative of  with respect to  is
+
+
+<br>
+The second partial derivative of  with respect to  is
+
+
+<br>Adding the second derivatives with respect to  and  gives<br><br>The equation to satisfy is<br><br>so substituting the expressions yields<br><br>Given that  satisfies , the right-hand side simplifies to . Thus,<br><br>For this to hold, .<br><br>
+<br>(3-Q8) The wave equation
+<br><br>arises in many models involving wave-like phenomena. Let  and  be related by the change of variables<br><br><br><br>
+<br>Show that  if and only if .
+<br>Show that  if and only if  for some functions  and .
+<br>Solution:<br>To show that the wave equation holds if and only if , express the second partial derivatives of  with respect to  and  in terms of the derivatives of  with respect to  and .<br>First, compute the first partial derivatives of :<br><br><br>Next, compute the second partial derivatives. For :<br><br>Applying the chain rule:<br><br><br>assuming equal mixed partial derivatives. Thus,<br><br>For :<br><br>Applying the chain rule:<br><br><br>Thus,<br><br><br>and<br><br>Substitute into the wave equation:<br><br><br>Simplify:<br><br><br>The wave equation requires:<br><br>which implies:<br><br>Conversely, if , then the expression is zero, satisfying the wave equation. Therefore, the wave equation holds if and only if .<br>The wave equation is given by<br><br>Consider the change of variables  and , and define . From the previous result, the wave equation holds if and only if<br><br>Integrating  with respect to  gives<br><br>where  is a function of  only. Integrating again with respect to  yields<br><br>where  is a function of  only. Let  and , so<br><br>Substituting back  and , <br><br>Conversely, assume  for some functions  and . Compute the partial derivatives:<br><br>where the prime denotes the derivative with respect to the argument. The second derivatives are<br><br><br><br>Substitute into the wave equation:<br><br>Thus,  satisfies the wave equation.<br><br>
+<br>(3-Q10) Find all horizontal planes that are tangent to the surface with equation
+<br><br>What are the largest and smallest values of $z$ on this surface?
+<br>The surface is given by .<br>Solution:<br>A horizontal tangent plane occurs where the partial derivatives of  with respect to  and  are both zero. The partial derivatives are:<br><br>Since the exponential factor is never zero, setting the partial derivatives to zero gives:<br><br>Solving this system:<br>
+<br>If , then the second equation implies , so .
+<br>If , then the second equation implies , so , giving points  and .
+<br>If , then the second equation implies , so , giving points  and .
+<br>The corresponding -values are:<br>
+<br>At : .
+<br>At : .
+<br>At : .
+<br>At : .
+<br>At : .
+<br>Thus, the horizontal tangent planes are at , , and .<br>To find the largest and smallest values of  on the surface, note that as  or  approaches infinity,  because the exponential decay dominates. The critical points yield , , and . Considering , and using  (with equality when ), it follows that:<br><br>Set , so . The maximum of  occurs at , where the value is , achieved when  and , i.e., at points like ,  (for maximum ) and ,  (for minimum ). Thus, the maximum  is  and the minimum  is .<br>The horizontal tangent planes are , , and . The largest value of  is , and the smallest value is .<br><br>
+<br>(3-Q11) Let  be the surface
+<br><br>- Find the tangent plane and normal line to the surface $S$ at the point $(0,2,1)$.
+- The equation defining $S$ implicitly defines $z$ as a function of $x$ and $y$. Find expressions for $\frac{\partial z}{\partial x}$ and $\frac{\partial z}{\partial y}$. Evaluate $\frac{\partial z}{\partial y}$ at $(x,y,z) = (0,2,1)$.
+- Find an expression for $\frac{\partial^2 z}{\partial x \partial y}$.
+<br>Solution:<br>The surface is given by the equation . Define the function , so the surface is the level set .<br>The gradient of  is:<br><br>Compute the partial derivatives:<br>
+<br>
+<br>
+<br>
+<br>At the point :<br>
+<br>
+<br>
+<br>
+<br>Thus, the gradient (normal vector) at  is . This can be simplified to  by dividing by 5, as the direction is the same.<br>Tangent Plane:<br>
+The equation of the tangent plane at  is given by:<br><br>Using the normal vector  and the point :<br><br>Simplify:<br><br>Normal Line:<br>
+The normal line passes through  in the direction of the normal vector . The parametric equations are:<br><br>for . Thus:<br><br>The point  satisfies the surface equation:<br><br>The tangent plane and normal line are as derived.<br>The surface  is defined by the equation , which implicitly defines  as a function of  and .<br>To find , differentiate the equation with respect to , treating  as constant and  as a function of :<br><br>This gives:<br><br>Solving for :<br><br><br>To find , differentiate the equation with respect to , treating  as constant and  as a function of :<br><br>This gives:<br><br>Solving for :<br><br><br>Evaluate  at the point :<br><br>Thus, the expressions are:<br><br>and at , .<br>
+The surface  is defined by the equation , which implicitly defines  as a function of  and .<br>The first partial derivatives of  with respect to  and  are given by:<br><br>To find the mixed partial derivative , differentiate  with respect to . Set:<br><br>Then:<br><br>Differentiating with respect to  and applying the quotient rule, while noting that  is a function of  and , gives:<br><br>Compute the partial derivatives:<br><br>Substitute :<br><br>Now:<br><br><br>So:<br><br>Thus:<br><br>Simplify :<br><br>Substitute , , and :<br><br>Since , write as a single fraction with denominator :<br><br><br>
+<br>
+(3-Q16) Let the pressure  and temperature  at a point  be
+
+- If the position of an airplane at time $t$ is
+
+
+find $\frac{d}{dt} (PT)^2$ at time $t=0$ as observed from the airplane.
+- In which direction should a bird at the point $(0,-1,1)$ fly if it wants to keep both $P$ and $T$ constant? (Give one possible direction vector. It does not need to be a unit vector.)
+- An ant crawls on the surface $z^3 + zx + y^2 = 2$. When the ant is at the point $(0,-1,1)$, in which direction should it go for maximum increase of the temperature $T = 5 + xy - z^2$? Your answer should be a vector $\langle a,b,c \rangle$, not necessarily of unit length. 
+
+
+<br>Solution:<br>The pressure  and temperature  are given by:<br><br>The position of the airplane at time  is:<br><br>Define . The derivative  is required at .<br>At :<br><br>The derivatives of the position components at  are:<br><br>Evaluate  and  at :<br><br>The partial derivatives of  and  at  are:<br><br><br>Now compute  and  at :<br><br><br>Set , so . Then:<br><br>At , , and:<br><br>Thus:<br><br>The derivative  at  is .<br>To determine the direction in which the bird should fly to keep both pressure  and temperature  constant at the point , the direction vector must be perpendicular to the gradients of both  and . This ensures that the directional derivatives of both functions are zero in that direction, meaning the functions remain constant along the path.<br>The pressure and temperature functions are:<br><br>The gradient of  is:<br><br>The gradient of  is:<br><br>Evaluating at :<br><br><br>The direction vector is given by the cross product :<br><br><br>Computing the components:<br>
+<br>-component: ,
+<br>-component: ,
+<br>-component: .
+<br>Thus, the cross product is .<br>This vector is perpendicular to both gradients, as verified by the dot products:<br><br><br>Therefore, the direction vector  ensures that both  and  remain constant at the point .<br>The ant is constrained to the surface , and the goal is to maximize the increase of the temperature function  at the point .<br>The direction of steepest ascent for  on the surface is given by the component of the gradient of  that is tangent to the surface. The gradient of  is:<br><br>At the point :<br><br>The surface is defined by . The gradient of  is:<br><br>At the point :<br><br>The tangential component of  is found by subtracting the projection of  onto :<br><br>First, compute the dot product:<br><br>Then, , so:<br><br>The projection is:<br><br>The tangential component is:<br><br>To avoid fractions, multiply by  to get:<br><br>This vector is tangent to the surface, as verified by the dot product with :<br><br>The directional derivative of  in this direction is positive, confirming it is the direction of maximum increase:<br><br>Thus, the direction for maximum increase of temperature is .<br><br>
+<br>(3-Q17) Find all saddle points, local minima and local maxima of the function
+
+
+<br>Solution:<br>The critical points of the function  are found by setting the first partial derivatives to zero.<br>The partial derivative with respect to  is:<br><br>The partial derivative with respect to  is:<br><br>Setting  gives:<br><br>Substituting  into :<br><br>Thus, the critical points are  and .<br>To classify these critical points, the second derivative test is used. The second partial derivatives are:<br><br>The discriminant is:<br><br>
+<br>
+At :
+
+
+Since  and , this is a local minimum.
+
+<br>
+At :
+
+Since , this is a saddle point.
+
+<br>There are no other critical points, as  implies , and substituting into  gives only the solutions above. The function has no local maxima, as the discriminant is negative at one critical point and positive with a positive second derivative at the other, and no other critical points exist.<br>Thus, the saddle point is at  and the local minimum is at .<br><br>
+<br>(3-19) Find the maximum and minimum values of  when  runs over the square .
+<br>Solution:<br>The function is  defined over the square , .<br>The minimum value of  is 0, achieved along the boundaries  and , and at the point . This is because:<br>
+<br>On ,  for all .
+<br>On ,  for all .
+<br>At , .
+<br>For all other points in the square,  since , , and  (with equality only at ).
+<br>The maximum value of  is , achieved at the point . This is determined as follows:<br>
+<br>The only critical point in the interior is , where .
+<br>On the boundary , , which has a maximum value of  at .
+<br>On the boundary , , which has a maximum value of  at .
+<br>On the boundaries  and , .
+<br>For each fixed , the maximum over  is given by:
+
+
+<br>Maximizing  over  shows that the global maximum is  at  (which is less than ), with .
+<br>The value  is greater than the maximum values on other boundaries, and no interior point yields a higher value.<br>Thus, the minimum value is 0 and the maximum value is .<br><br>
+<br>(3-Q20) The temperature at all points in the disc  is given by . Find the maximum and minimum temperatures at points of the disc.
+<br>Solution<br>The temperature function is  defined on the closed disk . To find the maximum and minimum temperatures, critical points inside the disk () and on the boundary () must be evaluated.<br>The partial derivatives are:<br><br>Setting both to zero and noting that , the equations are:<br><br>Solving, if , then . Substituting  gives:<br><br>The critical points are  and , both satisfying , so they are inside the disk. Evaluating :<br>
+<br>At : .
+<br>At : .
+<br>The boundary is . This is an equality constraint, so the method of Lagrange multipliers is appropriate. Define the constraint . Solve :<br><br>The gradient of  is:<br><br>On the boundary, , so . The equations are:<br><br>Rearranging:<br><br>Set , so:<br><br>where . Assuming  and , equate the expressions for :<br><br>With  and :<br><br>
+<br>At : .
+<br>At : .
+<br>If , then , so :<br>
+<br>At : .
+<br>At : .
+<br>If , then , so :<br>
+<br>At : .
+<br>At : .
+<br>However, for  or , the Lagrange multiplier equations lead to contradictions (e.g., for , , the equation  implies , which is false). Thus, the only solutions to the Lagrange multiplier equations are when , giving the points .<br>The extreme values on the boundary are  and , since  and these values occur at  and .<br><br>
+<br>(3-Q29) Find the point  (with  and ) on the surface  that is closest to the origin.
+<br>Solution<br>To find the point  with  on the surface  that is closest to the origin, minimize the square of the distance from the origin, , subject to the constraint .<br>Using the method of Lagrange multipliers, solve , where:<br><br>This gives the system of equations:<br><br><br><br>with the constraint:<br><br>Since , equations (1), (2), and (3) can be manipulated. Dividing equation (1) by equation (2):<br><br>Dividing equation (1) by equation (3):<br><br>Substitute  and  into the constraint (4):<br><br>Simplifying:<br><br>Solving for :<br><br><br>Then:<br><br>Thus, the point is .<br><br>
+<br>(3-Q30) Find the maximum value of  on the ellipsoid  Specify all points at which this maximum value occurs.
+<br>Solution:<br>To find the maximum value of  on the ellipsoid , the method of Lagrange multipliers is used. The gradients are:<br><br>The equations are:<br>
+<br>
+<br>
+<br>
+<br>
+<br>Assuming , solving these equations yields critical points. Dividing the first equation by the second gives:<br><br>Setting , the equation becomes , leading to , so  or .<br>
+<br>
+Case 1: <br>
+Substituting into the equations and constraint gives , , and . Solving yields :  
+
+<br>: , , so  or , and  or .  
+<br>: , , so  or , and  or .
+
+
+<br>
+Case 2: <br>
+Substituting gives , , and . Solving yields :  
+
+<br>: , so  or , and  or .  
+<br>: , so  or , and  or .
+
+
+<br>Cases where any variable is zero yield , which is less than 6. The ellipsoid is compact, so the maximum exists. The critical values are compared, and the maximum value of  is 6, occurring at the points where  and  with .<br>The points are  and . At both points,  and the constraint is satisfied.<br>The maximum occurs at the points  and .<br>]]></description><link>problem_appendix/a02_multivariable_differenciation.html</link><guid isPermaLink="false">Problem_Appendix/A02_Multivariable_Differenciation.md</guid><pubDate>Sun, 20 Jul 2025 08:38:54 GMT</pubDate></item><item><title><![CDATA[A03_Multivariable_Integration]]></title><description><![CDATA[ 
+ <br>
+<br>(1-Q3) In this problem,is the surface given by the quarter of the right-circular cylinder centered on the-axis, of radius 2 and height 4, which lies in the first octant. The field. 
+
+<br>Compute the flux integral 
+
+ (Use the normal which points ‘outward’ from, i.e., on the side away from the-axis.)
+<br>Letbe the 3D solid in the first octant given by the interior of the quarter-cylinder defined above. Use the divergence theorem to compute the flux of the fieldout of the region.
+<br>The boundary surface ofis comprised oftogether with four other faces. What is the flux outward through these four faces, and why? Use the answers to parts (b) and (c).
+
+
+<br>Solution:<br>The surfaceis the lateral surface of a quarter cylinder in the first octant, given by,,, and, with radius 2 and height 4.<br>The vector field is. The outward-pointing unit normal vector(away from the-axis) for the cylinder is, sinceon the cylinder.<br>The dot product is:<br><br>Parametrize the surface usingand, with,,, whereand. The position vector is.<br>The partial derivatives are:<br><br>The cross product is:<br><br><br>The magnitude is:<br><br>Thus, the surface element is.<br>The dot product in terms ofis:<br><br>The flux integral is:<br><br>Factor out constants:<br><br>First,.<br>Next,:<br><br>Thus:<br><br>The flux integral is.<br>This result is confirmed by the divergence theorem. Close the surface by adding the bottom disk atand the top disk at, both in the first octant. The outward normal for the bottom isand for the top is. Sincehas no-component,on both disks. Thus, the flux through the closed surface equals the flux through.<br>The divergence ofis:<br><br>The volumeis the quarter cylinder:,,,. The volume is:<br><br>The flux through the closed surface is:<br><br>Since the flux through the top and bottom disks is zero, the flux throughis.<br>The solidis the quarter-cylinder in the first octant bounded by,,, and. The vector field is.<br>The divergence theorem states that the flux ofout of the closed surface boundingis equal to the triple integral of the divergence ofover:<br><br>whereis the boundary ofwith outward-pointing normal.<br>Compute the divergence of:<br><br>Thus, the flux is:<br><br>which is the volume of.<br>is a quarter-cylinder of radius 2 and height 4. The volume of a full cylinder of radiusand heightis. Here,and, so the volume of the full cylinder is:<br><br>Sinceis a quarter of this cylinder, its volume is:<br><br>Therefore, the flux ofout ofis.<br>The solidis a quarter-cylinder in the first octant with radius 2 and height 4, bounded by the surfaces(for,,),,,, and. The boundary consists of five faces:<br>
+-: the lateral surface,,,.<br>
+<br>Bottom face:,,,.
+<br>Top face:,,,.<br>
+-face:,,.<br>
+-face:,,.
+<br>The vector field is.<br>From part (b), the flux ofoutward throughis. From part (c), using the divergence theorem, the total outward flux through the entire boundary ofis. The total outward flux is the sum of the fluxes through all five faces. Therefore:<br><br>Substituting the known flux through:<br><br>which implies that the flux through the other four faces is.<br>This result is consistent with direct computation of the flux through each of the four faces:<br>
+<br>Bottom face (): The outward normal is. Then, so the flux is.
+<br>Top face (): The outward normal is. Then, so the flux is.
+<br>face: The outward normal is. On this face,, so. Then, so the flux is.
+<br>face: The outward normal is. Then, sinceandare orthogonal.
+<br>Thus, the flux through each of the four faces is, and the total flux through these faces is.<br><br>
+<br>(1-Q4)Letbe the portion of the surface of the paraboloid 
+
+which lies above the first octant; and let$C$be the closed curve$C = C_1 + C_2 + C_3$, where the curves$C_1$,$C_2$, and$C_3$are the three curves formed by intersecting$S$with the$xy$,$yz$, and$xz$planes respectively (so that$C$is the boundary of$S$). Orient$C$so that it is traversed counterclockwise when seen from above in the first octant.
+- Use Stokes’ Theorem to compute
+
+
+by using the surface integral over the capping surface$S$.
+- Set up and evaluate the loop integral$\oint_C \textbf{F} \cdot d\textbf{r}$directly by parametrizing each piece of the curve$C$and then adding up the three line integrals. 
+
+
+<br>Solution:<br>To computeusing Stokes' Theorem, whereandis the boundary of the surface(the portion of the paraboloidin the first octant), oriented counterclockwise when viewed from above in the first octant, Stokes' Theorem states that:<br><br>Here,is oriented with the upward-pointing normal vector, consistent with the counterclockwise orientation ofwhen viewed from above.<br>First, compute the curl of:<br><br>Evaluating each component:<br>
+-,<br>
+-,<br>
+-.<br>Thus,.<br>Next, parametrize the surface. Sinceis given by, useandas parameters:<br><br>andis the projection ofonto the-plane, which is the quarter disk,,.<br>The surface elementis given by. Compute:<br><br><br><br>The normal vectorhas a positive-component, confirming it is upward-pointing. Thus,<br><br>Now, compute the dot product:<br><br>Substitute:<br><br>The surface integral becomes:<br><br>whereis the quarter disk,,.<br>To evaluate this integral, use polar coordinates. Set,, so, and. The regioncorresponds to,. The integrand is:<br><br>Thus, the integral is:<br><br>First, evaluate the inner integral:<br><br>Then, evaluate the outer integral:<br><br>Therefore, the surface integral is 0, and by Stokes' Theorem:<br><br>To compute the line integraldirectly, parametrize each piece of the curve, whereis the intersection of the paraboloidwith the-plane (),with the-plane (), andwith the-plane (), all in the first octant. The curve is oriented counterclockwise when viewed from above in the first octant, so the traversal is fromtoalong, then toalong, and finally back toalong.<br>The vector field is.<br>-lies in the-plane () and is the quarter-circlefromto.<br>
+<br>Parametrize using:
+
+
+<br>Derivative:
+
+
+<br>Vector field along(since):
+
+
+<br>Dot product:
+
+
+<br>Line integral:
+
+-lies in the-plane () withfromto.
+<br>Parametrize using(so,):
+
+
+<br>Derivative:
+
+
+<br>Vector field along(since):
+
+
+<br>Dot product:
+
+
+<br>Line integral:
+
+-lies in the-plane () withfromto.
+<br>Parametrize using:
+
+
+<br>Derivative:
+
+
+<br>Vector field along(since):
+
+
+<br>Dot product:
+
+
+<br>Line integral:
+
+
+<br>Sum the line integrals over each segment:<br><br>The line integral is 0, which matches the result obtained using Stokes' Theorem.<br><br>
+<br>(1-Q2) Let
+
+<br>Show thatis a gradient field. 
+<br>Find a potential functionforsuch that.
+<br>Computewhereis a straight line fromto.
+
+
+<br>Solution:<br>To show thatis a gradient field, it suffices to show thatis conservative, which requires that the curl ofis zero, i.e.,. The domain is, which is simply connected, so a zero curl implies thatis a gradient field.<br>Define the components ofas:<br><br>The curlis given by:<br><br>Compute the necessary partial derivatives:<br>
+-,<br>
+-,<br>
+-,<br>
+-,<br>
+-,<br>
+-.<br>Now substitute into the curl expression:<br>
+--component:,<br>
+--component:,<br>
+--component:.<br>Since all components are zero,. Therefore,is conservative and hence a gradient field.<br>To find a potential functionsuch that, integrate the components ofstep by step, ensuring consistency with all partial derivatives.<br>Start with the-component:<br><br>Integrate with respect to, treatingandas constants:<br><br>whereis an arbitrary function ofand.<br>Next, use the-component:<br><br>Compute the partial derivative ofwith respect to:<br><br>Set this equal to the given-component:<br><br>Simplify to find:<br><br>Integrate with respect to, treatingas constant:<br><br>whereis an arbitrary function of. Substitute back into:<br><br>Finally, use the-component:<br><br>Compute the partial derivative ofwith respect to:<br><br>Set this equal to the given-component:<br><br>Simplify to find:<br><br>Thus,is a constant, denoted. The potential function is:<br><br>Since potential functions are defined up to an additive constant, setfor simplicity:<br><br>The vector fieldis conservative, as previously established by showing that its curl is zero. A potential functionsuch thatis given by.<br>To compute the line integralalong the straight line pathfromto, the fundamental theorem for line integrals is applied. This theorem states that for a conservative vector field, the line integral depends only on the endpoints of the path and is given by the difference in the potential function evaluated at these points:<br><br>Evaluate the potential function at the endpoints:<br>
+<br>
+At:
+
+
+<br>
+At:
+
+
+<br>Compute the difference:<br><br><br>
+<br>(1-Q6) Evaluate the following single integral by converting it to an equivalent double integral:
+<br><br>Solution:<br>To evaluate the integral, convert it to an equivalent double integral. Note that for, the integrand can be expressed as:<br><br>This holds for all, as the limits account for the direction of integration (e.g., if, the integral from 1 to a is negative, matching the sign of the integrand). Substituting this into the original integral gives:<br><br>Since the integrandis continuous and non-negative forand, and the integral converges absolutely for, Fubini's theorem allows switching the order of integration:<br><br>Now evaluate the inner integral with respect to. For fixed,<br><br>Substitute this result back into the outer integral:<br><br><br>
+<br>(1-Q7) Show that the average distance of the points of a disk of radiusto its center is.  
+<br>Solution:<br>To find the average distance of the points in a disk of radiusto its center, consider the disk centered at the origin. The area of the disk is.<br>The distance from a pointto the center is. The average distance is given by the integral of the distance over the disk divided by the area of the disk:<br><br>Using polar coordinates, whereis the radial distance andis the angle, the area element is. The distance to the center is, and the disk is described byand. Thus, the integral becomes:<br><br>First, evaluate the inner integral with respect to:<br><br>Next, evaluate the outer integral with respect to:<br><br>So, the double integral is:<br><br>Now, divide by the area:<br><br>Thus, the average distance is.<br><br>
+<br>
+(1-Q8) In general, the moment of inertia around an axis (a line) is,<br>
+ 
+ The collection of lines parallel to the y-axis have the form. Letbe the usual moment of inertia around the y-axis,<br>
+ 
+ Letbe the moment of inertia around the axis, whereis the center of mass. Show that<br>
+
+
+<br>Solution:<br>The moment of inertia around the y-axis (x = 0) is given by:<br><br>The moment of inertia around the parallel axis through the center of mass, which is the line, is given by:<br><br>The center of massand the total massare defined as:<br><br>so that:<br><br>Expand the expression for:<br><br>Distribute the integral:<br><br>Substitute the known expressions:<br><br>Rearrange to solve for:<br><br><br>
+<br>(1-Q11) Consider the vector field , and let  be the portion of the graph  running from  to  (assume that , and  takes positive values). Show that the line integral  is equal to the polar moment of inertia of the region  lying below  and above the x-axis (with density ).  
+<br>Solution:<br>The vector field is given by , so the line integral along the curve  parameterized by  from  to  is:<br><br>since the -component is zero. Substituting , the integral becomes:<br><br>The regionis bounded below by the x-axis (), above by the curve , and between  and . The polar moment of inertia about the origin, with density , is:<br><br>This double integral can be expressed as an iterated integral:<br><br>Evaluating the inner integral with respect to:<br><br>Thus, the double integral is:<br><br>This expression is identical to the line integral:<br><br><br>
+<br>(1-Q12) Consider the vector field<br>
+ 
+<br>
+<br>Show that  is the gradient of the polar function  over the right half-plane .  
+<br>Suppose that  is a smooth curve in the right half-plane  joining two points and . Express  in terms of the polar coordinates  and  of  and .  
+<br>Compute directly from the definition the line integrals  and  where  is the upper half of the unit circle running from  to  and  is the lower half of the unit circle, also going from  to . 
+<br>Solution:<br>To show that the vector field  is the gradient of the polar function over the right half-plane , compute the gradient of  and verify that it matches .<br>The gradient of  is given by:<br><br>First, compute . Let , so . Using the chain rule:<br><br>Sinceis treated as constant with respect to,<br><br>Substituting :<br><br>Next, compute :<br><br>Sinceis treated as constant with respect to ,<br><br>Substituting :<br><br>Thus, the gradient is:<br><br>The given vector field is:<br><br>Since  for,  is the gradient of  over the right half-plane.<br>The vector field  is conservative in the right half-plane , as it is the gradient of the potential function . Specifically, .<br>Sinceis conservative, the line integral  depends only on the endpoints of the curve, which are  and . The value of the line integral is given by the difference in the potential function evaluated at the endpoints:<br><br>In polar coordinates, the angleis defined as for. The polar coordinates of  and  are  and , respectively, where  and .<br>Since the curve  lies entirely in the right half-plane ,  is well-defined and smooth, and the angles  and  are both in the interval . Therefore,<br><br>Substituting these into the expression for the line integral gives:<br><br>The vector field is .<br>For  (upper half of the unit circle from  to ):<br>
+<br>Parameterize  as  for .
+<br>Then .
+<br>On the unit circle, , so .
+<br>The dot product is:
+
+
+<br>The line integral is:
+
+
+<br>For(lower half of the unit circle from  to ):<br>
+<br>Parameterize  as  for .
+<br>Then .
+<br>On the unit circle, , so .
+<br>The dot product is:
+
+
+<br>The line integral is:
+
+
+<br><br>
+<br>(1-Q14)  Show that a constant force field does zero work on a particle that winds uniformlytimes around the ellipse,<br>
+
+<br>Solution:<br>Parameterize the ellipse. Letfor. Then,.<br>The line integral for work is:<br><br>Evaluate the integrals:<br><br><br>Sinceis an integer,and. Thus:<br><br>Therefore, the work done is:<br><br>Thus, the work done by the constant force field is zero for any integer.<br><br>
+<br>(1-Q17)
+<br>
+<br>Let . Calculate .  
+<br>Evaluate the flux of  over the sphere of radius  centered at the origin.  
+<br>Show that . Does this violate the divergence theorem?  
+<br>Solution:<br>The function is given by , where .<br>The gradient  is computed as follows:<br><br>Compute the partial derivative with respect to:<br><br>Similarly, for :<br><br>And for :<br><br>Thus,<br><br>The vector field is given by , where . This can be expressed as , with  and .<br>The flux of  over the sphere of radius  centered at the origin is given by the surface integral , where  is the sphere .<br>On the sphere, , so . The outward-pointing unit normal vector is , and the area element is .<br>The dot product is:<br><br>Since ,<br><br>The flux is:<br><br>The surface area of the sphere is , so:<br><br>Alternatively, using the divergence theorem, , where  is the volume enclosed by the sphere. The divergence of  is:<br><br>where  is the three-dimensional Dirac delta function. The integral over  is:<br><br>since the origin is inside the sphere, confirming the result.<br>The flux is independent of the radius .<br><br>
+<br>(1-Q30) Show that the average straight-line distance to a fixed point on the surface of a sphere of radius  is . 
+<br>Solution:<br>Any point  on the sphere can be represented in spherical coordinates as , where  is the polar angle (from the positive -axis) and  is the azimuthal angle. The Cartesian coordinates of  are .<br>The straight-line distance  from  to  is given by:<br><br>Simplifying the expression inside the square root:<br><br>Using the trigonometric identity :<br><br>since  for .<br>The average distance  is the integral of  over the sphere divided by the surface area of the sphere, which is . The surface area element in spherical coordinates is . Thus:<br><br>Separating the integrals:<br><br><br>Using the identity :<br><br>Substituting into the integral:<br><br>Use the substitution , so  and . When , ; when , :<br><br>Thus:<br><br><br>
+<br>(1-Q33) The Laplacian of a function of three variables is defined by 
+
+Suppose that the simple closed surface  is the iso-surface of some smooth function , that is, the set of points in 3-space satisfying  for some constant . 
+<br>Use the Divergence Theorem to show that if  is the interior of , then<br><br>Solution:<br>Set . Then, the divergence of  is .<br>By the Divergence Theorem, for the outward-pointing unit normal  on ,  <br><br>where .<br>Since  is an iso-surface of , the gradient  is normal to . The magnitude  is positive, and , where  is the unit normal in the direction of . The outward unit normal  may align with or oppose , so  <br><br>Thus,  <br><br>where the sign depends on the direction of  relative to .<br>Substituting into the Divergence Theorem result,  <br><br>Rearranging gives  <br><br>as required. The  accounts for whether  points outward or inward relative to .<br><br>
+<br>(4-Q14) Determine the surface area of the surface given by 
+
+
+<br>over the square . <br>Solution:<br>The surface is given by  over the region , .<br>The surface area  for a surface  is given by:<br><br>where  is the region .<br>First, compute the partial derivatives: <br><br><br>Then,<br><br>Thus,<br><br>The surface area integral is:<br><br>Compute the inner integral with respect to :<br><br>Substitute , so . When , ; when , . Then,<br><br>The double integral becomes:<br><br>Now compute the integral:<br><br>For the first integral, substitute , ; when , ; when , :<br><br>For the second integral, substitute , ; when , ; when , :<br><br>Thus,<br><br><br>Simplify the exponents:<br><br>so<br><br>Thus,<br><br>Now substitute back:<br><br>Therefore, the surface area is . <br>]]></description><link>problem_appendix/a03_multivariable_integration.html</link><guid isPermaLink="false">Problem_Appendix/A03_Multivariable_Integration.md</guid><pubDate>Sun, 20 Jul 2025 11:33:06 GMT</pubDate></item><item><title><![CDATA[A04_Navigating_3D_Space]]></title><description><![CDATA[ 
+ <br>
+<br>(1-Q1) Let  
+
+<br>Compute the unit tangent vector  
+<br>Compute 
+
+
+<br>Solution:<br>
+The position vector is given by .<br>The derivative is found by differentiating each component with respect to . For the -component: . Using the chain rule, let , so:  <br><br>For the -component: .  Using the chain rule:  <br><br>For the -component: . The derivative is .<br>Thus,  <br><br>The magnitude is given by:  <br><br>Simplify inside the square root:  <br><br>Since ,  <br><br>Thus,  <br><br>The unit tangent vector is defined as:  <br><br>In component form,  <br><br>Differentiate each component of  with respect to .<br>For the -component: . Using the chain rule:  <br><br>so  <br><br>For the -component: .  Using the chain rule:  <br><br>so  <br><br>For the -component: .  This is constant, so its derivative is 0.<br>Thus,  <br><br>This can also be written as:  <br><br><br><br><br>
+<br>(1-Q5) Let  be the solid 3-D cone bounded by the lateral surface given by  and by the plane .  Assume the density is given by&nbsp;.
+
+<br>Find the mass of  using cylindrical coordinates. 
+<br>Set up the calculation for  using cylindrical coordinates.
+<br>Set up the calculation for  using spherical coordinates. 
+
+
+<br>Solution:<br>The surface  becomes  in cylindrical coordinates. The plane  intersects the cone when , so . Thus, the solid is defined for , , and for each ,  ranges from the cone  to the plane .<br>The mass is given by the triple integral:<br><br>Since the integrand does not depend on , the integral can be separated:<br><br>First, evaluate the innermost integral with respect to :<br><br>Substitute this result into the integral:<br><br>Next, evaluate the integral with respect to :<br><br>Substitute this result into the integral:<br><br>Thus, the mass of the solid  is .<br>To compute the -coordinate of the center of mass, , for the solid cone  with density , use the formula:<br><br>The mass of  has been previously calculated as . Substituting the density  gives:<br><br>In cylindrical coordinates, the solid  is bounded by the cone  and the plane , with , , and for each ,  ranges from  to . The volume element is .<br>Thus, the triple integral is:<br><br>Therefore, the setup for  is:<br><br>In spherical coordinates, the solid  is bounded by the cone  and the plane . The conversion to spherical coordinates is given by:<br><br>with the volume element .<br>The cone surface  simplifies to , which gives . Thus,  ranges from  to . The plane  corresponds to , so . For each fixed  and ,  ranges from  to , and  ranges from  to .<br>The integrand  in spherical coordinates is:<br><br>Thus, the integrand  becomes:<br><br>The triple integral for  is:<br><br>Therefore, the setup for  is:<br><br><br>
+<br>(1-Q10) Find the area of the ellipse,  
+<br><br>Solution:<br>The equation  represents an ellipse. To find its area, define the transformations:<br><br>The equation becomes , which is a circle of radius 1 in the -plane with area .<br>The Jacobian matrix of the transformation from  to  is:<br><br>The determinant of  is:<br><br>The absolute value is .<br>The area element in the -plane relates to the area element in the -plane by:<br><br>since .<br>The area in the -plane is the integral over the region where :<br><br>The integral is the area of the disk in the -plane:<br><br>Thus,<br><br>The constants in the transformations do not affect the area, as translations preserve area. The area is therefore .<br><br>
+<br>(Q-21) Let  be the portion of the cylinder  lying in the first octant () and below the plane . Set up a triple integral in cylindrical coordinates which gives the moment of inertia of  about the -axis; assume the density to be .
+<br>Solution:<br>The moment of inertia about the -axis for a solid with constant density  is given by the triple integral:<br><br>where  is the region defined by , , , , and .<br>The transformations in cylindrical coordinates are:<br><br>with the volume element . Additionally, , so the integrand becomes .<br>The region  is bounded as follows:<br>
+<br>The cylinder  corresponds to .
+<br>The first octant (, ) corresponds to .
+<br>The conditions  and  correspond to .
+<br>Thus, the limits of integration are:<br>
+<br> from 0 to 1,
+<br> from 0 to ,
+<br> from 0 to 1.
+<br>The integrand is , and the volume element is , so the product is . Therefore, the moment of inertia integral is:<br><br>]]></description><link>problem_appendix/a04_navigating_3d_space.html</link><guid isPermaLink="false">Problem_Appendix/A04_Navigating_3D_Space.md</guid><pubDate>Sat, 19 Jul 2025 21:49:53 GMT</pubDate></item><item><title><![CDATA[CH01_Cylinders_and_Surfaces]]></title><description><![CDATA[ 
+ <br><br>
+<br>Their equations only have two variables.
+<br>These equations give a trace of the curve on the coordinate plane of the two given coordinates.
+<br>The curve is directed along the axes of the missing variable.
+<br>The curve/trace does not change along the direction axes.
+<br><br>
+<br>Find trace along the coordinate plane.
+<br>Direct it towards the direction of the missing axis.
+<br>To draw a cylinder of , for example, first draw the parabola on the  plane, then direct it along the -axis.
+<br><br>
+<br>Have all three variables.
+<br>Traces occur on coordinate planes or planes parallel to coordinate planes.
+<br>Still directed along an axis but changes along it.
+<br><br>
+<br>Determine the type of surface.
+<br>Determine the direction axis.
+<br>Find the trace on the coordinate plane.
+<br>Find at least two other traces.
+<br><br><br>
+<br>General form:<br>
+
+<br>How to tell:
+
+<br>All have positive coefficients.
+<br>All have a power of 2.
+<br>Has a constant.
+
+
+<br>Intercepts:
+
+<br>
+<br>
+<br>
+
+
+<br><img alt="Ellipsoid" src="assets/images/ellipsoids.gif"><br>
+An ellipsoid.<br><br>
+<br>General form:<br>
+
+<br>How to tell:
+
+<br>Has one negative coefficient.
+<br>All have a power of 2.
+<br>Has a constant.
+
+
+<br>Notes:
+
+<br>Always decreasing along the axis with the negative coefficient.
+<br>Set the variable with the negative coefficient to  and  to get three traces, which are usually circles or ellipses.
+
+
+<br><img alt="One-sheet Hyperboloid" src="assets/images/hyperbolidonesheet.gif"><br>
+One-sheet Hyperboloid.<br><br>
+<br>General form:<br>
+
+<br>How to tell:
+
+<br>Has one positive coefficient.
+<br>All have a power of 2.
+<br>Has a constant.
+
+
+<br>Notes:
+
+<br>Set both variables with negative coefficients to  to get the axis intercepts.
+<br>Use a variable divisible by the positive coefficient's denominator to obtain a cross-section (as an ellipse or circle) of both parts of the Hyperboloid.
+
+
+<br><img alt="Two-sheet Hyperboloid" src="assets/images/hyperbolidtwosheets.gif"><br>
+Two-sheet Hyperboloid.<br><br>
+<br>General form:<br>
+
+<br>How to tell:
+
+<br>Has one negative coefficient.
+<br>All have a power of 2.
+<br>Has no constants.
+
+
+<br>Notes:
+
+<br>Place in a value divisible by  of the variable with the negative coefficient to get an ellipse or circle on opposite ends of the axis with the negative coefficient.
+
+
+<br><img alt="Elliptical Cone" src="assets/images/ellipticalcone.gif"><br>
+An elliptical cone.<br><br>
+<br>General form:<br>
+
+<br>How to tell:
+
+<br>Has three variables with two having a power of two and one having a power of one.
+<br>Variables with a power of two have positive coefficients.
+<br>Opens up along the direction of the axis with the power of one.
+<br>Along the axis it opens up with, it "shifts" along .
+
+
+<br>Notes:
+
+<br>Set the variable with the degree of one to  to get a trace on the coordinate plane.
+
+
+<br><img alt="Elliptical Paraboloid" src="assets/images/ellipticparaboloid.gif"><br>
+An elliptical Paraboloid.<br><br>
+<br>General form:<br>
+
+<br>How to tell:
+
+<br>Three variables with two having a power of two and one having a power of one.
+<br>One of the variables with the power of two has a negative coefficient.
+
+
+<br>Notes:
+
+<br>The degree-one variable is the direction axis.
+<br>Plug in positive and negative values to the degree-one variable to give two different sets of equations that describe the trace.
+
+
+<br><img alt="Hyperbolic Paraboloid" src="assets/images/hyperbolicparaboloid.gif"><br>
+Hyperbolic Paraboloid.]]></description><link>ch01_cylinders_and_surfaces.html</link><guid isPermaLink="false">CH01_Cylinders_and_Surfaces.md</guid><pubDate>Fri, 18 Jul 2025 14:24:13 GMT</pubDate><enclosure url="assets/images/ellipsoids.gif" length="0" type="image/gif"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;assets/images/ellipsoids.gif&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[CH02_Vectors_and_Functions]]></title><description><![CDATA[ 
+ <br><br><br>
+<br>A vector is a directed line segment with magnitude and direction  
+<br><br>Here,  is the number of dimensions,  is a scalar and  is a unit basis vector along an axis (a vector that moves exactly 1 unit distance from the origin to a point in an axis like  for ). <br>
+<br>The magnitude of a vector denotes its length, which is equal to its Euclidean distance from the origin.
+<br>  <br>
+<br>Unit Vector: Vector of length 1 in direction of <br>
+
+<br>  <br>
+<br>Position Vector: Vector from origin  to point <br>
+
+<br><br><br>
+<br>Addition and subtraction:
+<br> <br>
+<br>Scalar multiplication: essentially scales magnitude by  and preserves direction if , reverses if ,
+<br> <br>
+<br>Dot product measures the degree to which vectors are parallel (so, by definition, ). Its computed as:
+<br><br>
+<br>The cross product is a binary operation on two vectors in three-dimensional space that produces a third vector perpendicular to both of them. This resulting vector is orthogonal to the input vectors and follows the right-hand rule for direction. 
+<br>In 3D, the cross product can be computed using the determinant of a  matrix, where the first row contains the basis vectors of the space, and the next two rows contain the components of the input vectors.
+<br><br>Its magnitude can be calculated as   (it can be interpreted as the area of parallelogram spanned by  and ). It is anticommutative:     <br><br>
+<br>
+Commutativity:<br>
+
+
+<br>
+Anticommutativity of Cross Product:<br>
+
+
+<br>
+Distributivity:<br>
+
+
+<br>
+Scalar Multiplication:<br>
+
+
+<br><br>Key Properties:  <br>
+<br>Cyclic symmetry:  
+<br>  <br>
+<br>Antisymmetry:<br>
+  
+<br>Vanishes if vectors are coplanar  
+<br>Lagrange's Identity:  <br>  <br>
+<br>Non-associativity:  
+<br>  <br><br><br>Parametric equation through  with direction :  <br><br><br>
+<br>Defined by a point  and normal vector . Unlike a line, its defined by two direction vectors, and hence spans a two dimensional region in space. In vector form:<br>
+
+<br>Its standard form, for normal vector coefficients  is given by: 
+<br><br>
+<br>And its general form is  
+<br><br>
+<br>Point to Plane:  
+<br><br>
+<br>Point to Line:  
+<br>3. Skew Lines:  <br><br>
+<br>Two parallel planes: Given planes:  ,  (Same normal )
+<br><br>
+<br>Line to plane (parallel): Plane: , line:  with  (i.e., ). 
+<br><br><br><br>
+<br>A vector function is a parametrically defined function where the terminal points of vectors trace a curve instead of a surface in 3-dimensional space.
+<br>The fact that  has a certain domain gives  an orientation.
+<br><br>
+<br>Identify .
+<br>Use one or more components to get a curve or surface (eliminate ).
+<br>For just two components, sketch on a plane.
+<br>For three components, it's a curve traveling along a surface.
+<br>Use values of  to find points and the orientation.
+<br><br>
+<br>The derivative of a vector function describes the direction vector of the tangent vector to the curve at some value of .
+<br>The derivative of a function is defined as:<br>
+
+<br>Similarly, the derivative of a vector function is defined for some parameter  as:  
+<br><br><br>
+<br>Example:<br>
+The derivative of  is .
+<br><br>
+<br>For some vector function  with a derivative , the so-called 'magnitude' of  is expressed as:  
+<br><br>
+<br>The arc length of the curve generated by the vector function, for some interval , is given as:  
+<br><br><br>Why?<br>
+<br>We can "walk through the curve" instead of using a vector to point at each individual point.
+<br>How?<br>
+<br>Find the arc length function (, not ):<br>
+
+<br> is where  begins.
+<br><br>For the vector function:<br>
+  <br>
+<br>Compute :<br>
+
+<br>Compute the arc length function :<br>
+
+<br>Turn  into the parameter :<br>
+Solve for :<br>
+
+<br>Substitute back into :  
+
+
+<br><br><br>
+<br>A measurement of how much fluid/flow enters the neighborhood around  compared to how much leaves.
+<br>If more fluid enters than leaves, then the divergence will be negative at .
+<br>If the same amount of fluid enters and leaves, then the divergence will be  at .
+<br>For 
+<br><br><br>
+<br>It is a scalar quantity.
+<br><br>
+<br>A measurement of the rotation of the vector field in the neighborhood around .
+<br>If curl is  at a point, then the flow would rotate counterclockwise.
+<br>And if , then clockwise.
+<br>If , then there is no rotation at .
+<br><br>
+<br>It is a vector.
+<br><br><br>
+<br>For a non-conservative vector field  along a path , the work done for a particle to move along the given path  is given by:
+<br><br>
+<br>These integrals are path dependent.
+<br><br>
+<br> is conservative iff  for some  that is called a potential function.
+<br>This means a line integral within a conservative vector field can be expressed by:
+<br><br><br>
+<br>For a conservative :
+<br><br>
+<br>Or for :
+<br>]]></description><link>ch02_vectors_and_functions.html</link><guid isPermaLink="false">CH02_Vectors_and_Functions.md</guid><pubDate>Sun, 20 Jul 2025 13:43:16 GMT</pubDate></item><item><title><![CDATA[CH03_Multivariable_Differenciation]]></title><description><![CDATA[ 
+ <br><br><br>
+<br>Multivariable functions take  independent variables to return the value of one dependent variable.
+<br>While a function  may be a line or, more generally, a curve in 2-D, a function  will extend to 3-D as a surface.
+<br>The derivative of this function at some point wouldn't simply be the gradient of the tangent line to the surface, as it'd be too ambiguous due to the number of tangent lines that can be drawn on the surface, all with varying directions.
+<br>To find the gradient of the tangent line to a surface at a point, we have to give it a direction.
+<br>This direction can, in the most simple cases, be along  or  in 3-D, or it can extend along any unit vector in the plane of the independent variables as a general directional derivative.
+<br><br>
+<br>When calculating the gradient along the  direction (along ), the tangent line is constrained to a plane parallel to the  plane.
+<br>Since this only contains the  axis,  must be treated as constant.
+<br>Similarly, when calculating the gradient along the  direction,  is treated as constant.
+<br>This idea of treating a variable as a constant ensures the tangent line is in the direction of the other variable and is called a partial derivative.
+<br>Notation for a partial derivative with respect to :<br>
+
+<br><br>
+<br>Extending the idea of calculating the derivative along a single independent variable, directional derivatives can be calculated along any direction , where  is a unit vector.
+<br>For a function  and vector , the directional derivative is denoted as  and is calculated as:  
+<br><br>
+<br>This expression can be rewritten as a dot product:
+<br><br>
+<br>The vector  is called the gradient vector and is denoted as . Thus:
+<br><br><br>
+<br> is the normal to the level curve of .
+<br> is the normal to the level surface of .
+<br>Tangent lines and planes both require the normal vector.
+<br><br>
+<br>Consider . To find the tangent and normal lines, treat this as a level curve of some surface in : .
+<br>The gradient vector  is the normal to any level curve .
+<br>At point ,  is:
+<br><br>
+<br>The gradient of the normal line is:
+<br><br>
+<br>Equation of the normal line:<br>
+
+<br>The tangent line is perpendicular to the normal line, so its gradient is . The equation of the tangent line is:<br>
+
+<br><br>
+<br>Consider  at point . Treat this as a level surface in : .
+<br> gives the normal vector:<br>
+
+<br>The tangent plane equation is given by:<br>
+
+<br>Substituting values:<br>
+Simplifies to:<br>
+
+<br><br><br><br><br><br>
+<br>When  and  go from , it is a relative maximum.
+<br>When  and  go from , it is a relative minimum.
+<br>When  goes from  but  goes from  (or vice versa), we have a saddle.
+<br>The second derivative test for two-variable functions is given as:<br><br>
+<br>When , ,  gives a relative minimum.
+<br>When , ,  gives a relative maximum.
+<br>When ,  gives a saddle.
+<br>When , results are inconclusive.
+<br><br><br>
+<br> is a surface and  is a level curve to a surface .
+<br>The intersection of the level curve of  and  gives a constrained maxima and minima.
+<br>The normals of the level curves are scalar multiples of each other. That is to say:  
+
+
+<br>This  is called a Lagrange multiplier. The solution to this will give a maximum and minimum.
+<br><br> with a constraint .  <br>Treat    as a level surface to . <br><br><br><br><br><br>For , we get , and for , .]]></description><link>ch03_multivariable_differenciation.html</link><guid isPermaLink="false">CH03_Multivariable_Differenciation.md</guid><pubDate>Sat, 19 Jul 2025 21:09:54 GMT</pubDate></item><item><title><![CDATA[CH04_Multivariable_Integration]]></title><description><![CDATA[ 
+ <br><br>
+<br>Volume is surface area times height.
+<br>Unlike calculating the area under the curve, we have to push our perspective up by one dimension. That is to say, we have to calculate the volume under a surface.
+<br>For some surface , this idea will first need us to set an interval for both  and .
+<br>These two intervals will give us a rectangle on the  plane shadowing the section of the surface we want to calculate the volume under.
+<br>So, if we have  and , we get a rectangle on the  plane with the area .
+<br>If we cut the rectangle up into  sections along the  axis and  sections along the  axis to give smaller rectangles with uniform width and height, we get these small lengths and breadths  and  as:
+<br><br>
+<br>The area of each rectangle is .
+<br>Thus, the volume of each tiny section is this surface area times the  value at those particular points. That is to say,
+<br><br>
+<br>The more smaller we make the number of tiny sections, the more we can approximate the area under the section.
+<br>If we have, say, an infinite number of sections (i.e. ), we'd have the exact value of the volume:
+<br><br><br>
+<br>The region we calculate volume along can either be rectangular or non-rectangular.
+<br>In a rectangular case, we'd have:
+<br><br>
+<br>
+Setting up this integral is simple:
+
+
+<br>
+Or, changing the order of  and ,
+
+<br><br>
+<br>Take a region bounded by  and . If we want to find the volume of a surface confined to the area of intersection of these regions:
+<br>First, we have to plot out these two functions:
+<br><img alt="plot of two functions" src="assets/images/plot1.png"><br>
+<br>We get two points of intersections:  and .
+<br>To evaluate the volume within this area from a surface, we have to set up the double integral as:
+<br><br>
+<br>Or in terms of ,
+<br><br>
+<br>The order of limits here matter as when we observe from the  axis, we'll have to take the left-most equation as the lower limit and right-most as the upper limit. And for the  axis, we have to take the bottom-most equation (within the intersecting region) as the lower limit and the upper-most as the upper limit.
+<br><br><br>
+<br>
+For a density function , mass , and center of mass position  of a 2-D lamina:
+
+
+<br>
+The moments of mass  and  are given by:
+
+
+
+
+<br>
+The second moments of inertia are given by:
+
+
+
+<br>
+About the origin, .
+
+<br><br><br>
+<br>Area under  (2-D)  
+<br>Mass of a straight wire (1-D)
+<br><br>
+<br>Volume under  (3-D)  
+<br>Mass of a lamina (2-D)
+<br><br>
+<br>Some measurement of a region on  (4-D)  
+<br>Mass of an object (3-D)
+<br>
+<br>The mass idea only works if , , and  are density functions.
+<br><br><br>
+<br>For a path along a surface:
+<br><br>Here, we're integrating along a path rather than two given limits.
+<br>
+<br>For a vector field  and  for , the work done for a point to move along the curve is:
+<br><br>(alternatively arc length parametrization as done [here](Vectors) is also an option) 
+<br><br>
+<br>
+Example 1:
+
+   : The segment .
+   Set up a parametric equation:
+
+
+
+   At  and :   $$<br>
+2 = 1 + k_1 \Rightarrow k_1=1
+
+
+<br><br><br>
+<br>
+Example 2:
+
+ Two segments:  and .
+ For : ,
+
+
+ For : ,
+
+
+ For :  and ,
+
+ For :  and ,
+
+ Adding them up, we get:
+
+
+<br><br>
+<br>Calculate the work done on  from  to .
+<br>Determine if  is conservative:<br><br>Finding  for : <br>   If , then:<br><br><br><br>Solving for :<br><br>Thus:<br><br>Calculating the work done:<br>
+<br><br><br>For a non-conservative vector field, the work done is:<br><br>Flux is given by:<br><br><br>
+<br>
+Example 1:
+
+ .
+
+
+ The region is defined between the lines , , , and .
+
+
+<br>
+Example 2:
+
+  and .
+
+
+
+ Result:
+
+
+<br><br><br><br><br><br><br>For  inside .<br>Let , so .<br>Now, we get,<br><br><br><br>
+<br>For  and , , and , let  
+<br><br>
+<br>
+Surface area is given by  
+
+
+<br>
+Where  is the domain of  and .
+
+<br>
+Parametric surface integral is given as  
+
+<br><br><br>
+<br>A vector field  assigns a vector (flow velocity, force, etc.) to each point in space.
+<br>A surface  in space is a 2D “sheet” through which the field can flow.
+<br>The flux of  through  measures the net flow of  across  per unit time.
+<br><br>If  is the unit normal to , and  is an infinitesimal area element on , then the flux is<br><br>Equivalently, we often write the vector area element as<br><br>so that<br><br><br>If  is given by a smooth parametrization<br><br>then the two tangent vectors are<br><br>The oriented area element is<br><br>which automatically carries both the correct direction (via the cross‐product) and the correct magnitude (area of the parallelogram).<br>Hence the flux becomes<br><br><br>If  is the graph of  over a domain  in the ‐plane, then we can parametrize by<br><br>Compute<br><br>so<br><br>Thus<br><br>and the flux is<br><br><br>If the flowing medium has mass density , then the mass flux across  is<br><br><br><br><br>Find the flux through the vector field<br><br>over the surface .<br><br><br>We can integrate it in spherical coordinates. So, , , ,<br><br><br><br> is not a plane, it's a surface.]]></description><link>ch04_multivariable_integration.html</link><guid isPermaLink="false">CH04_Multivariable_Integration.md</guid><pubDate>Sat, 19 Jul 2025 22:18:31 GMT</pubDate><enclosure url="assets/images/plot1.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;assets/images/plot1.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[CH05_Navigating_3D_Space]]></title><description><![CDATA[ 
+ <br><br><br>
+<br>TNB frames describe where a point on a space curve is:
+
+<br>Heading (, the Tangent vector),
+<br>Turning (, the Normal vector), and
+<br>Twisting (, the Binormal vector).
+
+
+<br><br><br><br><img alt="Visualization of TNB frames" src="assets/images/1-822.gif">  <br>Visualization of TNB frames<br><br>
+<br>Curvature ():
+
+<br>Measures how a curve fails to become a straight line.
+<br>The more "curvy" the curve, the larger the curvature.
+<br>Defined as the change in the tangent vector with respect to the arc length.
+
+
+<br><br><br>
+<br>Torsion ():
+
+<br>Measures a curve's failure to remain contained within a plane.
+
+
+<br><br><img alt="Osculating Circle Animation" src="assets/images/evolute_of_cycloid.gif">  <br>
+<br>The animation shows an osculating circle that "kisses" the curve at exactly one point.
+<br>Osculating Plane: Contains  and ;  is normal to this plane.
+<br>Normal Plane: Contains  and  and is perpendicular to .
+<br><br><br>
+<br>Polar coordinates with a  component.
+<br>
+<br><br>
+<br>Where .
+<br>Note that  is NOT the distance from the origin to a point. It's the distance from the origin to the projection of a point onto the X-Y plane.
+<br><br>
+<br>Uses distance from the origin to the point, denoted as .
+<br>Two angles are considered:  (just like cylindrical) and  (angle from the positive  axis).
+<br>For :
+<br><br>
+<br>And:
+<br><img alt="Pasted image 20250718191743.png" src="assets/pasted-image-20250718191743.png"><br><br><br>
+<br>For cylindrical coordinates :
+<br><br>
+<br>Spherical coordinates:
+<br><br><br><br>
+<br>When applying a -substitution in a single integral, we're essentially changing our view from the -axis to some -axis:
+<br><br>
+<br>Similarly, for a double substitution, we are changing our view from the region  to some region  where the transformation is a one-to-one relationship between  and  and defines how  and  work together:
+<br><br>
+<br> is the Jacobian:
+<br><br><br>Evaluate the integral:<br><br>Where .<br>
+Let  and . Let .  <br>So, <br><br><br>And, <br><br>We calculate the Jacobian as:<br><br>Thus, the integral can be transformed into:<br><br>Let , so:<br><br>Then the integral becomes:<br>]]></description><link>ch05_navigating_3d_space.html</link><guid isPermaLink="false">CH05_Navigating_3D_Space.md</guid><pubDate>Sat, 19 Jul 2025 21:49:50 GMT</pubDate><enclosure url="assets/images/1-822.gif" length="0" type="image/gif"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;assets/images/1-822.gif&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
+ <br>AUTHOR: Anubhav Lamsal;<br>
+SUBJECT: Multivariable Calculus]]></description><link>index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Sun, 20 Jul 2025 11:39:00 GMT</pubDate></item></channel></rss>
