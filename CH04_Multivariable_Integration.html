@@ -1,0 +1,475 @@
+
+<html>
+  <head><meta charset="utf-8"/>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      packages: {'[+]': ['noerrors', 'noundefined']}
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      ignoreHtmlClass: 'tex2jax_ignore'
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+<style>
+  /* Simple, legible table styling */
+  table { width: 100%; border-collapse: collapse; font-size: 0.95em; }
+  thead { background: #f2f2f2; }
+  th, td { border: 1px solid #bbb; padding: 0.45em 0.6em; text-align: left; }
+  tbody tr:nth-child(even) { background: #fafafa; }
+</style>
+<title>CH04_Multivariable_Integration.md</title></head>
+  <body><a href='index.html'>← Back</a><hr/><h2 id="volume-under-a-surface">Volume under a surface</h2>
+<ul>
+<li>Volume is surface area times height.</li>
+<li>Unlike calculating the area under the curve, we have to push our perspective up by one dimension. That is to say, we have to calculate the volume under a surface.</li>
+<li>For some surface $f(x, y) = z$, this idea will first need us to set an interval for both $x$ and $y$.</li>
+<li>These two intervals will give us a rectangle on the $xy$ plane shadowing the section of the surface we want to calculate the volume under.</li>
+<li>So, if we have $x \in [a, b]$ and $y \in [c, d]$, we get a rectangle on the $xy$ plane with the area $(b - a) \times (d - c)$.</li>
+<li>If we cut the rectangle up into $m$ sections along the $x$ axis and $n$ sections along the $y$ axis to give smaller rectangles with uniform width and height, we get these small lengths and breadths $\Delta x$ and $\Delta y$ as:</li>
+</ul>
+<p>$$\Delta x = \frac{b - a}{m}$$</p>
+<p>$$\Delta y = \frac{d - c}{n}$$</p>
+<ul>
+<li>The area of each rectangle is $\Delta x \Delta y$.</li>
+<li>Thus, the volume of each tiny section is this surface area times the $z$ value at those particular points. That is to say,</li>
+</ul>
+<p>$$
+V \approx \sum_{i = 1}^m \sum_{j = 1}^n f(x_i, y_j) \Delta x_i \Delta y_j
+$$</p>
+<ul>
+<li>The more smaller we make the number of tiny sections, the more we can approximate the area under the section.</li>
+<li>If we have, say, an infinite number of sections (i.e. $m, n \to \infty$), we'd have the exact value of the volume:</li>
+</ul>
+<p>$$
+V = \lim_{m, n \to \infty} \sum_{i = 1}^m \sum_{j = 1}^n f(x_i, y_j) \Delta x_i \Delta y_j = \int_R \int f(x, y) \cdot dx \cdot dy
+$$</p>
+<h2 id="setting-up-a-double-integral">Setting up a Double Integral</h2>
+<ul>
+<li>The region we calculate volume along can either be rectangular or non-rectangular.</li>
+<li>In a rectangular case, we'd have:</li>
+</ul>
+<p>$$
+\int_R \int f(x, y) \cdot dx \cdot dy \quad \text{for} \quad R = {(x, y): a \leq x \leq b, c \leq y \leq d}
+$$</p>
+<ul>
+<li>Setting up this integral is simple:</li>
+</ul>
+<p>$$
+\int_c^d \int_a^b f(x, y) \cdot dx \cdot dy
+$$</p>
+<ul>
+<li>Or, changing the order of $dx$ and $dy$,</li>
+</ul>
+<p>$$
+\int_a^b \int_c^d f(x, y) \cdot dy \cdot dx
+$$</p>
+<ul>
+<li>Take a region bounded by $y = x^2$ and $y = 2x$. If we want to find the volume of a surface confined to the area of intersection of these regions:</li>
+<li>First, we have to plot out these two functions:</li>
+</ul>
+<p><img alt="plot of two functions" src="assets/images/plot1.png" /></p>
+<ul>
+<li>We get two points of intersections: $(2, 4)$ and $(0, 0)$.</li>
+<li>To evaluate the volume within this area from a surface, we have to set up the double integral as:</li>
+</ul>
+<p>$$
+\int_0^2 \int_{y = x^2}^{y = 2x} f(x, y) \cdot dy \cdot dx
+$$</p>
+<ul>
+<li>Or in terms of $x$,</li>
+</ul>
+<p>$$
+\int_0^4 \int_{x = \frac{1}{2}y}^{x = \sqrt{y}} f(x, y) \cdot dx \cdot dy
+$$</p>
+<ul>
+<li>The order of limits here matter as when we observe from the $x$ axis, we'll have to take the left-most equation as the lower limit and right-most as the upper limit. And for the $y$ axis, we have to take the bottom-most equation (within the intersecting region) as the lower limit and the upper-most as the upper limit.</li>
+</ul>
+<h2 id="moments">Moments</h2>
+<h3 id="1st-and-2nd-moments">1st and 2nd Moments</h3>
+<ul>
+<li>For a density function $\rho(x, y)$, mass $m$, and center of mass position $(\bar{x}, \bar{y})$ of a 2-D lamina:</li>
+</ul>
+<p>$$
+  m = \int_R \int \rho(x, y) \cdot dA
+  $$</p>
+<ul>
+<li>The moments of mass $M_x$ and $M_y$ are given by:</li>
+</ul>
+<p>$$
+M_x = \int_R \int y \cdot \rho(x, y) \cdot dA
+$$
+  $$
+  M_y = \int_R \int x \cdot \rho(x, y) \cdot dA
+  $$
+  $$
+  \bar{x} = \frac{M_y}{m}, \quad \bar{y} = \frac{M_x}{m}
+  $$</p>
+<ul>
+<li>The second moments of inertia are given by:</li>
+</ul>
+<p>$$
+I_x = \int_R \int y^2 \cdot \rho(x, y) \cdot dA
+$$
+  $$
+  I_y = \int_R \int x^2 \cdot \rho(x, y) \cdot dA
+  $$</p>
+<ul>
+<li>About the origin, $I_o = I_x + I_y$.</li>
+</ul>
+<h3 id="introduction-to-triple-integrals">Introduction to Triple Integrals</h3>
+<p>$$
+\int f(x) \cdot dx
+$$</p>
+<ol>
+<li>Area under $f(x)$ (2-D)  </li>
+<li>Mass of a straight wire (1-D)</li>
+</ol>
+<p>$$
+\int_R \int f(x, y) \cdot dA
+$$</p>
+<ol>
+<li>Volume under $f(x, y)$ (3-D)  </li>
+<li>Mass of a lamina (2-D)</li>
+</ol>
+<p>$$
+\iiint f(x, y, z) \cdot dV
+$$</p>
+<ol>
+<li>Some measurement of a region on $f(x, y, z)$ (4-D)  </li>
+<li>
+<p>Mass of an object (3-D)</p>
+</li>
+<li>
+<p>The mass idea only works if $f(x)$, $f(x, y)$, and $f(x, y, z)$ are density functions.</p>
+</li>
+</ol>
+<h2 id="line-integrals">Line Integrals</h2>
+<h3 id="how-does-the-computation-work">How Does the Computation Work?</h3>
+<ul>
+<li>For a path along a surface:</li>
+</ul>
+<p>$$
+\int_C f(x,y) \cdot ds = \int_{t=a}^{t=b} f(x(t),y(t)) ||r'(t)|| \cdot dt
+$$</p>
+<p>Here, we're integrating along a path rather than two given limits.</p>
+<ul>
+<li>For a <em>vector field</em> $F(x,y,z) = F(x(t), y(t), z(t))$ and $C: r(t) = x(t)\hat{i} + y(t)\hat{j} + z(t)\hat{k}$ for $a \leq t \leq b$, the work done for a point to move along the curve is:</li>
+</ul>
+<p>$$
+w = \int_{t=a}^{t=b} F(\vec{r}(t)) \cdot r'(t) \cdot dt = \int_C F \cdot dr
+$$</p>
+<p>(alternatively arc length parametrization as done <a href="Vectors">here</a> is also an option) </p>
+<h4 id="examples">Examples</h4>
+<ul>
+<li><strong>Example 1:</strong></li>
+</ul>
+<p>$$ 
+   \int_C xyz^2 \cdot ds
+$$</p>
+<p>$C$: The segment $(1,1,0) \to (2,3,1)$.</p>
+<p>Set up a parametric equation:</p>
+<p>$$
+   x(t) = x_o + k_1t = 1 + k_1t
+$$</p>
+<p>$$
+   y(t) = y_o + k_2t = 1 + k_2t
+$$
+   $$
+   z(t) = z_o + k_3t = 0 + k_3t
+   $$</p>
+<p>At $(2,3,1)$ and $t=1$:   </p>
+<p>$$
+   2 = 1 + k_1 \Rightarrow k_1=1
+$$</p>
+<p>$$
+   3 = 1 + k_2 \Rightarrow k_2 = 2
+$$</p>
+<p>$$
+   k_3 = 1
+$$</p>
+<p>So, we have:</p>
+<p>$$
+   x(t) = 1 + t
+   $$</p>
+<p>$$
+   y(t) = 1 + 2t
+   $$</p>
+<p>$$
+   z(t) = t
+   $$</p>
+<p>This gives $0 \leq t \leq 1$ for this particular set of parametric equations. And:</p>
+<p>$$
+   \vec{r}(t) = x\hat{i} + y\hat{j} + z\hat{k} = (1+t)\hat{i} + (1+2t)\hat{j} + t\hat{k}
+   $$
+   $$
+   r'(t) = \hat{i} + 2\hat{j} + \hat{k}
+   $$</p>
+<p>$$
+||r'(t)|| = \sqrt{6}
+$$
+   $$
+   \int_C xyz^2 \cdot ds = \sqrt{6} \int_{t=0}^{t=1} (1+t)(2+t)t \cdot dt = \frac{89\sqrt{6}}{60}
+   $$</p>
+<ul>
+<li><strong>Example 2:</strong></li>
+</ul>
+<p>$$
+   \int_C xy \cdot dx + (x+y) \cdot dy
+   $$</p>
+<p>Two segments: $C_1: (1,2) \to (3,4)$ and $C_2: (3,4) \to (4,0)$.</p>
+<p>For $C_1$: $0 \leq t \leq 1$,</p>
+<p>$$
+   x = 1 + 2t
+   $$
+   $$
+   y = 2 + 2t
+   $$</p>
+<p>For $C_2$: $0 \leq t \leq 1$,</p>
+<p>$$
+   x = 3 + t
+   $$</p>
+<p>$$
+   y = 4 - 4t
+   $$</p>
+<p>For $C_1$: $dx = 2dt$ and $dy = 2dt$,</p>
+<p>$$
+   8 \int_{t=0}^{t=1} (1+2t)(1+t) \cdot dt + (3+4t) \cdot dt = \frac{68}{3}
+   $$</p>
+<p>For $C_2$: $dx = dt$ and $dy = -4dt$,</p>
+<p>$$
+   \int_{t=0}^{t=1} (3+t)(4-4t) \cdot dt (7-3t) \cdot -4dt = -\frac{46}{3}
+   $$</p>
+<p>Adding them up, we get:</p>
+<p>$$
+   \frac{22}{3}
+   $$</p>
+<h4 id="example-conservative-vector-fields">Example: Conservative Vector Fields</h4>
+<ul>
+<li>Calculate the work done on $F(x,y) = (2y+1)\hat{i} + (2x+3)\hat{j}$ from $A(0,0)$ to $B(-1,1)$.</li>
+</ul>
+<p>Determine if $F$ is conservative:</p>
+<p>$$
+\frac{\partial Q}{\partial x} = \frac{\partial P}{\partial y} = 2 \text{ (it is indeed conservative)}
+$$</p>
+<p>Finding $f$ for $F = \nabla f$: </p>
+<p>If $\nabla f = F$, then:</p>
+<p>$$
+\frac{\partial f}{\partial x} = 2y+1
+$$</p>
+<p>$$
+\frac{\partial f}{\partial y} = 2x+3
+$$</p>
+<p>$$
+f(x,y) = \int \frac{\partial f}{\partial x} \cdot dx = \int (2y+1) \cdot dx = 2xy + x + g(y)
+$$</p>
+<p>Solving for $g(y)$:</p>
+<p>$$
+g(y) = 3y + c
+$$</p>
+<p>Thus:</p>
+<p>$$
+f(x,y) = 2xy + x + 3y + c
+$$</p>
+<p>Calculating the work done:</p>
+<p>$$
+      \int_C F \cdot dr = f(B) - f(A) = f(-1,1) - f(0,0) = (-2 - 1 + 3 + c) - (0 + c) = 0
+      $$</p>
+<h3 id="greens-theorem">Green's Theorem</h3>
+<h4 id="the-result">The Result</h4>
+<p>For a non-conservative vector field, the work done is:</p>
+<p>$$
+\oint_C \left( P \, dx + Q \, dy \right) = \iint_D \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) \, dA
+$$</p>
+<p>Flux is given by:</p>
+<p>$$
+\oint_C \vec{F} \cdot \hat{n} \cdot ds = \iint_R (\nabla \cdot \vec{F}) \cdot dA
+$$</p>
+<h4 id="examples_1">Examples</h4>
+<ul>
+<li>Example 1:</li>
+</ul>
+<p>$$
+   \oint_C x^3 \cdot dx + xy \cdot dy
+   $$</p>
+<p>$C: (0,0), (1,1), (0,1)$.</p>
+<p>$$
+   \frac{\partial Q}{\partial x} = y
+   $$</p>
+<p>$$
+   \frac{\partial P}{\partial y} = 0
+   $$</p>
+<p>The region is defined between the lines $y=x$, $y=1$, $y=0$, and $x=0$.</p>
+<p>$$
+   \int_{y=0}^{y=1} \int_{x=0}^{x=y} y^2 \cdot dx \cdot dy = \int_{y=0}^{y=1} \frac{1}{3}y^3 \cdot dy = \frac{1}{3}
+   $$</p>
+<ul>
+<li>Example 2:</li>
+</ul>
+<p>$$
+   \oint_C (y^2 + \cos(x)) \cdot dx + (x-\arctan(y)) \cdot dy
+   $$</p>
+<p>$C: y = 4-x^2$ and $y = 0$.</p>
+<p>$$
+   \frac{\partial Q}{\partial x} = 1
+   $$</p>
+<p>$$
+   \frac{\partial P}{\partial y} = 2y
+   $$</p>
+<p>$$
+   \int_R \int 1-2y \cdot dy \cdot dx = \int_{x=-2}^{x=2} \int_{y=0}^{y=4-x^2} 1-2y \cdot dy \cdot dx
+   $$</p>
+<p>Result:</p>
+<p>$$
+   -\frac{352}{15}
+   $$</p>
+<h2 id="surface_integrals">Surface_Integrals</h2>
+<p>$$
+\int_S\int f(x,y,z)\cdot dS = \int_R\int f(x,y, g(x,y)) \sqrt{g_x^2 +g_y^2+1} \cdot dA
+$$</p>
+<p>$$
+\int_S \int f(x, y, z) \cdot dS = \int_R \int f(x,g(x,z),z) \sqrt{g_x^2 + g_z^2+1} \cdot dA
+$$</p>
+<p>$$
+\int_S \int f(x, y, z) \cdot dS = \int_R \int f(g(y,z),y,z) \sqrt{g_y^2 + g_z^2+1} \cdot dA
+$$</p>
+<h3 id="example">Example</h3>
+<p>$$
+\int_S \int  x+2y+z \cdot dS
+$$</p>
+<p>For $y+z=4$ inside $x^2+y^2=1$.</p>
+<p>Let $z=g(x,y)$, so $g(x,y)=4-y$.</p>
+<p>Now, we get,</p>
+<p>$$
+\int_R \int x+2y+4-y \sqrt{0^2 + 1 + 1}\cdot dA=\sqrt{2}\int_R \int x+y+4\cdot dA
+$$</p>
+<p>$$
+\sqrt{2}\int_0^{2\pi} \int_{r=0}^{r=1} r (r\cos{\theta} + r\sin{\theta}+4) \cdot dr \cdot d\theta=4\sqrt{2}\pi
+$$</p>
+<h3 id="parametric-surfaces">Parametric Surfaces</h3>
+<ul>
+<li>For $f(x,y,z)$ and $x=x(u,v)$, $y=y(u,v)$, and $z=z(u,v)$, let  </li>
+</ul>
+<p>$$
+\vec{r}(u,v)=x(u,v)\hat{i} + y(u,v)\hat{j} + z(u,v)\hat{k}
+$$</p>
+<ul>
+<li>Surface area is given by  </li>
+</ul>
+<p>$$
+\int_D \int ||r_u \times r_v|| \cdot dA
+$$</p>
+<ul>
+<li>Where $D$ is the domain of $u$ and $v$.</li>
+<li>Parametric surface integral is given as  </li>
+</ul>
+<p>$$
+\int_D \int f(r(u,v))||r_u \times r_v|| \cdot dA
+$$</p>
+<h3 id="flux">Flux</h3>
+<ul>
+<li>A <strong>vector field</strong> $\mathbf{F}$ assigns a vector (flow velocity, force, etc.) to each point in space.</li>
+<li>A <strong>surface</strong> $S$ in space is a 2D “sheet” through which the field can flow.</li>
+<li>The <strong>flux</strong> of $\mathbf{F}$ through $S$ measures the net flow of $\mathbf{F}$ across $S$ per unit time.</li>
+</ul>
+<h4 id="definition-of-flux">Definition of Flux</h4>
+<p>If $\hat{\mathbf n}$ is the unit normal to $S$, and $dS$ is an infinitesimal area element on $S$, then the flux is</p>
+<p>$$
+\Phi
+=\iint_{S} \mathbf{F}\,\cdot\,\hat{\mathbf n}\;dS.
+$$</p>
+<p>Equivalently, we often write the <strong>vector area element</strong> as</p>
+<p>$$
+d\mathbf S
+=\hat{\mathbf n}\,dS,
+$$</p>
+<p>so that</p>
+<p>$$
+\Phi
+=\iint_{S}\mathbf{F}\,\cdot\,d\mathbf S.
+$$</p>
+<h4 id="parametrized-surfaces">Parametrized Surfaces</h4>
+<p>If $S$ is given by a smooth parametrization</p>
+<p>$$
+\mathbf r(u,v),\quad (u,v)\in D\subset\mathbb{R}^2,
+$$</p>
+<p>then the two tangent vectors are</p>
+<p>$$
+\mathbf r_u \;=\;\frac{\partial\mathbf r}{\partial u}, 
+\qquad
+\mathbf r_v \;=\;\frac{\partial\mathbf r}{\partial v}.
+$$</p>
+<p>The <strong>oriented area element</strong> is</p>
+<p>$$
+d\mathbf S
+=\bigl(\mathbf r_u\times \mathbf r_v\bigr)\,du\,dv,
+$$</p>
+<p>which automatically carries both the correct <strong>direction</strong> (via the cross‐product) and the correct <strong>magnitude</strong> (area of the parallelogram).</p>
+<p>Hence the flux becomes</p>
+<p>$$
+\Phi
+=\iint_{D}\mathbf{F}\bigl(\mathbf r(u,v)\bigr)\;\cdot\;\bigl(\mathbf r_u\times\mathbf r_v\bigr)\;du\,dv.
+$$</p>
+<h4 id="graphs-of-the-form-z-gxy">Graphs of the Form $z = g(x,y)$</h4>
+<p>If $S$ is the graph of $z=g(x,y)$ over a domain $R$ in the $xy$‐plane, then we can parametrize by</p>
+<p>$$
+\mathbf r(x,y) = \bigl(x,\,y,\,g(x,y)\bigr),\quad (x,y)\in R.
+$$
+Compute</p>
+<p>$$
+\mathbf r_x = (1,\,0,\,g_x), 
+\qquad
+\mathbf r_y = (0,\,1,\,g_y),
+$$
+so</p>
+<p>$$
+\mathbf r_x\times\mathbf r_y
+=\bigl(-g_x,\,-g_y,\,1\bigr).
+$$
+Thus</p>
+<p>$$
+d\mathbf S
+=\bigl(-g_x,\,-g_y,\,1\bigr)\,dA,
+$$</p>
+<p>and the flux is</p>
+<p>$$
+\Phi
+=\iint_{R}
+\mathbf{F}\bigl(x,y,g(x,y)\bigr)\;\cdot\;\bigl(-g_x,\,-g_y,\,1\bigr)\;dA.
+$$</p>
+<h4 id="mass-flux-with-density">Mass Flux with Density</h4>
+<p>If the flowing medium has <strong>mass density</strong> $\rho(x,y,z)$, then the <strong>mass flux</strong> across $S$ is</p>
+<p>$$
+\iint_{S}\rho\,\mathbf{F}\,\cdot\,d\mathbf S.
+$$</p>
+<h3 id="the-divergence-theorem">The Divergence Theorem</h3>
+<p>$$
+\text{Flux}=\int_S\int \textbf{F} \cdot dS = \int_T\int\int \text{Div}(F) \cdot dV
+$$</p>
+<h4 id="example-problem">Example Problem</h4>
+<p>Find the flux through the vector field</p>
+<p>$$
+F(x,y,z)=(x+\sin{z})\hat{i} + (2y+\cos{x})\hat{j} + (3z+\tan{y})\hat{k}
+$$</p>
+<p>over the surface $x^2+y^2+z^2=4$.</p>
+<p>$$
+\text{Div}(F) = 6
+$$</p>
+<p>$$
+\int_S\int \textbf{F} \cdot dS = \int_T \int \int 6 \cdot dV
+$$</p>
+<p>We can integrate it in spherical coordinates. So, $0 \leq \rho \leq 2$, $0 \leq \phi \leq \pi$, $0\leq \theta \leq 2\pi$,</p>
+<p>$$
+\int_{0}^{2\pi} \int_0^\pi \int_0^2 6\rho^2 \sin{\phi} \cdot d\rho d\phi d\theta = 64\pi
+$$</p>
+<h3 id="stokes-theorem">Stokes Theorem</h3>
+<p>$$
+w = \oint_C \textbf{F} \cdot dr = \int_S \int \text{Curl}(\textbf{F}) \cdot dS
+$$</p>
+<p>$S$ is not a plane, it's a surface.</p></body>
+</html>

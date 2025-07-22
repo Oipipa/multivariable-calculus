@@ -1,0 +1,194 @@
+
+<html>
+  <head><meta charset="utf-8"/>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      packages: {'[+]': ['noerrors', 'noundefined']}
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      ignoreHtmlClass: 'tex2jax_ignore'
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+<style>
+  /* Simple, legible table styling */
+  table { width: 100%; border-collapse: collapse; font-size: 0.95em; }
+  thead { background: #f2f2f2; }
+  th, td { border: 1px solid #bbb; padding: 0.45em 0.6em; text-align: left; }
+  tbody tr:nth-child(even) { background: #fafafa; }
+</style>
+<title>CH05_Navigating_3D_Space.md</title></head>
+  <body><a href='index.html'>← Back</a><hr/><h2 id="tnb-frames">TNB Frames</h2>
+<h3 id="what-are-tnb-frames">What are TNB Frames?</h3>
+<ul>
+<li>TNB frames describe where a point on a space curve is:<ul>
+<li>Heading ($\vec{T}$, the Tangent vector),</li>
+<li>Turning ($\vec{N}$, the Normal vector), and</li>
+<li>Twisting ($\vec{B}$, the Binormal vector).</li>
+</ul>
+</li>
+</ul>
+<p>$$
+\vec{T} = \frac{r'(t)}{||r'(t)||}
+$$</p>
+<p>$$
+\vec{N} = \frac{\vec{T}'(t)}{||\vec{T}'(t)||}
+$$</p>
+<p>$$
+\vec{B} = \vec{N} \times \vec{T} = \frac{r'(t) \times r''(t)}{||r'(t) \times r''(t)||}
+$$</p>
+<p><img alt="Visualization of TNB frames" src="assets/images/1-822.gif" />  </p>
+<p><em>Visualization of TNB frames</em></p>
+<h3 id="curvature">Curvature</h3>
+<ul>
+<li><strong>Curvature ($\kappa$):</strong><ul>
+<li>Measures how a curve fails to become a straight line.</li>
+<li>The more "curvy" the curve, the larger the curvature.</li>
+<li>Defined as the change in the tangent vector with respect to the arc length.</li>
+</ul>
+</li>
+</ul>
+<p>$$
+\kappa = \left|\left| \frac{d\vec{T}}{ds} \right|\right| = ||T'(s)|| = \frac{T'(t)}{||r'(t)||} = \frac{||r' \times r''||}{||r'||^3}
+$$</p>
+<h3 id="torsion">Torsion</h3>
+<ul>
+<li><strong>Torsion ($\tau$):</strong><ul>
+<li>Measures a curve's failure to remain contained within a plane.</li>
+</ul>
+</li>
+</ul>
+<p>$$
+\tau = \frac{(\vec{r}' \times \vec{r}'') \cdot \vec{r}'''}{||\vec{r}' \times \vec{r}''||} = -\frac{d\vec{B}}{ds} \cdot \vec{N}
+$$</p>
+<p><img alt="Osculating Circle Animation" src="assets/images/Evolute_of_cycloid.gif" />  </p>
+<ul>
+<li>The animation shows an osculating circle that "kisses" the curve at exactly one point.</li>
+<li><strong>Osculating Plane:</strong> Contains $\vec{T}$ and $\vec{N}$; $\vec{B}$ is normal to this plane.</li>
+<li><strong>Normal Plane:</strong> Contains $\vec{N}$ and $\vec{B}$ and is perpendicular to $\vec{T}$.</li>
+</ul>
+<h2 id="coordinate-systems">Coordinate Systems</h2>
+<h3 id="cylindrical-coordinates">Cylindrical Coordinates</h3>
+<ul>
+<li>Polar coordinates with a $z$ component.</li>
+<li>$Pol(r, \theta) \rightarrow Cyl(r, \theta, z)$</li>
+</ul>
+<p>$$
+\begin{matrix}
+x = r\cos{\theta} \ 
+y = r\sin{\theta} \ 
+z = z
+\end{matrix}
+$$</p>
+<ul>
+<li>Where $r = \sqrt{x^2 + y^2}$.</li>
+<li>Note that $r$ is <strong>NOT</strong> the distance from the origin to a point. It's the distance from the origin to the <em>projection</em> of a point onto the X-Y plane.</li>
+</ul>
+<h3 id="spherical-coordinates">Spherical Coordinates</h3>
+<ul>
+<li>Uses distance from the origin to the point, denoted as $\rho$.</li>
+<li>Two angles are considered: $\theta$ (just like cylindrical) and $\phi$ (angle from the positive $z$ axis).</li>
+<li>For $Sph(\rho, \theta, \phi)$:</li>
+</ul>
+<p>$$
+\begin{matrix}
+\rho \geq 0 \ 
+0 \leq \theta \leq 2\pi \
+0 \leq \phi \leq \pi
+\end{matrix}
+$$</p>
+<ul>
+<li>And:</li>
+</ul>
+<p><img alt="Pasted image 20250718191743.png" src="assets/Pasted image 20250718191743.png" /></p>
+<p>$$
+\begin{matrix}
+r = \rho\sin{\phi} \ 
+x = r\cos{\theta} = \rho\cos{\theta}\sin{\phi} \ 
+y = r\sin{\theta} = \rho\sin{\theta}\sin{\phi} \
+z = \rho\cos{\phi} \ 
+\rho = \sqrt{x^2 + y^2 + z^2} \ 
+\tan{\theta} = \frac{y}{x} \ 
+\cos{\phi} = \frac{z}{\rho}
+\end{matrix}
+$$</p>
+<h3 id="triple-integrals-in-cylindricalspherical-coordinates">Triple Integrals in Cylindrical/Spherical Coordinates</h3>
+<ul>
+<li>For cylindrical coordinates $f(x, y, z) = f(r\cos{\theta}, r\sin{\theta}, z)$:</li>
+</ul>
+<p>$$
+\iiint f(x, y, z) \cdot dV \to \int_{\theta_1}^{\theta_2}\int_{r_1}^{r_2}\int_{z_1}^{z_2}f(r\cos{\theta}, r\sin{\theta}, z) r \cdot dz \cdot dr \cdot d\theta
+$$</p>
+<ul>
+<li>Spherical coordinates:</li>
+</ul>
+<p>$$
+\iiint f(x, y, z) \cdot dV = \int_{\theta_1}^{\theta_2} \int_{\phi_1}^{\phi_2} \int_{\rho_1}^{\rho_2} f(x, y, z) \rho^2 \cdot \sin{\phi} \cdot d\rho \cdot d\phi \cdot d\theta
+$$</p>
+<h2 id="space-transformations">Space Transformations</h2>
+<h3 id="the-jacobian">The Jacobian</h3>
+<ul>
+<li>When applying a $u$-substitution in a single integral, we're essentially changing our view from the $x$-axis to some $u$-axis:</li>
+</ul>
+<p>$$
+\int_a^b f(x) \cdot dx, \text{ } [a,b] \in x \to \int_{u=c}^{u=d} g(u) \cdot du, \text{ } [c,d] \in \text{"u"-axis}
+$$</p>
+<ul>
+<li>Similarly, for a double substitution, we are changing our view from the region $R \in (x,y)$ to some region $S \in (u,v)$ where the transformation is a one-to-one relationship between $R$ and $S$ and defines how $(x,y)$ and $(u,v)$ work together:</li>
+</ul>
+<p>$$
+\int_R\int f(x,y) \cdot dA \Rightarrow \int\int f(g(u,v), h(u,v)) \cdot J \cdot du \cdot dv
+$$</p>
+<ul>
+<li>$J$ is the Jacobian:</li>
+</ul>
+<p>$$
+J=\frac{\partial (x,y)}{\partial (u,v)} = \begin{vmatrix} 
+\frac{\partial x}{\partial u} &amp; \frac{\partial x}{\partial v} \
+\frac{\partial y}{\partial u} &amp; \frac{\partial y}{\partial v}
+\end{vmatrix}
+$$</p>
+<h4 id="example-problem">Example Problem</h4>
+<p>Evaluate the integral:</p>
+<p>$$
+\int_R\int \sqrt{1-\frac{x^2}{4}-\frac{y^2}{9}} \cdot dA
+$$</p>
+<p>Where $R: \frac{x^2}{4} + \frac{y^2}{9} = 1$.<br />
+Let $x=2u$ and $y=3v$. Let $u^2+v^2=r^2$.  </p>
+<p>So, </p>
+<p>$$
+\frac{4u^2}{4}+\frac{9v^2}{9}=1 \Rightarrow u^2+v^2=1 \Rightarrow r^2=1
+$$</p>
+<p>$$
+\therefore 0 \leq r \leq 1
+$$</p>
+<p>And, </p>
+<p>$$
+0 \leq \theta \leq 2\pi
+$$</p>
+<p>We calculate the Jacobian as:</p>
+<p>$$
+J = \begin{vmatrix}
+2 &amp; 0 \
+0 &amp; 3
+\end{vmatrix} = 6
+$$</p>
+<p>Thus, the integral can be transformed into:</p>
+<p>$$
+\int_R\int \sqrt{1-\left(\frac{x^2}{4} + \frac{y^2}{9}\right)} \cdot dA = \int_{\theta=0}^{\theta=2\pi} \int_{r=0}^{r=1} 6\sqrt{1-r^2} \cdot r \cdot dr \cdot d\theta
+$$</p>
+<p>Let $u=1-r^2$, so:</p>
+<p>$$
+\frac{du}{dr}=-2r \Rightarrow dr = -\frac{du}{2r}
+$$</p>
+<p>Then the integral becomes:</p>
+<p>$$
+\int_{\theta=0}^{\theta=2\pi} \int_{u=0}^{u=1} 6 \cdot \sqrt{u} \cdot r \cdot \frac{du}{2r} \cdot d\theta = \int_{\theta=0}^{\theta=2\pi} \int_{u=0}^{u=1} 3\sqrt{u} \cdot du \cdot d\theta = 4\pi
+$$</p></body>
+</html>

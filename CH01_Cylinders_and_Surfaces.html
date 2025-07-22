@@ -1,0 +1,161 @@
+
+<html>
+  <head><meta charset="utf-8"/>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      packages: {'[+]': ['noerrors', 'noundefined']}
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      ignoreHtmlClass: 'tex2jax_ignore'
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+<style>
+  /* Simple, legible table styling */
+  table { width: 100%; border-collapse: collapse; font-size: 0.95em; }
+  thead { background: #f2f2f2; }
+  th, td { border: 1px solid #bbb; padding: 0.45em 0.6em; text-align: left; }
+  tbody tr:nth-child(even) { background: #fafafa; }
+</style>
+<title>CH01_Cylinders_and_Surfaces.md</title></head>
+  <body><a href='index.html'>← Back</a><hr/><h2 id="cylinders">Cylinders</h2>
+<ul>
+<li>Their equations only have two variables.</li>
+<li>These equations give a trace of the curve on the coordinate plane of the two given coordinates.</li>
+<li>The curve is directed along the axes of the missing variable.</li>
+<li>The curve/trace does not change along the direction axes.</li>
+</ul>
+<h3 id="steps-to-draw-cylinders">Steps to Draw Cylinders</h3>
+<ul>
+<li>Find trace along the coordinate plane.</li>
+<li>Direct it towards the direction of the missing axis.</li>
+<li>To draw a cylinder of $y = x^2$, for example, first draw the parabola on the $xy$ plane, then direct it along the $z$-axis.</li>
+</ul>
+<h2 id="general-surfaces">General Surfaces</h2>
+<ul>
+<li>Have all three variables.</li>
+<li>Traces occur on coordinate planes or planes parallel to coordinate planes.</li>
+<li>Still directed along an axis but changes along it.</li>
+</ul>
+<h3 id="steps-to-draw-surfaces">Steps to Draw Surfaces</h3>
+<ul>
+<li>Determine the type of surface.</li>
+<li>Determine the direction axis.</li>
+<li>Find the trace on the coordinate plane.</li>
+<li>Find at least two other traces.</li>
+</ul>
+<h2 id="some-common-types-of-surfaces">Some Common Types of Surfaces</h2>
+<h3 id="ellipsoids">Ellipsoids</h3>
+<ul>
+<li>General form:<br />
+  $$\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1$$</li>
+<li>How to tell:<ul>
+<li>All have positive coefficients.</li>
+<li>All have a power of 2.</li>
+<li>Has a constant.</li>
+</ul>
+</li>
+<li>Intercepts:<ul>
+<li>$x = \pm a$</li>
+<li>$y = \pm b$</li>
+<li>$z = \pm c$</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Ellipsoid" src="assets/images/Ellipsoids.gif" /><br />
+<em>An ellipsoid.</em></p>
+<h3 id="1-sheet-hyperboloid">1-Sheet Hyperboloid</h3>
+<ul>
+<li>General form:<br />
+  $$\frac{x^2}{a^2} + \frac{y^2}{b^2} - \frac{z^2}{c^2} = 1$$</li>
+<li>How to tell:<ul>
+<li>Has one negative coefficient.</li>
+<li>All have a power of 2.</li>
+<li>Has a constant.</li>
+</ul>
+</li>
+<li>Notes:<ul>
+<li>Always decreasing along the axis with the negative coefficient.</li>
+<li>Set the variable with the negative coefficient to $0$ and $\pm \sqrt{\text{denominator}}$ to get three traces, which are usually circles or ellipses.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="One-sheet Hyperboloid" src="assets/images/hyperbolidonesheet.gif" /><br />
+<em>One-sheet Hyperboloid.</em></p>
+<h3 id="2-sheet-hyperboloid">2-Sheet Hyperboloid</h3>
+<ul>
+<li>General form:<br />
+  $$\frac{x^2}{a^2} - \frac{y^2}{b^2} - \frac{z^2}{c^2} = 1$$</li>
+<li>How to tell:<ul>
+<li>Has one positive coefficient.</li>
+<li>All have a power of 2.</li>
+<li>Has a constant.</li>
+</ul>
+</li>
+<li>Notes:<ul>
+<li>Set both variables with negative coefficients to $0$ to get the axis intercepts.</li>
+<li>Use a variable divisible by the positive coefficient's denominator to obtain a cross-section (as an ellipse or circle) of both parts of the Hyperboloid.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Two-sheet Hyperboloid" src="assets/images/hyperbolidtwosheets.gif" /><br />
+<em>Two-sheet Hyperboloid.</em></p>
+<h3 id="cones">Cones</h3>
+<ul>
+<li>General form:<br />
+  $$\frac{x^2}{a^2} + \frac{y^2}{b^2} - \frac{z^2}{c^2} = 0$$</li>
+<li>How to tell:<ul>
+<li>Has one negative coefficient.</li>
+<li>All have a power of 2.</li>
+<li>Has no constants.</li>
+</ul>
+</li>
+<li>Notes:<ul>
+<li>Place in a value divisible by $\pm \sqrt{\text{denominator}}$ of the variable with the negative coefficient to get an ellipse or circle on opposite ends of the axis with the negative coefficient.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Elliptical Cone" src="assets/images/ellipticalcone.gif" /><br />
+<em>An elliptical cone.</em></p>
+<h3 id="paraboloids">Paraboloids</h3>
+<ul>
+<li>General form:<br />
+  $$\frac{x^2}{a^2} + \frac{y^2}{b^2} = cz + d$$</li>
+<li>How to tell:<ul>
+<li>Has three variables with two having a power of two and one having a power of one.</li>
+<li>Variables with a power of two have positive coefficients.</li>
+<li>Opens up along the direction of the axis with the power of one.</li>
+<li>Along the axis it opens up with, it "shifts" along $-d$.</li>
+</ul>
+</li>
+<li>Notes:<ul>
+<li>Set the variable with the degree of one to $0$ to get a trace on the coordinate plane.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Elliptical Paraboloid" src="assets/images/ellipticparaboloid.gif" /><br />
+<em>An elliptical Paraboloid.</em></p>
+<h3 id="hyperbolic-paraboloids">Hyperbolic Paraboloids</h3>
+<ul>
+<li>General form:<br />
+  $$\frac{x^2}{a^2} - \frac{y^2}{b^2} = cz + d$$</li>
+<li>How to tell:<ul>
+<li>Three variables with two having a power of two and one having a power of one.</li>
+<li>One of the variables with the power of two has a negative coefficient.</li>
+</ul>
+</li>
+<li>Notes:<ul>
+<li>The degree-one variable is the direction axis.</li>
+<li>Plug in positive and negative values to the degree-one variable to give two different sets of equations that describe the trace.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Hyperbolic Paraboloid" src="assets/images/hyperbolicparaboloid.gif" /><br />
+<em>Hyperbolic Paraboloid.</em></p></body>
+</html>

@@ -1,0 +1,272 @@
+
+<html>
+  <head><meta charset="utf-8"/>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      packages: {'[+]': ['noerrors', 'noundefined']}
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      ignoreHtmlClass: 'tex2jax_ignore'
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+<style>
+  /* Simple, legible table styling */
+  table { width: 100%; border-collapse: collapse; font-size: 0.95em; }
+  thead { background: #f2f2f2; }
+  th, td { border: 1px solid #bbb; padding: 0.45em 0.6em; text-align: left; }
+  tbody tr:nth-child(even) { background: #fafafa; }
+</style>
+<title>CH02_Vectors_and_Functions.md</title></head>
+  <body><a href='index.html'>← Back</a><hr/><h2 id="introduction">Introduction</h2>
+<h3 id="fundamental-definitions">Fundamental Definitions</h3>
+<ul>
+<li>A vector is a directed line segment with magnitude and direction  </li>
+</ul>
+<p>$$\vec{\textbf{v}} = \langle v_1, v_2, v_3,... v_n\rangle = \begin{pmatrix}v_1 \ v_2 \ v_3 \ .. \ v_n\end{pmatrix} = \sum_{i=0}^n v_i \hat{\textbf{e}_i}$$</p>
+<p>Here, $n$ is the number of dimensions, $v_i$ is a scalar and $\hat{\textbf{e}_i}$ is a unit basis vector along an axis (a vector that moves exactly 1 unit distance from the origin to a point in an axis like $\hat{\textbf{i}}=\langle 1,0,0\rangle$ for $n=3$). </p>
+<ul>
+<li>The magnitude of a vector denotes its length, which is equal to its Euclidean distance from the origin.</li>
+</ul>
+<p>$$|\vec{\textbf{v}}| = \sqrt{\sum_{i=0}^n v_i^2}$$<br />
+- Unit Vector: Vector of length 1 in direction of $\vec{v}$ </p>
+<p>$$\hat{\textbf{u}} = \frac{\vec{\textbf{v}}}{|\vec{\vec{\textbf{v}}}|}$$<br />
+- Position Vector: Vector from origin $(0,0,0,..,0)$ to point $P(x_1,x_2,..,x_n)$  </p>
+<p>$$\vec{OP} = \begin{pmatrix}x_1 \ x_2 \ .. \ x_n\end{pmatrix}= \langle x_1, x_2,..,x_n \rangle$$</p>
+<h3 id="core-operations">Core Operations</h3>
+<ul>
+<li>Addition and subtraction:</li>
+</ul>
+<p>$$\vec{a} \pm \vec{b} = \begin{pmatrix}a_1\pm b_1 \ a_2\pm b_2 \ .. \ a_n\pm b_n\end{pmatrix}$$ </p>
+<ul>
+<li>Scalar multiplication: essentially scales magnitude by $|k|$ and preserves direction if $k &gt; 0$, reverses if $k &lt; 0$,</li>
+</ul>
+<p>$$k\vec{v} = \begin{pmatrix}kv_1 \ kv_2 \ kv_3 \ .. \ kv_n\end{pmatrix}$$ </p>
+<ul>
+<li>Dot product measures the degree to which vectors are parallel (so, by definition, $\vec{a} \cdot \vec{b} = 0 \iff \vec{a} \perp \vec{b}$). Its computed as:</li>
+</ul>
+<p>$$\vec{a} \cdot \vec{b} = \sum_{i=1}^n a_ib_i = |\vec{a}||\vec{b}|\cos\theta$$</p>
+<ul>
+<li>The cross product is a binary operation on two vectors in three-dimensional space that produces a third vector perpendicular to both of them. This resulting vector is orthogonal to the input vectors and follows the right-hand rule for direction. </li>
+<li>In 3D, the cross product can be computed using the determinant of a $3\times 3$ matrix, where the first row contains the basis vectors of the space, and the next two rows contain the components of the input vectors.</li>
+</ul>
+<p>$$\vec{a} \times \vec{b} = \begin{vmatrix}
+\hat{i} &amp; \hat{j} &amp; \hat{k} \
+a_x &amp; a_y &amp; a_z \
+b_x &amp; b_y &amp; b_z
+\end{vmatrix} = (a_yb_z - a_zb_y)\hat{i} - (a_xb_z - a_zb_x)\hat{j} + (a_xb_y - a_yb_x)\hat{k}$$  </p>
+<p>Its magnitude can be calculated as $|\vec{a} \times \vec{b}| = |\vec{a}||\vec{b}|\sin\theta$  <em>(it can be interpreted as the area of parallelogram spanned by $\vec{a}$ and $\vec{b}$)</em>. It is anticommutative: $\vec{a} \times \vec{b} = -(\vec{b} \times \vec{a})$    </p>
+<h3 id="vector-identities">Vector Identities</h3>
+<ol>
+<li><strong>Commutativity</strong>:  </li>
+</ol>
+<p>$$\vec{a} + \vec{b} = \vec{b} + \vec{a}$$<br />
+   $$\vec{a} \cdot \vec{b} = \vec{b} \cdot \vec{a}$$</p>
+<ol>
+<li><strong>Anticommutativity of Cross Product</strong>:  </li>
+</ol>
+<p>$$\vec{a} \times \vec{b} = -\vec{b} \times \vec{a}$$</p>
+<ol>
+<li><strong>Distributivity</strong>:  </li>
+</ol>
+<p>$$\vec{a} \cdot (\vec{b} + \vec{c}) = \vec{a} \cdot \vec{b} + \vec{a} \cdot \vec{c}$$<br />
+   $$\vec{a} \times (\vec{b} + \vec{c}) = \vec{a} \times \vec{b} + \vec{a} \times \vec{c}$$</p>
+<ol>
+<li><strong>Scalar Multiplication</strong>:<br />
+   $$k(\vec{a} \cdot \vec{b}) = (k\vec{a}) \cdot \vec{b} = \vec{a} \cdot (k\vec{b})$$<br />
+   $$k(\vec{a} \times \vec{b}) = (k\vec{a}) \times \vec{b} = \vec{a} \times (k\vec{b})$$</li>
+</ol>
+<p>$$\vec{a} \cdot (\vec{b} \times \vec{c}) = \begin{vmatrix}
+a_x &amp; a_y &amp; a_z \
+b_x &amp; b_y &amp; b_z \
+c_x &amp; c_y &amp; c_z
+\end{vmatrix}$$  </p>
+<p><strong>Key Properties</strong>:<br />
+- Cyclic symmetry:  </p>
+<p>$$\vec{a}\cdot(\vec{b}\times\vec{c}) = \vec{b}\cdot(\vec{c}\times\vec{a}) = \vec{c}\cdot(\vec{a}\times\vec{b})$$<br />
+- Antisymmetry:  </p>
+<p>$$\vec{a}\cdot(\vec{b}\times\vec{c}) = -\vec{a}\cdot(\vec{c}\times\vec{b})$$<br />
+- Vanishes if vectors are coplanar  </p>
+<p><strong>Lagrange's Identity</strong>:  </p>
+<p>$$\vec{a} \times (\vec{b} \times \vec{c}) = (\vec{a} \cdot \vec{c})\vec{b} - (\vec{a} \cdot \vec{b})\vec{c}$$<br />
+- Non-associativity:  </p>
+<p>$$\vec{a} \times (\vec{b} \times \vec{c}) \neq (\vec{a} \times \vec{b}) \times \vec{c}$$  </p>
+<h3 id="geometric-entities">Geometric Entities</h3>
+<h4 id="lines">Lines</h4>
+<p>Parametric equation through $P_0(x_0,y_0,z_0)$ with direction $\vec{d} = \langle a,b,c \rangle$:  </p>
+<p>$$\vec{r}(t) = \vec{r_0} + t\vec{d}<br />
+\Rightarrow \begin{cases} x = x_0 + at \ y = y_0 + bt \ z = z_0 + ct \end{cases}, \quad t \in \mathbb{R}$$</p>
+<h4 id="planes">Planes</h4>
+<ul>
+<li>Defined by a point $P_0(x_0,y_0,z_0)$ and normal vector $\vec{n} = \langle a,b,c \rangle$. Unlike a line, its defined by two direction vectors, and hence spans a two dimensional region in space. In vector form:</li>
+</ul>
+<p>$$\vec{r}(t,\mu) = \begin{pmatrix}x_o \ y_o \ z_o\end{pmatrix} + t \begin{pmatrix}d_x \ d_y \ d_z\end{pmatrix}+ \mu \begin{pmatrix}e_x \ e_y \ e_z\end{pmatrix}$$</p>
+<ul>
+<li>Its standard form, for normal vector coefficients $\hat{n}=\langle a, b, c\rangle$ is given by: </li>
+</ul>
+<p>$$a(x-x_0) + b(y-y_0) + c(z-z_0) = 0$$</p>
+<ul>
+<li>And its general form is $ax + by + cz + d = 0$ </li>
+</ul>
+<h4 id="distance-formulae">Distance Formulae</h4>
+<ol>
+<li>Point to Plane:  </li>
+</ol>
+<p>$$\text{Distance} = \frac{|ax_0 + by_0 + cz_0 + d|}{\sqrt{a^2 + b^2 + c^2}}$$</p>
+<ol>
+<li>Point to Line:  </li>
+</ol>
+<p>$$\text{Distance} = \frac{| (\vec{r} - \vec{r_0}) \times \vec{d} |}{|\vec{d}|}$$</p>
+<ol>
+<li>Skew Lines:  </li>
+</ol>
+<p>$$\text{Distance} = \frac{| (\vec{r_2} - \vec{r_1}) \cdot (\vec{d_1} \times \vec{d_2}) |}{|\vec{d_1} \times \vec{d_2}|}$$</p>
+<ol>
+<li>Two parallel planes: Given planes:  $P_1: ax + by + cz + d_1 = 0$, $P_2: ax + by + cz + d_2 = 0$ <em>(Same normal $\vec{n} = \langle a,b,c \rangle$)</em></li>
+</ol>
+<p>$$D=\frac{|d_1-d_2|}{\sqrt{a^2+b^2+c^2}}$$</p>
+<ol>
+<li>Line to plane (parallel): Plane: $ax + by + cz + d = 0$, line: $\vec{r}(t) = \langle x_0,y_0,z_0 \rangle + t\langle v_x,v_y,v_z \rangle$ with $\vec{n} \perp \vec{v}$ (i.e., $av_x + bv_y + cv_z = 0$). </li>
+</ol>
+<p>$$D=\frac{|ax_o+by_o+cz_o+d|}{\sqrt{a^2+b^2+c^2}}$$</p>
+<h2 id="vector-functions">Vector Functions</h2>
+<h3 id="what-is-a-vector-function">What is a Vector Function?</h3>
+<ul>
+<li>A vector function is a parametrically defined function where the terminal points of vectors trace a <em>curve</em> instead of a surface in 3-dimensional space.</li>
+<li>The fact that $t$ has a certain domain gives $r(t)$ an orientation.</li>
+</ul>
+<h3 id="sketching-a-vector-function">Sketching a Vector Function</h3>
+<ul>
+<li>Identify $x, y, z$.</li>
+<li>Use one or more components to get a curve or surface (eliminate $t$).</li>
+<li>For just two components, sketch on a plane.</li>
+<li>For three components, it's a <em>curve</em> traveling along a surface.</li>
+<li>Use values of $t$ to find points and the orientation.</li>
+</ul>
+<h3 id="derivative-of-a-vector-function">Derivative of a Vector Function</h3>
+<ul>
+<li>The derivative of a vector function describes the direction vector of the <em>tangent vector</em> to the curve at some value of $t$.</li>
+<li>The derivative of a function is defined as:  </li>
+</ul>
+<p>$$f'(x) = \lim_{\Delta x \to 0} \frac{f(x+\Delta x) - f(x)}{\Delta x}$$</p>
+<ul>
+<li>Similarly, the derivative of a vector function is defined for some parameter $t$ as:  </li>
+</ul>
+<p>$$
+  r'(t) = \lim_{\Delta t \to 0} \frac{r(t+\Delta t) - r(t)}{\Delta t} = \lim_{\Delta t \to 0} \frac{f(t+\Delta t) \hat{i} + g(t+\Delta t) \hat{j} + h(t+\Delta t) \hat{k} - (f(t) \hat{i} + g(t) \hat{j} + h(t) \hat{k})}{\Delta t}
+  $$</p>
+<p>$$
+  = \lim_{\Delta t \to 0} \frac{f(t+\Delta t)-f(t)}{\Delta t} \hat{i} + \frac{g(t+\Delta t)-g(t)}{\Delta t} \hat{j} + \frac{h(t+\Delta t)-h(t)}{\Delta t} \hat{k} = f'(t)\hat{i} + g'(t) \hat{j} + h'(t) \hat{k}
+  $$</p>
+<ul>
+<li>Example: The derivative of $r(t) = t \hat{i} + t^2 \hat{j} + t^3 \hat{k}$ is $r'(t) = \hat{i} + 2t\hat{j} + 3t^2 \hat{k}$.</li>
+</ul>
+<h3 id="the-arc-length-of-a-curve">The Arc Length of a Curve</h3>
+<ul>
+<li>For some vector function $r(t)$ with a derivative $r'(t)$, the so-called 'magnitude' of $r'(t)$ is expressed as:  </li>
+</ul>
+<p>$$||r'(t)|| = \sqrt{(f'(t))^2 + (g'(t))^2 + (h'(t))^2}$$</p>
+<ul>
+<li>The arc length of the curve generated by the vector function, for some interval $t \in [a,b]$, is given as:  </li>
+</ul>
+<p>$$L=\int_a^b \sqrt{(f'(t))^2 + (g'(t))^2 + (h'(t))^2} \, dt = \int_a^b ||r'(t)|| \, dt$$</p>
+<h3 id="arc-length-reparametrization">Arc Length Reparametrization</h3>
+<p>Why?
+- We can "walk through the curve" instead of using a vector to point at each individual point.</p>
+<p>How?
+- Find the arc length function ($S(t)$, not $L$):  </p>
+<p>$$S(t)=\int_a^t ||r(u)|| \, du$$</p>
+<ul>
+<li>$a$ is where $t$ begins.</li>
+</ul>
+<h4 id="example">Example</h4>
+<p>For the vector function:  </p>
+<p>$$r(t) = e^t \cos{t} \hat{i} + e^t \sin{t} \hat{j} + e^t \hat{k} \text{ for } t \geq 0$$<br />
+1. Compute $||r'(t)||$:  </p>
+<p>$$||r'(t)|| = \sqrt{3}e^t$$</p>
+<ol>
+<li>Compute the arc length function $S(t)$:  </li>
+</ol>
+<p>$$S(t) = \int_0^t \sqrt{3} e^u \, du = \sqrt{3}(e^t-1)$$</p>
+<ol>
+<li>Turn $S(t)$ into the parameter $S$:<br />
+   $$S=\sqrt{3}(e^t-1)$$<br />
+   Solve for $t$:  </li>
+</ol>
+<p>$$e^t = \frac{\sqrt{3}}{3} S + 1$$<br />
+   $$t=\ln{\left(\frac{\sqrt{3}}{3} S +1\right)}$$</p>
+<ol>
+<li>Substitute back into $r(t)$:<br />
+   $$
+   r(s) = \left(\frac{\sqrt{3}}{3}S+1\right)\cos{\left(\ln{\left(\frac{\sqrt{3}}{3} S +1\right)}\right)}\hat{i} + \left(\frac{\sqrt{3}}{3}S+1\right)\sin{\left(\ln{\left(\frac{\sqrt{3}}{3} S +1\right)}\right)}\hat{j}+\left(\frac{\sqrt{3}}{3}S+1\right)\hat{k}
+   $$</li>
+</ol>
+<h2 id="vector-fields">Vector Fields</h2>
+<h3 id="divergence">Divergence</h3>
+<ul>
+<li>A measurement of how much fluid/flow enters the neighborhood around $P$ compared to how much leaves.</li>
+<li>If more fluid enters than leaves, then the divergence will be negative at $P$.</li>
+<li>If the same amount of fluid enters and leaves, then the divergence will be $0$ at $P$.</li>
+<li>For </li>
+</ul>
+<p>$$
+F(x, y, z) = P\hat{i} + Q\hat{j} + R\hat{k}
+$$</p>
+<p>$$
+Div(F) = \nabla \cdot F = \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z}
+$$</p>
+<ul>
+<li>It is a scalar quantity.</li>
+</ul>
+<h3 id="curl">Curl</h3>
+<ul>
+<li>A measurement of the rotation of the vector field in the neighborhood around $P$.</li>
+<li>If curl is $+$ at a point, then the flow would rotate counterclockwise.</li>
+<li>And if $-$, then clockwise.</li>
+<li>If $0$, then there is no rotation at $P$.</li>
+</ul>
+<p>$$
+Curl(F) = \nabla \times F
+$$</p>
+<ul>
+<li>It is a vector.</li>
+</ul>
+<h3 id="work-done-to-move-along-a-vector-field">Work Done to Move along a Vector Field</h3>
+<h4 id="non-conservative-vector-fields">Non-Conservative Vector Fields</h4>
+<ul>
+<li>For a non-conservative vector field $F(x, y, z) = F(x(t), y(t), z(t))$ along a path $r(t)$, the work done for a particle to move along the given path $C$ is given by:</li>
+</ul>
+<p>$$
+w = \int_C F \cdot dr = \int_{t=a}^{t=b} F(r(t)) \cdot r'(t) \cdot dt
+$$</p>
+<ul>
+<li>These integrals are <em>path dependent</em>.</li>
+</ul>
+<h4 id="conservative-vector-fields">Conservative Vector Fields</h4>
+<ul>
+<li>$F(x, y)$ is conservative iff $F(x, y) = \nabla f(x, y)$ for some $f(x, y)$ that is called a potential function.</li>
+<li>This means a line integral within a conservative vector field can be expressed by:</li>
+</ul>
+<p>$$
+\int_C F \cdot dr = \int_C \nabla f \cdot dr = f(b) - f(a)
+$$</p>
+<h4 id="showing-f-is-conservative">Showing $F$ is Conservative</h4>
+<ul>
+<li>For a conservative $F(x, y) = P\hat{i} + Q\hat{j}$:</li>
+</ul>
+<p>$$
+\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x}
+$$</p>
+<ul>
+<li>Or for $F(x, y, z) = P\hat{i} + Q\hat{j} + R\hat{k}$:</li>
+</ul>
+<p>$$
+Curl(F) = 0
+$$</p></body>
+</html>

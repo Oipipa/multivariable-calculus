@@ -1,0 +1,234 @@
+
+<html>
+  <head><meta charset="utf-8"/>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      packages: {'[+]': ['noerrors', 'noundefined']}
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      ignoreHtmlClass: 'tex2jax_ignore'
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+<style>
+  /* Simple, legible table styling */
+  table { width: 100%; border-collapse: collapse; font-size: 0.95em; }
+  thead { background: #f2f2f2; }
+  th, td { border: 1px solid #bbb; padding: 0.45em 0.6em; text-align: left; }
+  tbody tr:nth-child(even) { background: #fafafa; }
+</style>
+<title>A04_Navigating_3D_Space.md</title></head>
+  <body><a href='index.html'>← Back</a><hr/><ol>
+<li>(1-Q1) Let $\textbf{r}(t)=\langle \cos{e^t}, \sin{e^t}, e^t\rangle$ </li>
+<li>Compute the unit tangent vector $\textbf{T}(t)$ </li>
+<li>Compute $\textbf{T}'(t)$</li>
+</ol>
+<p><strong>Solution:</strong>
+The position vector is given by $\mathbf{r}(t) = \langle \cos(e^t), \sin(e^t), e^t \rangle$.</p>
+<p>The derivative is found by differentiating each component with respect to $t$. For the $x$-component: $x(t) = \cos(e^t)$. Using the chain rule, let $u = e^t$, so:  </p>
+<p>$$\frac{d}{dt} \cos(u) = -\sin(u) \cdot \frac{du}{dt} = -\sin(e^t) \cdot e^t$$</p>
+<p>For the $y$-component: $y(t) = \sin(e^t)$.  Using the chain rule:  </p>
+<p>$$\frac{d}{dt} \sin(u) = \cos(u) \cdot \frac{du}{dt} = \cos(e^t) \cdot e^t$$</p>
+<p>For the $z$-component: $z(t) = e^t$. The derivative is $e^t$.</p>
+<p>Thus,  </p>
+<p>$$
+\mathbf{r}'(t) = \langle -\sin(e^t) e^t, \cos(e^t) e^t, e^t \rangle = e^t \langle -\sin(e^t), \cos(e^t), 1 \rangle.
+$$</p>
+<p>The magnitude is given by:  </p>
+<p>$$
+|\mathbf{r}'(t)| = \sqrt{ \left( -\sin(e^t) e^t \right)^2 + \left( \cos(e^t) e^t \right)^2 + \left( e^t \right)^2 }.
+$$</p>
+<p>Simplify inside the square root:  </p>
+<p>$$
+\left( -\sin(e^t) e^t \right)^2 + \left( \cos(e^t) e^t \right)^2 + \left( e^t \right)^2 = e^{2t} \sin^2(e^t) + e^{2t} \cos^2(e^t) + e^{2t} = e^{2t} \left( \sin^2(e^t) + \cos^2(e^t) + 1 \right).
+$$</p>
+<p>Since $\sin^2(\theta) + \cos^2(\theta) = 1$,<br />
+$$
+\sin^2(e^t) + \cos^2(e^t) + 1 = 1 + 1 = 2.
+$$</p>
+<p>Thus,  </p>
+<p>$$
+|\mathbf{r}'(t)| = \sqrt{ e^{2t} \cdot 2 } = \sqrt{2 e^{2t}} = \sqrt{2} \cdot e^t.
+$$</p>
+<p>The unit tangent vector is defined as:  </p>
+<p>$$
+\mathbf{T}(t) = \frac{\mathbf{r}'(t)}{|\mathbf{r}'(t)|} = \frac{e^t \langle -\sin(e^t), \cos(e^t), 1 \rangle}{\sqrt{2}  e^t} = \frac{1}{\sqrt{2}} \langle -\sin(e^t), \cos(e^t), 1 \rangle.
+$$</p>
+<p>In component form,<br />
+$$
+\mathbf{T}(t) = \left\langle -\frac{\sin(e^t)}{\sqrt{2}}, \frac{\cos(e^t)}{\sqrt{2}}, \frac{1}{\sqrt{2}} \right\rangle.
+$$</p>
+<p>Differentiate each component of $\mathbf{T}(t)$ with respect to $t$.</p>
+<p>For the $x$-component: $T_x(t) = -\frac{1}{\sqrt{2}} \sin(e^t)$. Using the chain rule:  </p>
+<p>$$\frac{d}{dt} \sin(e^t) = \cos(e^t) \cdot e^t$$</p>
+<p>so<br />
+  $$
+  \frac{d}{dt} T_x = -\frac{1}{\sqrt{2}} \cdot \cos(e^t) \cdot e^t = -\frac{e^t \cos(e^t)}{\sqrt{2}}.
+  $$</p>
+<p>For the $y$-component: $T_y(t) = \frac{1}{\sqrt{2}} \cos(e^t)$.  Using the chain rule:  </p>
+<p>$$\frac{d}{dt} \cos(e^t) = -\sin(e^t) \cdot e^t$$</p>
+<p>so  </p>
+<p>$$
+  \frac{d}{dt} T_y = \frac{1}{\sqrt{2}} \cdot \left( -\sin(e^t) \cdot e^t \right) = -\frac{e^t \sin(e^t)}{\sqrt{2}}.
+$$</p>
+<p>For the $z$-component: $T_z(t) = \frac{1}{\sqrt{2}}$.  This is constant, so its derivative is 0.</p>
+<p>Thus,<br />
+$$
+\mathbf{T}'(t) = \left\langle -\frac{e^t \cos(e^t)}{\sqrt{2}}, -\frac{e^t \sin(e^t)}{\sqrt{2}}, 0 \right\rangle.
+$$</p>
+<p>This can also be written as:<br />
+$$
+\mathbf{T}'(t) = -\frac{e^t}{\sqrt{2}} \langle \cos(e^t), \sin(e^t), 0 \rangle.
+$$</p>
+<p>$$
+\boxed{\mathbf{T}(t) = \left\langle -\dfrac{\sin\left({\mathrm{e}}^{t}\right)}{\sqrt{2}},\ \dfrac{\cos\left({\mathrm{e}}^{t}\right)}{\sqrt{2}},\ \dfrac{1}{\sqrt{2}}\right\rangle}
+$$
+$$
+\boxed{\mathbf{T}'(t) = \left\langle -\dfrac{{\mathrm{e}}^{t}\cos\left({\mathrm{e}}^{t}\right)}{\sqrt{2}},\ -\dfrac{{\mathrm{e}}^{t}\sin\left({\mathrm{e}}^{t}\right)}{\sqrt{2}},\ 0\right\rangle}
+$$</p>
+<hr />
+<ol>
+<li>(1-Q5) Let $G$ be the solid 3-D cone bounded by the lateral surface given by $z=2\sqrt{x^2+y^2}$ and by the plane $z=2$.  Assume the density is given by $\rho(x,y,z)=z$.</li>
+<li>Find the mass of $G$ using cylindrical coordinates. </li>
+<li>Set up the calculation for $\overline{z}$ using cylindrical coordinates.</li>
+<li>Set up the calculation for $\overline{z}$ using spherical coordinates. </li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>The surface $z = 2\sqrt{x^2 + y^2}$ becomes $z = 2r$ in cylindrical coordinates. The plane $z = 2$ intersects the cone when $2r = 2$, so $r = 1$. Thus, the solid is defined for $0 \leq r \leq 1$, $0 \leq \theta \leq 2\pi$, and for each $(r, \theta)$, $z$ ranges from the cone $z = 2r$ to the plane $z = 2$.</p>
+<p>The mass is given by the triple integral:</p>
+<p>$$
+m = \iiint_G \rho  dV = \iiint_G z  dV = \int_{\theta=0}^{2\pi} \int_{r=0}^{1} \int_{z=2r}^{2} z \cdot r  dz  dr  d\theta.
+$$</p>
+<p>Since the integrand does not depend on $\theta$, the integral can be separated:
+$$
+m = \int_{0}^{2\pi} d\theta \int_{0}^{1} r  dr \int_{2r}^{2} z  dz.
+$$</p>
+<p>First, evaluate the innermost integral with respect to $z$:</p>
+<p>$$
+\int_{2r}^{2} z  dz = \left[ \frac{1}{2} z^2 \right]_{2r}^{2} = \frac{1}{2} (2)^2 - \frac{1}{2} (2r)^2 = \frac{1}{2} \cdot 4 - \frac{1}{2} \cdot 4r^2 = 2 - 2r^2.
+$$</p>
+<p>Substitute this result into the integral:</p>
+<p>$$
+m = \int_{0}^{2\pi} d\theta \int_{0}^{1} r (2 - 2r^2)  dr = \int_{0}^{2\pi} d\theta \int_{0}^{1} (2r - 2r^3)  dr.
+$$</p>
+<p>Next, evaluate the integral with respect to $r$:</p>
+<p>$$
+\int_{0}^{1} (2r - 2r^3)  dr = \left[ r^2 - \frac{1}{2} r^4 \right]_{0}^{1} = \left(1^2 - \frac{1}{2} \cdot 1^4\right) - (0) = 1 - \frac{1}{2} = \frac{1}{2}.
+$$</p>
+<p>Substitute this result into the integral:</p>
+<p>$$
+m = \int_{0}^{2\pi} \frac{1}{2}  d\theta = \frac{1}{2} \int_{0}^{2\pi} d\theta = \frac{1}{2} \cdot 2\pi = \pi.
+$$</p>
+<p>Thus, the mass of the solid $G$ is $\pi$.</p>
+<p>To compute the $z$-coordinate of the center of mass, $\overline{z}$, for the solid cone $G$ with density $\rho(x, y, z) = z$, use the formula:</p>
+<p>$$
+\overline{z} = \frac{1}{\text{mass}} \iiint_G z  \rho  dV.
+$$</p>
+<p>The mass of $G$ has been previously calculated as $\pi$. Substituting the density $\rho(x, y, z) = z$ gives:</p>
+<p>$$
+\overline{z} = \frac{1}{\pi} \iiint_G z \cdot z  dV = \frac{1}{\pi} \iiint_G z^2  dV.
+$$</p>
+<p>In cylindrical coordinates, the solid $G$ is bounded by the cone $z = 2r$ and the plane $z = 2$, with $0 \leq r \leq 1$, $0 \leq \theta \leq 2\pi$, and for each $(r, \theta)$, $z$ ranges from $2r$ to $2$. The volume element is $dV = r  dz  dr  d\theta$.</p>
+<p>Thus, the triple integral is:</p>
+<p>$$
+\iiint_G z^2  dV = \int_{\theta=0}^{2\pi} \int_{r=0}^{1} \int_{z=2r}^{2} z^2 \cdot r  dz  dr  d\theta.
+$$</p>
+<p>Therefore, the setup for $\overline{z}$ is:</p>
+<p>$$\boxed{\overline{z} = \dfrac{1}{\pi} \displaystyle\int_{0}^{2\pi} \int_{0}^{1} \int_{2r}^{2} z^{2}  r  dz  dr  d\theta}$$</p>
+<p>In spherical coordinates, the solid $G$ is bounded by the cone $z = 2\sqrt{x^2 + y^2}$ and the plane $z = 2$. The conversion to spherical coordinates is given by:</p>
+<p>$$
+x = \rho \sin\phi \cos\theta, \quad y = \rho \sin\phi \sin\theta, \quad z = \rho \cos\phi,
+$$</p>
+<p>with the volume element $dV = \rho^2 \sin\phi  d\rho  d\phi  d\theta$.</p>
+<p>The cone surface $z = 2\sqrt{x^2 + y^2}$ simplifies to $\rho \cos\phi = 2\rho \sin\phi$, which gives $\tan\phi = \frac{1}{2}$. Thus, $\phi$ ranges from $0$ to $\phi_0 = \arctan(1/2)$. The plane $z = 2$ corresponds to $\rho \cos\phi = 2$, so $\rho = \frac{2}{\cos\phi}$. For each fixed $\phi$ and $\theta$, $\rho$ ranges from $0$ to $\frac{2}{\cos\phi}$, and $\theta$ ranges from $0$ to $2\pi$.</p>
+<p>The integrand $z^2$ in spherical coordinates is:</p>
+<p>$$
+z^2 = (\rho \cos\phi)^2 = \rho^2 \cos^2\phi.
+$$</p>
+<p>Thus, the integrand $z^2  dV$ becomes:</p>
+<p>$$
+z^2  dV = \rho^2 \cos^2\phi \cdot \rho^2 \sin\phi  d\rho  d\phi  d\theta = \rho^4 \cos^2\phi \sin\phi  d\rho  d\phi  d\theta.
+$$</p>
+<p>The triple integral for $\iiint_G z^2  dV$ is:</p>
+<p>$$
+\iiint_G z^2  dV = \int_{\theta=0}^{2\pi} \int_{\phi=0}^{\arctan(1/2)} \int_{\rho=0}^{2 / \cos\phi} \rho^4 \cos^2\phi \sin\phi  d\rho  d\phi  d\theta.
+$$</p>
+<p>Therefore, the setup for $\overline{z}$ is:</p>
+<p>$$\boxed{\overline{z} = \dfrac{1}{\pi} \displaystyle\int_{0}^{2\pi} \int_{0}^{\arctan\left(1/2\right)} \int_{0}^{\frac{2}{\cos \phi}} \rho^{4} \cos^{2}\phi  \sin\phi  d\rho  d\phi  d\theta}$$</p>
+<hr />
+<ol>
+<li>(1-Q10) Find the area of the ellipse,  </li>
+</ol>
+<p>$$(2x+5y-3)^2 + (3x-7y+8)^2 = 1$$</p>
+<p><strong>Solution:</strong></p>
+<p>The equation $(2x + 5y - 3)^2 + (3x - 7y + 8)^2 = 1$ represents an ellipse. To find its area, define the transformations:</p>
+<p>$$
+u = 2x + 5y - 3, \quad v = 3x - 7y + 8.
+$$</p>
+<p>The equation becomes $u^2 + v^2 = 1$, which is a circle of radius 1 in the $uv$-plane with area $\pi \cdot 1^2 = \pi$.</p>
+<p>The Jacobian matrix of the transformation from $(x, y)$ to $(u, v)$ is:</p>
+<p>$$
+J = \begin{pmatrix}
+\frac{\partial u}{\partial x} &amp; \frac{\partial u}{\partial y} \
+\frac{\partial v}{\partial x} &amp; \frac{\partial v}{\partial y}
+\end{pmatrix} = \begin{pmatrix}
+2 &amp; 5 \
+3 &amp; -7
+\end{pmatrix}.
+$$
+The determinant of $J$ is:</p>
+<p>$$
+\det(J) = (2)(-7) - (5)(3) = -14 - 15 = -29.
+$$
+The absolute value is $|\det(J)| = 29$.</p>
+<p>The area element in the $xy$-plane relates to the area element in the $uv$-plane by:
+$$
+dx  dy = \left| \frac{\partial(x, y)}{\partial(u, v)} \right| du  dv = \frac{1}{|\det(J)|} du  dv = \frac{1}{29} du  dv,
+$$
+since $\left| \frac{\partial(x, y)}{\partial(u, v)} \right| = \frac{1}{|\det(J)|}$.</p>
+<p>The area in the $xy$-plane is the integral over the region where $u^2 + v^2 \leq 1$:</p>
+<p>$$
+\text{Area} = \iint_{u^2 + v^2 \leq 1} dx  dy = \iint_{u^2 + v^2 \leq 1} \frac{1}{29}  du  dv.
+$$
+The integral is the area of the disk in the $uv$-plane:
+$$
+\iint_{u^2 + v^2 \leq 1} du  dv = \pi.
+$$
+Thus,
+$$
+\text{Area} = \frac{1}{29} \cdot \pi = \frac{\pi}{29}.
+$$</p>
+<p>The constants in the transformations do not affect the area, as translations preserve area. The area is therefore $\frac{\pi}{29}$.</p>
+<hr />
+<ol>
+<li>(Q-21) Let $C$ be the portion of the cylinder $x^2+ y^2 \leq 1$ lying in the first octant ($x \geq 0, y \geq 0, z \geq 0$) and below the plane $z = 1$. Set up a triple integral in cylindrical coordinates which gives the moment of inertia of $C$ about the $z$-axis; assume the density to be $\delta = 1$.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>The moment of inertia about the $z$-axis for a solid with constant density $\delta = 1$ is given by the triple integral:</p>
+<p>$$
+I_z = \iiint_C (x^2 + y^2)  dV,
+$$</p>
+<p>where $C$ is the region defined by $x^2 + y^2 \leq 1$, $x \geq 0$, $y \geq 0$, $z \geq 0$, and $z \leq 1$.</p>
+<p>The transformations in cylindrical coordinates are:</p>
+<p>$$
+x = r \cos \theta, \quad y = r \sin \theta, \quad z = z,
+$$</p>
+<p>with the volume element $dV = r  dr  d\theta  dz$. Additionally, $x^2 + y^2 = r^2$, so the integrand becomes $r^2$.</p>
+<p>The region $C$ is bounded as follows:
+- The cylinder $x^2 + y^2 \leq 1$ corresponds to $r \leq 1$.
+- The first octant ($x \geq 0$, $y \geq 0$) corresponds to $0 \leq \theta \leq \pi/2$.
+- The conditions $z \geq 0$ and $z \leq 1$ correspond to $0 \leq z \leq 1$.</p>
+<p>Thus, the limits of integration are:
+- $r$ from 0 to 1,
+- $\theta$ from 0 to $\pi/2$,
+- $z$ from 0 to 1.</p>
+<p>The integrand is $r^2$, and the volume element is $dV = r  dr  d\theta  dz$, so the product is $r^2 \cdot r = r^3$. Therefore, the moment of inertia integral is:</p>
+<p>$$\boxed{I_z = \displaystyle\int_{\theta=0}^{\pi/2} \int_{r=0}^{1} \int_{z=0}^{1} r^{3}  dz  dr  d\theta}$$</p>
+<hr /></body>
+</html>
