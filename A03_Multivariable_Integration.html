@@ -25,23 +25,25 @@
 </style>
 <title>A03_Multivariable_Integration.md</title></head>
   <body><a href='index.html'>← Back</a><hr/><ol>
-<li>(1-Q3) In this problem,$S$is the surface given by the quarter of the right-circular cylinder centered on the$z$-axis, of radius 2 and height 4, which lies in the first octant. The field$\mathbf{F}(x,y,z) = x \mathbf{i}$. </li>
+<li>(1-Q3) In this problem, $S$ is the surface given by the quarter of the right-circular cylinder centered on the $z$-axis, of radius 2 and height 4, which lies in the first octant. The field $\mathbf{F}(x,y,z) = x \mathbf{i}$. <ul>
 <li>Compute the flux integral 
    $$
-    \iint_S \mathbf{F} \cdot \mathbf{n} \, dS.
+\iint_S \mathbf{F} \cdot \mathbf{n} \, dS.
    $$
-(Use the normal which points ‘outward’ from$S$, i.e., on the side away from the$z$-axis.)</li>
-<li>Let$G$be the 3D solid in the first octant given by the interior of the quarter-cylinder defined above. Use the divergence theorem to compute the flux of the field$\mathbf{F} = x \mathbf{i}$out of the region$G$.</li>
-<li>The boundary surface of$G$is comprised of$S$together with four other faces. What is the flux outward through these four faces, and why? Use the answers to parts (b) and (c).</li>
+(Use the normal which points ‘outward’ from $S$, i.e., on the side away from the$z$-axis.)</li>
+<li>Let $G$ be the 3D solid in the first octant given by the interior of the quarter-cylinder defined above. Use the divergence theorem to compute the flux of the field $\mathbf{F} = x \mathbf{i}$ out of the region $G$.</li>
+<li>The boundary surface of$G$is comprised of $S$ together with four other faces. What is the flux outward through these four faces, and why? Use the answers to parts (b) and (c).</li>
+</ul>
+</li>
 </ol>
 <p><strong>Solution:</strong></p>
-<p>The surface$S$is the lateral surface of a quarter cylinder in the first octant, given by$x^2 + y^2 = 4$,$x \geq 0$,$y \geq 0$, and$0 \leq z \leq 4$, with radius 2 and height 4.</p>
-<p>The vector field is$\mathbf{F}(x,y,z) = x \mathbf{i}$. The outward-pointing unit normal vector$\mathbf{n}$(away from the$z$-axis) for the cylinder is$\mathbf{n} = \frac{x}{2} \mathbf{i} + \frac{y}{2} \mathbf{j}$, since$\sqrt{x^2 + y^2} = 2$on the cylinder.</p>
+<p>The surface$S$is the lateral surface of a quarter cylinder in the first octant, given by $x^2 + y^2 = 4$, $x \geq 0$, $y \geq 0$, and $0 \leq z \leq 4$, with radius 2 and height 4.</p>
+<p>The vector field is $\mathbf{F}(x,y,z) = x \mathbf{i}$. The outward-pointing unit normal vector$\mathbf{n}$(away from the$z$-axis) for the cylinder is $\mathbf{n} = \frac{x}{2} \mathbf{i} + \frac{y}{2} \mathbf{j}$, since $\sqrt{x^2 + y^2} = 2$ on the cylinder.</p>
 <p>The dot product is:
 $$
 \mathbf{F} \cdot \mathbf{n} = (x \mathbf{i}) \cdot \left( \frac{x}{2} \mathbf{i} + \frac{y}{2} \mathbf{j} \right) = x \cdot \frac{x}{2} = \frac{x^2}{2}.
 $$</p>
-<p>Parametrize the surface using$\theta$and$z$, with$x = 2 \cos \theta$,$y = 2 \sin \theta$,$z = z$, where$\theta \in [0, \pi/2]$and$z \in [0, 4]$. The position vector is$\mathbf{r}(\theta, z) = (2 \cos \theta, 2 \sin \theta, z)$.</p>
+<p>Parametrize the surface using $\theta$ and $z$, with $x = 2 \cos \theta$, $y = 2 \sin \theta$, $z = z$, where $\theta \in [0, \pi/2]$ and $z \in [0, 4]$. The position vector is $\mathbf{r}(\theta, z) = (2 \cos \theta, 2 \sin \theta, z)$.</p>
 <p>The partial derivatives are:
 $$
 \frac{\partial \mathbf{r}}{\partial \theta} = (-2 \sin \theta, 2 \cos \theta, 0), \quad \frac{\partial \mathbf{r}}{\partial z} = (0, 0, 1).
@@ -54,14 +56,14 @@ $$
 0 &amp; 0 &amp; 1
 \end{vmatrix}
 $$</p>
-<p>$$= \mathbf{i}(2 \cos \theta \cdot 1 - 0 \cdot 0) - \mathbf{j}(-2 \sin \theta \cdot 1 - 0 \cdot 0) + \mathbf{k}(-2 \sin \theta \cdot 0 - 2 \cos \theta \cdot 0) = (2 \cos \theta, 2 \sin \theta, 0).$$</p>
+<p>$$= \mathbf{i}(2 \cos \theta \cdot 1     - 0 \cdot 0)     - \mathbf{j}(-2 \sin \theta \cdot 1     - 0 \cdot 0) + \mathbf{k}(-2 \sin \theta \cdot 0     - 2 \cos \theta \cdot 0) = (2 \cos \theta, 2 \sin \theta, 0).$$</p>
 <p>The magnitude is:
 $$
 \left| \frac{\partial \mathbf{r}}{\partial \theta} \times \frac{\partial \mathbf{r}}{\partial z} \right| = \sqrt{(2 \cos \theta)^2 + (2 \sin \theta)^2} = \sqrt{4 \cos^2 \theta + 4 \sin^2 \theta} = \sqrt{4} = 2.
 $$</p>
-<p>Thus, the surface element is$dS = 2  d\theta  dz$.</p>
-<p>The dot product in terms of$\theta$is:
-$$
+<p>Thus, the surface element is $dS = 2  d\theta  dz$.</p>
+<p>The dot product in terms of $\theta$ is:</p>
+<p>$$
 \mathbf{F} \cdot \mathbf{n} = \frac{x^2}{2} = \frac{(2 \cos \theta)^2}{2} = \frac{4 \cos^2 \theta}{2} = 2 \cos^2 \theta.
 $$</p>
 <p>The flux integral is:
@@ -72,8 +74,8 @@ $$</p>
 $$
 4 \int_{0}^{4} dz \int_{0}^{\pi/2} \cos^2 \theta  d\theta.
 $$</p>
-<p>First,$\int_{0}^{4} dz = 4$.</p>
-<p>Next,$\int_{0}^{\pi/2} \cos^2 \theta  d\theta$:
+<p>First, $\int_{0}^{4} dz = 4$.</p>
+<p>Next, $\int_{0}^{\pi/2} \cos^2 \theta  d\theta$:
 $$
 \cos^2 \theta = \frac{1 + \cos 2\theta}{2}, \quad \int_{0}^{\pi/2} \cos^2 \theta  d\theta = \int_{0}^{\pi/2} \frac{1 + \cos 2\theta}{2} d\theta = \frac{1}{2} \left[ \theta + \frac{\sin 2\theta}{2} \right]_{0}^{\pi/2} = \frac{1}{2} \left( \frac{\pi}{2} \right) = \frac{\pi}{4}.
 $$</p>
@@ -81,13 +83,13 @@ $$</p>
 $$
 4 \cdot 4 \cdot \frac{\pi}{4} = 4 \cdot \pi = 4\pi.
 $$</p>
-<p>The flux integral is$4\pi$.</p>
-<p>This result is confirmed by the divergence theorem. Close the surface by adding the bottom disk at$z = 0$and the top disk at$z = 4$, both in the first octant. The outward normal for the bottom is$-\mathbf{k}$and for the top is$\mathbf{k}$. Since$\mathbf{F}$has no$z$-component,$\mathbf{F} \cdot \mathbf{n} = 0$on both disks. Thus, the flux through the closed surface equals the flux through$S$.</p>
-<p>The divergence of$\mathbf{F}$is:
+<p>The flux integral is $4\pi$.</p>
+<p>This result is confirmed by the divergence theorem. Close the surface by adding the bottom disk at $z = 0$ and the top disk at $z = 4$, both in the first octant. The outward normal for the bottom is $-\mathbf{k}$ and for the top is $\mathbf{k}$. Since $\mathbf{F}$ has no$z$-component, $\mathbf{F} \cdot \mathbf{n} = 0$ on both disks. Thus, the flux through the closed surface equals the flux through$S$.</p>
+<p>The divergence of $\mathbf{F}$ is:
 $$
 \nabla \cdot \mathbf{F} = \frac{\partial}{\partial x}(x) + \frac{\partial}{\partial y}(0) + \frac{\partial}{\partial z}(0) = 1.
 $$</p>
-<p>The volume$V$is the quarter cylinder:$x \geq 0$,$y \geq 0$,$x^2 + y^2 \leq 4$,$0 \leq z \leq 4$. The volume is:
+<p>The volume$V$is the quarter cylinder: $x \geq 0$,  $y \geq 0$,  $x^2 + y^2 \leq 4$, $0 \leq z \leq 4$. The volume is:
 $$
 \text{Volume} = \frac{1}{4} \pi r^2 h = \frac{1}{4} \pi (2)^2 \cdot 4 = \frac{1}{4} \pi \cdot 4 \cdot 4 = 4\pi.
 $$</p>
@@ -95,14 +97,14 @@ $$</p>
 $$
 \iiint_V \nabla \cdot \mathbf{F}  dV = \iiint_V 1  dV = 4\pi.
 $$</p>
-<p>Since the flux through the top and bottom disks is zero, the flux through$S$is$4\pi$.</p>
-<p>The solid$G$is the quarter-cylinder in the first octant bounded by$x^2 + y^2 = 4$,$x \geq 0$,$y \geq 0$, and$0 \leq z \leq 4$. The vector field is$\mathbf{F} = x \mathbf{i}$.</p>
-<p>The divergence theorem states that the flux of$\mathbf{F}$out of the closed surface bounding$G$is equal to the triple integral of the divergence of$\mathbf{F}$over$G$:</p>
+<p>Since the flux through the top and bottom disks is zero, the flux through $S$ is $4\pi$.</p>
+<p>The solid $G$ is the quarter-cylinder in the first octant bounded by $x^2 + y^2 = 4$, $x \geq 0$,$y \geq 0$, and$0 \leq z \leq 4$. The vector field is $\mathbf{F} = x \mathbf{i}$.</p>
+<p>The divergence theorem states that the flux of $\mathbf{F}$ out of the closed surface bounding$G$is equal to the triple integral of the divergence of $\mathbf{F}$ over $G$:</p>
 <p>$$
 \iint_{\partial G} \mathbf{F} \cdot \mathbf{n}  dS = \iiint_G (\nabla \cdot \mathbf{F})  dV,
 $$</p>
 <p>where$\partial G$is the boundary of$G$with outward-pointing normal$\mathbf{n}$.</p>
-<p>Compute the divergence of$\mathbf{F}$:</p>
+<p>Compute the divergence of $\mathbf{F}$:</p>
 <p>$$
 \nabla \cdot \mathbf{F} = \frac{\partial}{\partial x}(x) + \frac{\partial}{\partial y}(0) + \frac{\partial}{\partial z}(0) = 1.
 $$</p>
@@ -110,8 +112,8 @@ $$</p>
 <p>$$
 \iiint_G 1  dV,
 $$</p>
-<p>which is the volume of$G$.</p>
-<p>$G$is a quarter-cylinder of radius 2 and height 4. The volume of a full cylinder of radius$r$and height$h$is$\pi r^2 h$. Here,$r = 2$and$h = 4$, so the volume of the full cylinder is:</p>
+<p>which is the volume of $G$.</p>
+<p>$G$ is a quarter-cylinder of radius 2 and height 4. The volume of a full cylinder of radius$r$and height$h$is$\pi r^2 h$. Here,$r = 2$and$h = 4$, so the volume of the full cylinder is:</p>
 <p>$$
 \pi (2)^2 \cdot 4 = 16\pi.
 $$</p>
@@ -119,14 +121,14 @@ $$</p>
 <p>$$
 \frac{1}{4} \cdot 16\pi = 4\pi.
 $$</p>
-<p>Therefore, the flux of$\mathbf{F}$out of$G$is$4\pi$.</p>
-<p>The solid$G$is a quarter-cylinder in the first octant with radius 2 and height 4, bounded by the surfaces$x^2 + y^2 = 4$(for$x \geq 0$,$y \geq 0$,$0 \leq z \leq 4$),$z = 0$,$z = 4$,$x = 0$, and$y = 0$. The boundary consists of five faces:
--$S$: the lateral surface$x^2 + y^2 = 4$,$x \geq 0$,$y \geq 0$,$0 \leq z \leq 4$.
-- Bottom face:$z = 0$,$x^2 + y^2 \leq 4$,$x \geq 0$,$y \geq 0$.
-- Top face:$z = 4$,$x^2 + y^2 \leq 4$,$x \geq 0$,$y \geq 0$.
--$x=0$face:$x = 0$,$0 \leq y \leq 2$,$0 \leq z \leq 4$.
--$y=0$face:$y = 0$,$0 \leq x \leq 2$,$0 \leq z \leq 4$.</p>
-<p>The vector field is$\mathbf{F} = x \mathbf{i}$.</p>
+<p>Therefore, the flux of $\mathbf{F}$ out of $G$ is $4\pi$.</p>
+<p>The solid $G$ is a quarter-cylinder in the first octant with radius 2 and height 4, bounded by the surfaces $x^2 + y^2 = 4$ (for $x \geq 0$ , $y \geq 0$, $0 \leq z \leq 4$), $z = 0$, $z = 4$, $x = 0$, and $y = 0$. The boundary consists of five faces:
+-$S$: the lateral surface $x^2 + y^2 = 4$, $x \geq 0$, $y \geq 0$, $0 \leq z \leq 4$.
+    - Bottom face:$z = 0$, $x^2 + y^2 \leq 4$, $x \geq 0$, $y \geq 0$.
+    - Top face:$z = 4$, $x^2 + y^2 \leq 4$, $x \geq 0$, $y \geq 0$.
+-$x=0$face:$x = 0$, $0 \leq y \leq 2$, $0 \leq z \leq 4$.
+-$y=0$face:$y = 0$, $0 \leq x \leq 2$, $0 \leq z \leq 4$.</p>
+<p>The vector field is $\mathbf{F} = x \mathbf{i}$.</p>
 <p>From part (b), the flux of$\mathbf{F}$outward through$S$is$4\pi$. From part (c), using the divergence theorem, the total outward flux through the entire boundary of$G$is$4\pi$. The total outward flux is the sum of the fluxes through all five faces. Therefore:
 $$
 \text{Flux through } S + \text{Flux through the other four faces} = 4\pi.
@@ -137,47 +139,49 @@ $$
 $$
 which implies that the flux through the other four faces is$0$.</p>
 <p>This result is consistent with direct computation of the flux through each of the four faces:
-- <strong>Bottom face ($z = 0$):</strong> The outward normal is$-\mathbf{k}$. Then$\mathbf{F} \cdot (-\mathbf{k}) = (x \mathbf{i}) \cdot (-\mathbf{k}) = 0$, so the flux is$0$.
-- <strong>Top face ($z = 4$):</strong> The outward normal is$\mathbf{k}$. Then$\mathbf{F} \cdot \mathbf{k} = (x \mathbf{i}) \cdot \mathbf{k} = 0$, so the flux is$0$.
-- <strong>$x=0$face:</strong> The outward normal is$-\mathbf{i}$. On this face,$x = 0$, so$\mathbf{F} = \mathbf{0}$. Then$\mathbf{F} \cdot (-\mathbf{i}) = \mathbf{0} \cdot (-\mathbf{i}) = 0$, so the flux is$0$.
-- <strong>$y=0$face:</strong> The outward normal is$-\mathbf{j}$. Then$\mathbf{F} \cdot (-\mathbf{j}) = (x \mathbf{i}) \cdot (-\mathbf{j}) = 0$, since$\mathbf{i}$and$\mathbf{j}$are orthogonal.</p>
+    - <strong>Bottom face ($z = 0$):</strong> The outward normal is$-\mathbf{k}$. Then$\mathbf{F} \cdot (-\mathbf{k}) = (x \mathbf{i}) \cdot (-\mathbf{k}) = 0$, so the flux is$0$.
+    - <strong>Top face ($z = 4$):</strong> The outward normal is$\mathbf{k}$. Then$\mathbf{F} \cdot \mathbf{k} = (x \mathbf{i}) \cdot \mathbf{k} = 0$, so the flux is$0$.
+    - <strong>$x=0$face:</strong> The outward normal is$-\mathbf{i}$. On this face,$x = 0$, so$\mathbf{F} = \mathbf{0}$. Then$\mathbf{F} \cdot (-\mathbf{i}) = \mathbf{0} \cdot (-\mathbf{i}) = 0$, so the flux is$0$.
+    - <strong>$y=0$face:</strong> The outward normal is$-\mathbf{j}$. Then$\mathbf{F} \cdot (-\mathbf{j}) = (x \mathbf{i}) \cdot (-\mathbf{j}) = 0$, since$\mathbf{i}$and$\mathbf{j}$are orthogonal.</p>
 <p>Thus, the flux through each of the four faces is$0$, and the total flux through these faces is$0$.</p>
 <hr />
 <ol>
-<li>(1-Q4)$\mathbf{F}(x,y,z) = (y z) \mathbf{i} + (-x z) \mathbf{j} + \mathbf{k}.$Let$S$be the portion of the surface of the paraboloid 
+<li>(1-Q4) $\mathbf{F}(x,y,z) = (y z) \mathbf{i} + (-x z) \mathbf{j} + \mathbf{k}.$ Let $S$ be the portion of the surface of the paraboloid 
 $$
-    z = 4 - x^2 - y^2
+    z = 4     - x^2     - y^2
 $$
-which lies above the first octant; and let$C$be the closed curve$C = C_1 + C_2 + C_3$, where the curves$C_1$,$C_2$, and$C_3$are the three curves formed by intersecting$S$with the$xy$,$yz$, and$xz$planes respectively (so that$C$is the boundary of$S$). Orient$C$so that it is traversed counterclockwise when seen from above in the first octant.</li>
+which lies above the first octant; and let$C$be the closed curve$C = C_1 + C_2 + C_3$, where the curves $C_1$, $C_2$, and $C_3$ are the three curves formed by intersecting $S$ with the $xy$, $yz$, and $xz$ planes respectively (so that $C$ is the boundary of $S$). Orient $C$ so that it is traversed counterclockwise when seen from above in the first octant.<ul>
 <li>Use Stokes’ Theorem to compute
    $$
-    \oint_C \mathbf{F} \cdot d \mathbf{r}
+\oint_C \mathbf{F} \cdot d \mathbf{r}
    $$
-by using the surface integral over the capping surface$S$.</li>
-<li>Set up and evaluate the loop integral$\oint_C \textbf{F} \cdot d\textbf{r}$directly by parametrizing each piece of the curve$C$and then adding up the three line integrals. </li>
+by using the surface integral over the capping surface $S$.</li>
+<li>Set up and evaluate the loop integral $\oint_C \textbf{F} \cdot d\textbf{r}$ directly by parametrizing each piece of the curve $C$ and then adding up the three line integrals. </li>
+</ul>
+</li>
 </ol>
 <p><strong>Solution:</strong></p>
-<p>To compute$\oint_C \mathbf{F} \cdot d\mathbf{r}$using Stokes' Theorem, where$\mathbf{F}(x,y,z) = yz  \mathbf{i} - xz  \mathbf{j} + \mathbf{k}$and$C$is the boundary of the surface$S$(the portion of the paraboloid$z = 4 - x^2 - y^2$in the first octant), oriented counterclockwise when viewed from above in the first octant, Stokes' Theorem states that:
-$$
+<p>To compute $\oint_C \mathbf{F} \cdot d\mathbf{r}$ using Stokes' Theorem, where $\mathbf{F}(x,y,z) = yz  \mathbf{i}     - xz  \mathbf{j} + \mathbf{k}$ and $C$ is the boundary of the surface $S$ (the portion of the paraboloid $z = 4     - x^2     - y^2$ in the first octant), oriented counterclockwise when viewed from above in the first octant, Stokes' Theorem states that:</p>
+<p>$$
 \oint_C \mathbf{F} \cdot d\mathbf{r} = \iint_S (\nabla \times \mathbf{F}) \cdot d\mathbf{S}.
-$$
-Here,$S$is oriented with the upward-pointing normal vector, consistent with the counterclockwise orientation of$C$when viewed from above.</p>
-<p>First, compute the curl of$\mathbf{F}$:
+$$</p>
+<p>Here, $S$ is oriented with the upward-pointing normal vector, consistent with the counterclockwise orientation of$C$when viewed from above.</p>
+<p>First, compute the curl of $\mathbf{F}$:
 $$
 \nabla \times \mathbf{F} = \begin{vmatrix}
 \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \
 \frac{\partial}{\partial x} &amp; \frac{\partial}{\partial y} &amp; \frac{\partial}{\partial z} \
 yz &amp; -xz &amp; 1
-\end{vmatrix} = \left( \frac{\partial (1)}{\partial y} - \frac{\partial (-xz)}{\partial z}, \frac{\partial (yz)}{\partial z} - \frac{\partial (1)}{\partial x}, \frac{\partial (-xz)}{\partial x} - \frac{\partial (yz)}{\partial y} \right).
+\end{vmatrix} = \left( \frac{\partial (1)}{\partial y}     - \frac{\partial (-xz)}{\partial z}, \frac{\partial (yz)}{\partial z}     - \frac{\partial (1)}{\partial x}, \frac{\partial (-xz)}{\partial x}     - \frac{\partial (yz)}{\partial y} \right).
 $$
 Evaluating each component:
--$\frac{\partial (1)}{\partial y} - \frac{\partial (-xz)}{\partial z} = 0 - (-x) = x$,
--$\frac{\partial (yz)}{\partial z} - \frac{\partial (1)}{\partial x} = y - 0 = y$,
--$\frac{\partial (-xz)}{\partial x} - \frac{\partial (yz)}{\partial y} = -z - z = -2z$.</p>
-<p>Thus,$\nabla \times \mathbf{F} = (x, y, -2z)$.</p>
-<p>Next, parametrize the surface $S$. Since$S$is given by $z = 4 - x^2 - y^2$, use $x$ and $y$ as parameters:
+-$\frac{\partial (1)}{\partial y}     - \frac{\partial (-xz)}{\partial z} = 0     - (-x) = x$,
+-$\frac{\partial (yz)}{\partial z}     - \frac{\partial (1)}{\partial x} = y     - 0 = y$,
+-$\frac{\partial (-xz)}{\partial x}     - \frac{\partial (yz)}{\partial y} = -z     - z = -2z$.</p>
+<p>Thus, $\nabla \times \mathbf{F} = (x, y, -2z)$.</p>
+<p>Next, parametrize the surface $S$. Since$S$is given by $z = 4     - x^2     - y^2$, use $x$ and $y$ as parameters:
 $$
-\mathbf{r}(x,y) = (x, y, 4 - x^2 - y^2), \quad \text{where } (x,y) \in D,
+\mathbf{r}(x,y) = (x, y, 4     - x^2     - y^2), \quad \text{where } (x,y) \in D,
 $$
 and $D$ is the projection of$S$onto the$xy$-plane, which is the quarter disk $x \geq 0$, $y \geq 0$, $x^2 + y^2 \leq 4$.</p>
 <p>The surface element $d\mathbf{S}$ is given by $\mathbf{r}_x \times \mathbf{r}_y  dx  dy$. Compute:
@@ -191,35 +195,35 @@ $$
 0 &amp; 1 &amp; -2y
 \end{vmatrix}
 $$</p>
-<p>$$= \mathbf{i}(0 \cdot (-2y) - (-2x) \cdot 1) - \mathbf{j}(1 \cdot (-2y) - (-2x) \cdot 0) + \mathbf{k}(1 \cdot 1 - 0 \cdot 0) = (2x, 2y, 1).$$</p>
+<p>$$= \mathbf{i}(0 \cdot (-2y)     - (-2x) \cdot 1)     - \mathbf{j}(1 \cdot (-2y)     - (-2x) \cdot 0) + \mathbf{k}(1 \cdot 1     - 0 \cdot 0) = (2x, 2y, 1).$$</p>
 <p>The normal vector $(2x, 2y, 1)$ has a positive$z$-component, confirming it is upward-pointing. Thus,
 $$
 d\mathbf{S} = (2x, 2y, 1)  dx  dy.
 $$</p>
 <p>Now, compute the dot product:
 $$
-(\nabla \times \mathbf{F}) \cdot d\mathbf{S} = (x, y, -2z) \cdot (2x, 2y, 1) = 2x^2 + 2y^2 - 2z.
+(\nabla \times \mathbf{F}) \cdot d\mathbf{S} = (x, y, -2z) \cdot (2x, 2y, 1) = 2x^2 + 2y^2     - 2z.
 $$
-Substitute$z = 4 - x^2 - y^2$:
+Substitute$z = 4     - x^2     - y^2$:
 $$
-2x^2 + 2y^2 - 2(4 - x^2 - y^2) = 2x^2 + 2y^2 - 8 + 2x^2 + 2y^2 = 4x^2 + 4y^2 - 8.
+2x^2 + 2y^2     - 2(4     - x^2     - y^2) = 2x^2 + 2y^2     - 8 + 2x^2 + 2y^2 = 4x^2 + 4y^2     - 8.
 $$
 The surface integral becomes:
 $$
-\iint_S (\nabla \times \mathbf{F}) \cdot d\mathbf{S} = \iint_D (4x^2 + 4y^2 - 8)  dx  dy,
+\iint_S (\nabla \times \mathbf{F}) \cdot d\mathbf{S} = \iint_D (4x^2 + 4y^2     - 8)  dx  dy,
 $$
 where$D$is the quarter disk$x \geq 0$,$y \geq 0$,$x^2 + y^2 \leq 4$.</p>
 <p>To evaluate this integral, use polar coordinates. Set $x = r \cos \theta$, $y = r \sin \theta$, so $dx  dy = r  dr  d\theta$, and $x^2 + y^2 = r^2$. The region$D$corresponds to $0 \leq r \leq 2$, $0 \leq \theta \leq \pi/2$. The integrand is:
 $$
-4x^2 + 4y^2 - 8 = 4r^2 - 8.
+4x^2 + 4y^2     - 8 = 4r^2     - 8.
 $$
 Thus, the integral is:
 $$
-\int_{\theta=0}^{\pi/2} \int_{r=0}^{2} (4r^2 - 8) r  dr  d\theta = \int_{0}^{\pi/2} \int_{0}^{2} (4r^3 - 8r)  dr  d\theta.
+\int_{\theta=0}^{\pi/2} \int_{r=0}^{2} (4r^2     - 8) r  dr  d\theta = \int_{0}^{\pi/2} \int_{0}^{2} (4r^3     - 8r)  dr  d\theta.
 $$
 First, evaluate the inner integral:
 $$
-\int_{0}^{2} (4r^3 - 8r)  dr = \left[ r^4 - 4r^2 \right]<em>{0}^{2} = (16 - 16) - (0) = 0.
+\int_{0}^{2} (4r^3     - 8r)  dr = \left[ r^4     - 4r^2 \right]<em>{0}^{2} = (16     - 16)     - (0) = 0.
 $$
 Then, evaluate the outer integral:
 $$
@@ -229,73 +233,71 @@ Therefore, the surface integral is 0, and by Stokes' Theorem:
 $$
 \oint_C \mathbf{F} \cdot d\mathbf{r} = 0.
 $$</p>
-<p>To compute the line integral $\oint_C \mathbf{F} \cdot d\mathbf{r}$ directly, parametrize each piece of the curve$C = C_1 + C_2 + C_3$, where $C_1$is the intersection of the paraboloid $z = 4 - x^2 - y^2$ with the $xy$-plane ($z = 0$), $C_2$ with the $yz$-plane ($x = 0$), and $C_3$ with the $xz$-plane ($y = 0$), all in the first octant. The curve is oriented counterclockwise when viewed from above in the first octant, so the traversal is from $(2,0,0)$ to $(0,2,0)$ along$C_1$, then to$(0,0,4)$along$C_2$, and finally back to $(2,0,0)$ along $C_3$.</p>
-<p>The vector field is$\mathbf{F}(x,y,z) = (yz) \mathbf{i} + (-xz) \mathbf{j} + \mathbf{k}$.</p>
-<ul>
-<li>$C_1$lies in the$xy$-plane ($z = 0$) and is the quarter-circle $x^2 + y^2 = 4$ from $(2,0,0)$ to $(0,2,0)$.</li>
-<li>Parametrize using$t \in [0, \pi/2]$:
+<p>To compute the line integral $\oint_C \mathbf{F} \cdot d\mathbf{r}$ directly, parametrize each piece of the curve$C = C_1 + C_2 + C_3$, where $C_1$is the intersection of the paraboloid $z = 4     - x^2     - y^2$ with the $xy$-plane ($z = 0$), $C_2$ with the $yz$-plane ($x = 0$), and $C_3$ with the $xz$-plane ($y = 0$), all in the first octant. The curve is oriented counterclockwise when viewed from above in the first octant, so the traversal is from $(2,0,0)$ to $(0,2,0)$ along$C_1$, then to$(0,0,4)$along$C_2$, and finally back to $(2,0,0)$ along $C_3$.</p>
+<p>The vector field is$\mathbf{F}(x,y,z) = (yz) \mathbf{i} + (-xz) \mathbf{j} + \mathbf{k}$.
+    - $C_1$lies in the$xy$-plane ($z = 0$) and is the quarter-circle $x^2 + y^2 = 4$ from $(2,0,0)$ to $(0,2,0)$.
+    - Parametrize using$t \in [0, \pi/2]$:
  $$
-  \mathbf{r}_1(t) = (2\cos t, 2\sin t, 0)
- $$</li>
-<li>Derivative:
+  \mathbf{r}<em>1(t) = (2\cos t, 2\sin t, 0)
+ $$
+    - Derivative:
  $$
   \mathbf{r}_1'(t) = (-2\sin t, 2\cos t, 0)
- $$</li>
-<li>Vector field along $C_1$ (since$z = 0$):
+ $$
+    - Vector field along $C_1$ (since$z = 0$):
  $$
   \mathbf{F}(\mathbf{r}_1(t)) = ( (2\sin t)(0), -(2\cos t)(0), 1 ) = (0, 0, 1)
- $$</li>
-<li>Dot product:
+ $$
+    - Dot product:
  $$
   \mathbf{F} \cdot \mathbf{r}_1'(t) = (0, 0, 1) \cdot (-2\sin t, 2\cos t, 0) = 0
- $$</li>
-<li>Line integral:
  $$
-  \int_{C_1} \mathbf{F} \cdot d\mathbf{r} = \int_0^{\pi/2} 0  dt = 0
+    - Line integral:
  $$
--$C_2$lies in the$yz$-plane ($x = 0$) with$z = 4 - y^2$from $(0,2,0)$ to $(0,0,4)$.</li>
-<li>Parametrize using$t \in [0, 2]$(so $y = 2 - t$, $z = 4 - (2 - t)^2 = 4t - t^2$):
+  \int</em>{C_1} \mathbf{F} \cdot d\mathbf{r} = \int_0^{\pi/2} 0  dt = 0
  $$
-  \mathbf{r}_2(t) = (0, 2 - t, 4t - t^2)
- $$</li>
-<li>Derivative:
+-$C_2$lies in the$yz$-plane ($x = 0$) with$z = 4     - y^2$from $(0,2,0)$ to $(0,0,4)$.
+    - Parametrize using$t \in [0, 2]$(so $y = 2     - t$, $z = 4     - (2     - t)^2 = 4t     - t^2$):
  $$
-  \mathbf{r}_2'(t) = (0, -1, 4 - 2t)
- $$</li>
-<li>Vector field along $C_2$ (since $x = 0$):
+  \mathbf{r}<em>2(t) = (0, 2     - t, 4t     - t^2)
  $$
-  \mathbf{F}(\mathbf{r}_2(t)) = ( (2 - t)(4t - t^2), -(0)(4t - t^2), 1 ) = ((2 - t)(4t - t^2), 0, 1)
- $$</li>
-<li>Dot product:
+    - Derivative:
  $$
-  \mathbf{F} \cdot \mathbf{r}_2'(t) = ((2 - t)(4t - t^2)) \cdot 0 + 0 \cdot (-1) + 1 \cdot (4 - 2t) = 4 - 2t
- $$</li>
-<li>Line integral:
+  \mathbf{r}_2'(t) = (0, -1, 4     - 2t)
  $$
-  \int_{C_2} \mathbf{F} \cdot d\mathbf{r} = \int_0^2 (4 - 2t)  dt = \left[ 4t - t^2 \right]_0^2 = (8 - 4) - 0 = 4
+    - Vector field along $C_2$ (since $x = 0$):
  $$
--$C_3$ lies in the $xz$-plane ($y = 0$) with $z = 4 - x^2$ from $(0,0,4)$ to $(2,0,0)$.</li>
-<li>Parametrize using$t \in [0, 2]$:
+  \mathbf{F}(\mathbf{r}_2(t)) = ( (2     - t)(4t     - t^2), -(0)(4t     - t^2), 1 ) = ((2     - t)(4t     - t^2), 0, 1)
  $$
-  \mathbf{r}_3(t) = (t, 0, 4 - t^2)
- $$</li>
-<li>Derivative:
+    - Dot product:
+ $$
+  \mathbf{F} \cdot \mathbf{r}_2'(t) = ((2     - t)(4t     - t^2)) \cdot 0 + 0 \cdot (-1) + 1 \cdot (4     - 2t) = 4     - 2t
+ $$
+    - Line integral:
+ $$
+  \int</em>{C_2} \mathbf{F} \cdot d\mathbf{r} = \int_0^2 (4     - 2t)  dt = \left[ 4t     - t^2 \right]<em>0^2 = (8     - 4)     - 0 = 4
+ $$
+-$C_3$ lies in the $xz$-plane ($y = 0$) with $z = 4     - x^2$ from $(0,0,4)$ to $(2,0,0)$.
+    - Parametrize using$t \in [0, 2]$:
+ $$
+  \mathbf{r}_3(t) = (t, 0, 4     - t^2)
+ $$
+    - Derivative:
  $$
   \mathbf{r}_3'(t) = (1, 0, -2t)
- $$</li>
-<li>Vector field along $C_3$(since$y = 0$):
  $$
-  \mathbf{F}(\mathbf{r}_3(t)) = ( (0)(4 - t^2), -t(4 - t^2), 1 ) = (0, -4t + t^3, 1)
- $$</li>
-<li>Dot product:
+    - Vector field along $C_3$(since$y = 0$):
+ $$
+  \mathbf{F}(\mathbf{r}_3(t)) = ( (0)(4     - t^2), -t(4     - t^2), 1 ) = (0, -4t + t^3, 1)
+ $$
+    - Dot product:
  $$
   \mathbf{F} \cdot \mathbf{r}_3'(t) = 0 \cdot 1 + (-4t + t^3) \cdot 0 + 1 \cdot (-2t) = -2t
- $$</li>
-<li>Line integral:
  $$
-  \int_{C_3} \mathbf{F} \cdot d\mathbf{r} = \int_0^2 -2t  dt = \left[ -t^2 \right]_0^2 = -4
- $$</li>
-</ul>
+    - Line integral:
+ $$
+  \int</em>{C_3} \mathbf{F} \cdot d\mathbf{r} = \int_0^2 -2t  dt = \left[ -t^2 \right]_0^2 = -4
+ $$</p>
 <p>Sum the line integrals over each segment:
 $$
 \oint_C \mathbf{F} \cdot d\mathbf{r} = \int_{C_1} \mathbf{F} \cdot d\mathbf{r} + \int_{C_2} \mathbf{F} \cdot d\mathbf{r} + \int_{C_3} \mathbf{F} \cdot d\mathbf{r} = 0 + 4 + (-4) = 0
@@ -311,28 +313,28 @@ $$</p>
 </li>
 </ol>
 <p><strong>Solution:</strong></p>
-<p>To show that $\mathbf{F}(x,y,z) = (y + y^2 z) \hat{\mathbf{i}} + (x - z + 2xyz) \hat{\mathbf{j}} + (-y + x y^2) \hat{\mathbf{k}}$ is a gradient field, it suffices to show that $\mathbf{F}$ is conservative, which requires that the curl of $\mathbf{F}$ is zero, i.e., $\nabla \times \mathbf{F} = \mathbf{0}$. The domain is $\mathbb{R}^3$, which is simply connected, so a zero curl implies that $\mathbf{F}$ is a gradient field.</p>
+<p>To show that $\mathbf{F}(x,y,z) = (y + y^2 z) \hat{\mathbf{i}} + (x     - z + 2xyz) \hat{\mathbf{j}} + (-y + x y^2) \hat{\mathbf{k}}$ is a gradient field, it suffices to show that $\mathbf{F}$ is conservative, which requires that the curl of $\mathbf{F}$ is zero, i.e., $\nabla \times \mathbf{F} = \mathbf{0}$. The domain is $\mathbb{R}^3$, which is simply connected, so a zero curl implies that $\mathbf{F}$ is a gradient field.</p>
 <p>Define the components of $\mathbf{F}$ as:
 $$
-P = y + y^2 z, \quad Q = x - z + 2xyz, \quad R = -y + x y^2.
+P = y + y^2 z, \quad Q = x     - z + 2xyz, \quad R = -y + x y^2.
 $$</p>
 <p>The curl $\nabla \times \mathbf{F}$ is given by:
 $$
-\nabla \times \mathbf{F} = \left( \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z} \right) \hat{\mathbf{i}} - \left( \frac{\partial R}{\partial x} - \frac{\partial P}{\partial z} \right) \hat{\mathbf{j}} + \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) \hat{\mathbf{k}}.
+\nabla \times \mathbf{F} = \left( \frac{\partial R}{\partial y}     - \frac{\partial Q}{\partial z} \right) \hat{\mathbf{i}}     - \left( \frac{\partial R}{\partial x}     - \frac{\partial P}{\partial z} \right) \hat{\mathbf{j}} + \left( \frac{\partial Q}{\partial x}     - \frac{\partial P}{\partial y} \right) \hat{\mathbf{k}}.
 $$</p>
 <p>Compute the necessary partial derivatives:
 -$\frac{\partial R}{\partial y} = \frac{\partial}{\partial y}(-y + x y^2) = -1 + 2xy$,
--$\frac{\partial Q}{\partial z} = \frac{\partial}{\partial z}(x - z + 2xyz) = -1 + 2xy$,
+-$\frac{\partial Q}{\partial z} = \frac{\partial}{\partial z}(x     - z + 2xyz) = -1 + 2xy$,
 -$\frac{\partial R}{\partial x} = \frac{\partial}{\partial x}(-y + x y^2) = y^2$,
 -$\frac{\partial P}{\partial z} = \frac{\partial}{\partial z}(y + y^2 z) = y^2$,
--$\frac{\partial Q}{\partial x} = \frac{\partial}{\partial x}(x - z + 2xyz) = 1 + 2yz$,
+-$\frac{\partial Q}{\partial x} = \frac{\partial}{\partial x}(x     - z + 2xyz) = 1 + 2yz$,
 -$\frac{\partial P}{\partial y} = \frac{\partial}{\partial y}(y + y^2 z) = 1 + 2yz$.</p>
 <p>Now substitute into the curl expression:
--$\hat{\mathbf{i}}$-component:$\frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z} = (-1 + 2xy) - (-1 + 2xy) = 0$,
--$\hat{\mathbf{j}}$-component:$-\left( \frac{\partial R}{\partial x} - \frac{\partial P}{\partial z} \right) = -(y^2 - y^2) = 0$,
--$\hat{\mathbf{k}}$-component:$\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} = (1 + 2yz) - (1 + 2yz) = 0$.</p>
+-$\hat{\mathbf{i}}$-component:$\frac{\partial R}{\partial y}     - \frac{\partial Q}{\partial z} = (-1 + 2xy)     - (-1 + 2xy) = 0$,
+-$\hat{\mathbf{j}}$-component:$-\left( \frac{\partial R}{\partial x}     - \frac{\partial P}{\partial z} \right) = -(y^2     - y^2) = 0$,
+-$\hat{\mathbf{k}}$-component:$\frac{\partial Q}{\partial x}     - \frac{\partial P}{\partial y} = (1 + 2yz)     - (1 + 2yz) = 0$.</p>
 <p>Since all components are zero,$\nabla \times \mathbf{F} = \mathbf{0}$. Therefore,$\mathbf{F}$is conservative and hence a gradient field.</p>
-<p>To find a potential function$f(x, y, z)$such that$\nabla f = \mathbf{F}(x, y, z) = (y + y^2 z) \hat{\mathbf{i}} + (x - z + 2xyz) \hat{\mathbf{j}} + (-y + x y^2) \hat{\mathbf{k}}$, integrate the components of$\mathbf{F}$step by step, ensuring consistency with all partial derivatives.</p>
+<p>To find a potential function$f(x, y, z)$such that$\nabla f = \mathbf{F}(x, y, z) = (y + y^2 z) \hat{\mathbf{i}} + (x     - z + 2xyz) \hat{\mathbf{j}} + (-y + x y^2) \hat{\mathbf{k}}$, integrate the components of$\mathbf{F}$step by step, ensuring consistency with all partial derivatives.</p>
 <p>Start with the$x$-component:
 $$
 \frac{\partial f}{\partial x} = y + y^2 z.
@@ -344,7 +346,7 @@ $$
 where $g(y, z)$ is an arbitrary function of $y$ and $z$.</p>
 <p>Next, use the$y$-component:
 $$
-\frac{\partial f}{\partial y} = x - z + 2xyz.
+\frac{\partial f}{\partial y} = x     - z + 2xyz.
 $$
 Compute the partial derivative of$f$with respect to$y$:
 $$
@@ -352,7 +354,7 @@ $$
 $$
 Set this equal to the given$y$-component:
 $$
-x + 2x y z + \frac{\partial g}{\partial y} = x - z + 2x y z.
+x + 2x y z + \frac{\partial g}{\partial y} = x     - z + 2x y z.
 $$
 Simplify to find:
 $$
@@ -364,7 +366,7 @@ g(y, z) = \int (-z)  dy = -y z + h(z),
 $$
 where $h(z)$ is an arbitrary function of$z$. Substitute back into$f$:
 $$
-f(x, y, z) = xy + x y^2 z - y z + h(z).
+f(x, y, z) = xy + x y^2 z     - y z + h(z).
 $$</p>
 <p>Finally, use the $z$-component:
 $$
@@ -372,11 +374,11 @@ $$
 $$
 Compute the partial derivative of $f$ with respect to $z$:
 $$
-\frac{\partial f}{\partial z} = \frac{\partial}{\partial z} (xy + x y^2 z - y z + h(z)) = x y^2 - y + h'(z).
+\frac{\partial f}{\partial z} = \frac{\partial}{\partial z} (xy + x y^2 z     - y z + h(z)) = x y^2     - y + h'(z).
 $$
 Set this equal to the given$z$-component:
 $$
-x y^2 - y + h'(z) = -y + x y^2.
+x y^2     - y + h'(z) = -y + x y^2.
 $$
 Simplify to find:
 $$
@@ -384,49 +386,43 @@ h'(z) = 0.
 $$
 Thus, $h(z)$ is a constant, denoted $C$. The potential function is:
 $$
-f(x, y, z) = xy + x y^2 z - y z + C.
+f(x, y, z) = xy + x y^2 z     - y z + C.
 $$
 Since potential functions are defined up to an additive constant, set $C = 0$ for simplicity:
 $$
-f(x, y, z) = xy + x y^2 z - y z.
+f(x, y, z) = xy + x y^2 z     - y z.
 $$</p>
-<p>The vector field $\mathbf{F}(x,y,z) = (y + y^2 z) \hat{\mathbf{i}} + (x - z + 2xyz) \hat{\mathbf{j}} + (-y + x y^2) \hat{\mathbf{k}}$ is conservative, as previously established by showing that its curl is zero. A potential function $f(x,y,z)$such that $\nabla f = \mathbf{F}$ is given by $f(x,y,z) = xy + x y^2 z - y z$.</p>
+<p>The vector field $\mathbf{F}(x,y,z) = (y + y^2 z) \hat{\mathbf{i}} + (x     - z + 2xyz) \hat{\mathbf{j}} + (-y + x y^2) \hat{\mathbf{k}}$ is conservative, as previously established by showing that its curl is zero. A potential function $f(x,y,z)$such that $\nabla f = \mathbf{F}$ is given by $f(x,y,z) = xy + x y^2 z     - y z$.</p>
 <p>To compute the line integral $\int_C \mathbf{F} \cdot d\mathbf{r}$ along the straight line path $C$ from $(2,2,1)$ to $(1,-1,2)$, the fundamental theorem for line integrals is applied. This theorem states that for a conservative vector field, the line integral depends only on the endpoints of the path and is given by the difference in the potential function evaluated at these points:</p>
 <p>$$
-\int_C \mathbf{F} \cdot d\mathbf{r} = f(1,-1,2) - f(2,2,1).
+\int_C \mathbf{F} \cdot d\mathbf{r} = f(1,-1,2)     - f(2,2,1).
 $$</p>
-<p>Evaluate the potential function at the endpoints:</p>
-<ul>
-<li>
-<p>At $(1,-1,2)$:
+<p>Evaluate the potential function at the endpoints:
+    - At $(1,-1,2)$:
  $$
-  f(1,-1,2) = (1)(-1) + (1)(-1)^2(2) - (-1)(2) = -1 + (1)(1)(2) - (-2) = -1 + 2 + 2 = 3.
- $$</p>
-</li>
-<li>
-<p>At $(2,2,1)$:
+  f(1,-1,2) = (1)(-1) + (1)(-1)^2(2)     - (-1)(2) = -1 + (1)(1)(2)     - (-2) = -1 + 2 + 2 = 3.
  $$
-  f(2,2,1) = (2)(2) + (2)(2)^2(1) - (2)(1) = 4 + (2)(4)(1) - 2 = 4 + 8 - 2 = 10.
+    - At $(2,2,1)$:
+ $$
+  f(2,2,1) = (2)(2) + (2)(2)^2(1)     - (2)(1) = 4 + (2)(4)(1)     - 2 = 4 + 8     - 2 = 10.
  $$</p>
-</li>
-</ul>
 <p>Compute the difference:
 $$
-f(1,-1,2) - f(2,2,1) = 3 - 10 = -7.
+f(1,-1,2)     - f(2,2,1) = 3     - 10 = -7.
 $$</p>
 <hr />
 <ol>
 <li>(1-Q6) Evaluate the following single integral by converting it to an equivalent double integral:</li>
 </ol>
-<p>$$\int_0^\infty \frac{e^{-x} - e^{-ax}}{x} \cdot dx$$</p>
+<p>$$\int_0^\infty \frac{e^{-x}     - e^{-ax}}{x} \cdot dx$$</p>
 <p><strong>Solution:</strong></p>
-<p>To evaluate the integral $\int_0^\infty \frac{e^{-x} - e^{-ax}}{x}  dx$, convert it to an equivalent double integral. Note that for$a &gt; 0$, the integrand can be expressed as:</p>
+<p>To evaluate the integral $\int_0^\infty \frac{e^{-x}     - e^{-ax}}{x}  dx$, convert it to an equivalent double integral. Note that for$a &gt; 0$, the integrand can be expressed as:</p>
 <p>$$
-\frac{e^{-x} - e^{-ax}}{x} = \int_1^a e^{-u x}  du.
+\frac{e^{-x}     - e^{-ax}}{x} = \int_1^a e^{-u x}  du.
 $$</p>
 <p>This holds for all $a &gt; 0$, as the limits account for the direction of integration (e.g., if $a &lt; 1$, the integral from 1 to a is negative, matching the sign of the integrand). Substituting this into the original integral gives:</p>
 <p>$$
-\int_0^\infty \frac{e^{-x} - e^{-ax}}{x}  dx = \int_0^\infty \left( \int_1^a e^{-u x}  du \right) dx.
+\int_0^\infty \frac{e^{-x}     - e^{-ax}}{x}  dx = \int_0^\infty \left( \int_1^a e^{-u x}  du \right) dx.
 $$</p>
 <p>Since the integrand $e^{-u x}$ is continuous and non-negative for $x &gt; 0$ and $u &gt; 0$, and the integral converges absolutely for $a &gt; 0$, Fubini's theorem allows switching the order of integration:</p>
 <p>$$
@@ -434,13 +430,13 @@ $$</p>
 $$</p>
 <p>Now evaluate the inner integral with respect to $x$. For fixed $u &gt; 0$,</p>
 <p>$$
-\int_0^\infty e^{-u x}  dx = \left[ -\frac{1}{u} e^{-u x} \right]_0^\infty = 0 - \left( -\frac{1}{u} \right) = \frac{1}{u}.
+\int_0^\infty e^{-u x}  dx = \left[ -\frac{1}{u} e^{-u x} \right]_0^\infty = 0     - \left( -\frac{1}{u} \right) = \frac{1}{u}.
 $$</p>
 <p>Substitute this result back into the outer integral:</p>
 <p>$$
-\int_1^a \frac{1}{u}  du = \left[ \ln u \right]_1^a = \ln a - \ln 1 = \ln a,
+\int_1^a \frac{1}{u}  du = \left[ \ln u \right]_1^a = \ln a     - \ln 1 = \ln a,
 $$</p>
-<hr />
+<p>--    - </p>
 <ol>
 <li>(1-Q7) Show that the average distance of the points of a disk of radius$a$to its center is$2a/3$.  </li>
 </ol>
@@ -487,7 +483,7 @@ I = \iint_R x^2 \delta  dA.
 $$
 The moment of inertia around the parallel axis through the center of mass$(\bar{x}, \bar{y})$, which is the line $x = \bar{x}$, is given by:</p>
 <p>$$
-\bar{I} = \iint_R (x - \bar{x})^2 \delta  dA.
+\bar{I} = \iint_R (x     - \bar{x})^2 \delta  dA.
 $$
 The center of mass $\bar{x}$ and the total mass $M$ are defined as:</p>
 <p>$$
@@ -499,15 +495,15 @@ $$</p>
 $$</p>
 <p>Expand the expression for $\bar{I}$:</p>
 <p>$$
-\bar{I} = \iint_R (x - \bar{x})^2 \delta  dA = \iint_R (x^2 - 2x\bar{x} + \bar{x}^2) \delta  dA.
+\bar{I} = \iint_R (x     - \bar{x})^2 \delta  dA = \iint_R (x^2     - 2x\bar{x} + \bar{x}^2) \delta  dA.
 $$</p>
 <p>Distribute the integral:</p>
 <p>$$
-\bar{I} = \iint_R x^2 \delta  dA - 2\bar{x} \iint_R x \delta  dA + \bar{x}^2 \iint_R \delta  dA.
+\bar{I} = \iint_R x^2 \delta  dA     - 2\bar{x} \iint_R x \delta  dA + \bar{x}^2 \iint_R \delta  dA.
 $$
 Substitute the known expressions:</p>
 <p>$$
-\bar{I} = I - 2\bar{x} (M \bar{x}) + \bar{x}^2 M = I - 2M \bar{x}^2 + M \bar{x}^2 = I - M \bar{x}^2.
+\bar{I} = I     - 2\bar{x} (M \bar{x}) + \bar{x}^2 M = I     - 2M \bar{x}^2 + M \bar{x}^2 = I     - M \bar{x}^2.
 $$</p>
 <p>Rearrange to solve for$I$:</p>
 <p>$$
@@ -549,10 +545,12 @@ $$</p>
 <hr />
 <ol>
 <li>(1-Q12) Consider the vector field<br />
-$$\vec{F} = \frac{-y\hat{i} + x\hat{j}}{x^2 + y^2}$$ </li>
+$$\vec{F} = \frac{-y\hat{i} + x\hat{j}}{x^2 + y^2}$$ <ul>
 <li>Show that $\vec{F}$ is the gradient of the polar function $\theta(x,y) = \arctan(y/x)$ over the right half-plane $x &gt; 0$.  </li>
 <li>Suppose that $C$ is a smooth curve in the right half-plane $x &gt; 0$ joining two points $A : (x_1 , y_1 )$and $B : (x_2 , y_2 )$. Express $\int_C \vec{F} \cdot d\vec{r}$ in terms of the polar coordinates $(r_1, \theta_1)$ and $(r_2, \theta_2)$ of $A$ and $B$.  </li>
 <li>Compute directly from the definition the line integrals $\int_{C_1} \vec{F} \cdot d\vec{r}$ and $\int_{C_2} \vec{F} \cdot d\vec{r}$ where $C_1$ is the upper half of the unit circle running from $(1, 0)$ to $(-1, 0)$ and $C_2$ is the lower half of the unit circle, also going from $(1, 0)$ to $(-1, 0)$. </li>
+</ul>
+</li>
 </ol>
 <p><strong>Solution:</strong></p>
 <p>To show that the vector field $\vec{F} = \frac{-y\hat{i} + x\hat{j}}{x^2 + y^2}$ is the gradient of the polar function $\theta(x,y) = \arctan(y/x)$over the right half-plane $x &gt; 0$, compute the gradient of $\theta(x,y)$ and verify that it matches $\vec{F}$.</p>
@@ -596,7 +594,7 @@ $$</p>
 <p>The vector field $\vec{F} = \frac{-y \hat{i} + x \hat{j}}{x^2 + y^2}$ is conservative in the right half-plane $x &gt; 0$, as it is the gradient of the potential function $\theta(x,y) = \arctan(y/x)$. Specifically, $\nabla \theta = \vec{F}$.</p>
 <p>Since$\vec{F}$is conservative, the line integral $\int_C \vec{F} \cdot d\vec{r}$ depends only on the endpoints of the curve$C$, which are $A: (x_1, y_1)$ and $B: (x_2, y_2)$. The value of the line integral is given by the difference in the potential function evaluated at the endpoints:</p>
 <p>$$
-\int_C \vec{F} \cdot d\vec{r} = \theta(B) - \theta(A).
+\int_C \vec{F} \cdot d\vec{r} = \theta(B)     - \theta(A).
 $$</p>
 <p>In polar coordinates, the angle$\theta$is defined as $\theta = \arctan(y/x)$for$x &gt; 0$. The polar coordinates of $A$ and $B$ are $(r_1, \theta_1)$ and $(r_2, \theta_2)$, respectively, where $\theta_1 = \arctan(y_1/x_1)$ and $\theta_2 = \arctan(y_2/x_2)$.</p>
 <p>Since the curve $C$ lies entirely in the right half-plane $x &gt; 0$, $\theta(x,y)$ is well-defined and smooth, and the angles $\theta_1$ and $\theta_2$ are both in the interval $(-\pi/2, \pi/2)$. Therefore,
@@ -605,30 +603,30 @@ $$
 $$</p>
 <p>Substituting these into the expression for the line integral gives:
 $$
-\int_C \vec{F} \cdot d\vec{r} = \theta_2 - \theta_1.
+\int_C \vec{F} \cdot d\vec{r} = \theta_2     - \theta_1.
 $$</p>
 <p>The vector field is $\vec{F} = \frac{-y \hat{i} + x \hat{j}}{x^2 + y^2}$.</p>
 <p>For $C_1$ (upper half of the unit circle from $(1,0)$ to $(-1,0)$):
-- Parameterize $C_1$ as $\vec{r}(t) = (\cos t, \sin t)$ for $t \in [0, \pi]$.
-- Then $\vec{r}'(t) = (-\sin t, \cos t)$.
-- On the unit circle, $x^2 + y^2 = \cos^2 t + \sin^2 t = 1$, so $\vec{F}(\vec{r}(t)) = (-\sin t, \cos t)$.
-- The dot product is:
+    - Parameterize $C_1$ as $\vec{r}(t) = (\cos t, \sin t)$ for $t \in [0, \pi]$.
+    - Then $\vec{r}'(t) = (-\sin t, \cos t)$.
+    - On the unit circle, $x^2 + y^2 = \cos^2 t + \sin^2 t = 1$, so $\vec{F}(\vec{r}(t)) = (-\sin t, \cos t)$.
+    - The dot product is:
  $$
   \vec{F} \cdot \vec{r}' = (-\sin t)(-\sin t) + (\cos t)(\cos t) = \sin^2 t + \cos^2 t = 1.
  $$
-- The line integral is:
+    - The line integral is:
  $$
   \int_{C_1} \vec{F} \cdot d\vec{r} = \int_0^\pi 1  dt = [t]_0^\pi = \pi.
  $$</p>
 <p>For$C_2$(lower half of the unit circle from $(1,0)$ to $(-1,0)$):
-- Parameterize $C_2$ as $\vec{r}(t) = (\cos t, -\sin t)$ for $t \in [0, \pi]$.
-- Then $\vec{r}'(t) = (-\sin t, -\cos t)$.
-- On the unit circle, $x^2 + y^2 = \cos^2 t + (-\sin t)^2 = 1$, so $\vec{F}(\vec{r}(t)) = (-(-\sin t), \cos t) = (\sin t, \cos t)$.
-- The dot product is:
+    - Parameterize $C_2$ as $\vec{r}(t) = (\cos t, -\sin t)$ for $t \in [0, \pi]$.
+    - Then $\vec{r}'(t) = (-\sin t, -\cos t)$.
+    - On the unit circle, $x^2 + y^2 = \cos^2 t + (-\sin t)^2 = 1$, so $\vec{F}(\vec{r}(t)) = (-(-\sin t), \cos t) = (\sin t, \cos t)$.
+    - The dot product is:
  $$
-  \vec{F} \cdot \vec{r}' = (\sin t)(-\sin t) + (\cos t)(-\cos t) = -\sin^2 t - \cos^2 t = -1.
+  \vec{F} \cdot \vec{r}' = (\sin t)(-\sin t) + (\cos t)(-\cos t) = -\sin^2 t     - \cos^2 t = -1.
  $$
-- The line integral is:
+    - The line integral is:
  $$
   \int_{C_2} \vec{F} \cdot d\vec{r} = \int_0^\pi -1  dt = [-t]_0^\pi = -\pi.
  $$</p>
@@ -645,14 +643,14 @@ $$
 $$</p>
 <p>Evaluate the integrals:
 $$
-\int_0^{2\pi w} \sin t  dt = \left[ -\cos t \right]_0^{2\pi w} = -\cos(2\pi w) - (-\cos 0) = -\cos(2\pi w) + 1,
+\int_0^{2\pi w} \sin t  dt = \left[ -\cos t \right]_0^{2\pi w} = -\cos(2\pi w)     - (-\cos 0) = -\cos(2\pi w) + 1,
 $$
 $$
-\int_0^{2\pi w} \cos t  dt = \left[ \sin t \right]_0^{2\pi w} = \sin(2\pi w) - \sin 0.
+\int_0^{2\pi w} \cos t  dt = \left[ \sin t \right]_0^{2\pi w} = \sin(2\pi w)     - \sin 0.
 $$</p>
 <p>Since $w$ is an integer, $\cos(2\pi w) = \cos(0) = 1$ and $\sin(2\pi w) = \sin(0) = 0$. Thus:
 $$
--\cos(2\pi w) + 1 = -1 + 1 = 0, \quad \sin(2\pi w) - 0 = 0 - 0 = 0.
+-\cos(2\pi w) + 1 = -1 + 1 = 0, \quad \sin(2\pi w)     - 0 = 0     - 0 = 0.
 $$</p>
 <p>Therefore, the work done is:
 $$
@@ -661,10 +659,12 @@ $$</p>
 <p>Thus, the work done by the constant force field is zero for any integer$w$.</p>
 <hr />
 <ol>
-<li>(1-Q17)</li>
+<li>(1-Q17)<ul>
 <li>Let $f(x,y,z) = 1/\rho = (x^2 + y^2 + z^2)^{-1/2}$. Calculate $\vec{F}=\nabla f$.  </li>
 <li>Evaluate the flux of $\vec{F}$ over the sphere of radius $a$ centered at the origin.  </li>
 <li>Show that $div(\vec{F}) = 0$. Does this violate the divergence theorem?  </li>
+</ul>
+</li>
 </ol>
 <p><strong>Solution:</strong></p>
 <p>The function is given by $f(x,y,z) = \frac{1}{\rho} = (x^2 + y^2 + z^2)^{-1/2}$, where $\rho = \sqrt{x^2 + y^2 + z^2}$.</p>
@@ -725,14 +725,14 @@ since the origin is inside the sphere, confirming the result.</p>
 <p>Any point $Q$ on the sphere can be represented in spherical coordinates as $(a, \theta, \phi)$, where $\theta$ is the polar angle (from the positive $z$-axis) and $\phi$ is the azimuthal angle. The Cartesian coordinates of $Q$ are $(a \sin\theta \cos\phi, a \sin\theta \sin\phi, a \cos\theta)$.</p>
 <p>The straight-line distance $d$ from $P$ to $Q$ is given by:
 $$
-d = \sqrt{(0 - a \sin\theta \cos\phi)^2 + (0 - a \sin\theta \sin\phi)^2 + (a - a \cos\theta)^2}.
+d = \sqrt{(0     - a \sin\theta \cos\phi)^2 + (0     - a \sin\theta \sin\phi)^2 + (a     - a \cos\theta)^2}.
 $$
 Simplifying the expression inside the square root:
 $$
-d = a \sqrt{\sin^2\theta (\cos^2\phi + \sin^2\phi) + (1 - \cos\theta)^2} 
+d = a \sqrt{\sin^2\theta (\cos^2\phi + \sin^2\phi) + (1     - \cos\theta)^2} 
 $$
-$$= a \sqrt{\sin^2\theta + 1 - 2\cos\theta + \cos^2\theta} = a \sqrt{2 - 2\cos\theta} = a \sqrt{2(1 - \cos\theta)}.$$
-Using the trigonometric identity $1 - \cos\theta = 2 \sin^2(\theta/2)$:
+$$= a \sqrt{\sin^2\theta + 1     - 2\cos\theta + \cos^2\theta} = a \sqrt{2     - 2\cos\theta} = a \sqrt{2(1     - \cos\theta)}.$$
+Using the trigonometric identity $1     - \cos\theta = 2 \sin^2(\theta/2)$:
 $$
 d = a \sqrt{2 \cdot 2 \sin^2(\theta/2)} = a \sqrt{4 \sin^2(\theta/2)} = 2a \sin(\theta/2),
 $$
@@ -843,29 +843,29 @@ $$
 $$
 Substitute $u = 1 + x + y$, so $du = dx$. When $x = 0$, $u = 1 + y$; when $x = 1$, $u = 2 + y$. Then,
 $$
-\int_{x=0}^{1} \sqrt{1 + x + y}  dx = \int_{u=1+y}^{2+y} u^{1/2}  du = \left[ \frac{2}{3} u^{3/2} \right]_{1+y}^{2+y} = \frac{2}{3} \left[ (2 + y)^{3/2} - (1 + y)^{3/2} \right].
+\int_{x=0}^{1} \sqrt{1 + x + y}  dx = \int_{u=1+y}^{2+y} u^{1/2}  du = \left[ \frac{2}{3} u^{3/2} \right]_{1+y}^{2+y} = \frac{2}{3} \left[ (2 + y)^{3/2}     - (1 + y)^{3/2} \right].
 $$</p>
 <p>The double integral becomes:
 $$
-A = \int_{y=0}^{1} \frac{2}{3} \left[ (2 + y)^{3/2} - (1 + y)^{3/2} \right]  dy = \frac{2}{3} \int_{0}^{1} \left[ (2 + y)^{3/2} - (1 + y)^{3/2} \right]  dy.
+A = \int_{y=0}^{1} \frac{2}{3} \left[ (2 + y)^{3/2}     - (1 + y)^{3/2} \right]  dy = \frac{2}{3} \int_{0}^{1} \left[ (2 + y)^{3/2}     - (1 + y)^{3/2} \right]  dy.
 $$</p>
 <p>Now compute the integral:</p>
 <p>$$
-\int_{0}^{1} (2 + y)^{3/2}  dy - \int_{0}^{1} (1 + y)^{3/2}  dy.
+\int_{0}^{1} (2 + y)^{3/2}  dy     - \int_{0}^{1} (1 + y)^{3/2}  dy.
 $$</p>
 <p>For the first integral, substitute $v = 2 + y$, $dv = dy$; when $y = 0$, $v = 2$; when $y = 1$, $v = 3$:</p>
 <p>$$
-\int_{2}^{3} v^{3/2}  dv = \left[ \frac{2}{5} v^{5/2} \right]_{2}^{3} = \frac{2}{5} \left( 3^{5/2} - 2^{5/2} \right).
+\int_{2}^{3} v^{3/2}  dv = \left[ \frac{2}{5} v^{5/2} \right]_{2}^{3} = \frac{2}{5} \left( 3^{5/2}     - 2^{5/2} \right).
 $$</p>
 <p>For the second integral, substitute $w = 1 + y$, $dw = dy$; when $y = 0$, $w = 1$; when $y = 1$, $w = 2$:</p>
 <p>$$
-\int_{1}^{2} w^{3/2}  dw = \left[ \frac{2}{5} w^{5/2} \right]_{1}^{2} = \frac{2}{5} \left( 2^{5/2} - 1^{5/2} \right) = \frac{2}{5} \left( 2^{5/2} - 1 \right).
+\int_{1}^{2} w^{3/2}  dw = \left[ \frac{2}{5} w^{5/2} \right]_{1}^{2} = \frac{2}{5} \left( 2^{5/2}     - 1^{5/2} \right) = \frac{2}{5} \left( 2^{5/2}     - 1 \right).
 $$</p>
 <p>Thus,</p>
 <p>$$
-\int_{0}^{1} \left[ (2 + y)^{3/2} - (1 + y)^{3/2} \right]  dy = \frac{2}{5} \left( 3^{5/2} - 2^{5/2} \right) - \frac{2}{5} \left( 2^{5/2} - 1 \right)
+\int_{0}^{1} \left[ (2 + y)^{3/2}     - (1 + y)^{3/2} \right]  dy = \frac{2}{5} \left( 3^{5/2}     - 2^{5/2} \right)     - \frac{2}{5} \left( 2^{5/2}     - 1 \right)
 $$</p>
-<p>$$= \frac{2}{5} \left( 3^{5/2} - 2^{5/2} - 2^{5/2} + 1 \right) = \frac{2}{5} \left( 3^{5/2} - 2 \cdot 2^{5/2} + 1 \right).$$</p>
+<p>$$= \frac{2}{5} \left( 3^{5/2}     - 2^{5/2}     - 2^{5/2} + 1 \right) = \frac{2}{5} \left( 3^{5/2}     - 2 \cdot 2^{5/2} + 1 \right).$$</p>
 <p>Simplify the exponents:
 $$
 3^{5/2} = 3^{2 + 1/2} = 3^2 \cdot 3^{1/2} = 9\sqrt{3}, \quad 2^{5/2} = 2^{2 + 1/2} = 2^2 \cdot 2^{1/2} = 4\sqrt{2},
@@ -876,12 +876,12 @@ $$
 $$
 Thus,
 $$
-\int_{0}^{1} \left[ (2 + y)^{3/2} - (1 + y)^{3/2} \right]  dy = \frac{2}{5} \left( 9\sqrt{3} - 8\sqrt{2} + 1 \right).
+\int_{0}^{1} \left[ (2 + y)^{3/2}     - (1 + y)^{3/2} \right]  dy = \frac{2}{5} \left( 9\sqrt{3}     - 8\sqrt{2} + 1 \right).
 $$</p>
 <p>Now substitute back:
 $$
-A = \frac{2}{3} \cdot \frac{2}{5} \left( 9\sqrt{3} - 8\sqrt{2} + 1 \right) = \frac{4}{15} \left( 1 + 9\sqrt{3} - 8\sqrt{2} \right).
+A = \frac{2}{3} \cdot \frac{2}{5} \left( 9\sqrt{3}     - 8\sqrt{2} + 1 \right) = \frac{4}{15} \left( 1 + 9\sqrt{3}     - 8\sqrt{2} \right).
 $$</p>
-<p>Therefore, the surface area is $\frac{4}{15} \left( 1 + 9\sqrt{3} - 8\sqrt{2} \right)$. </p>
+<p>Therefore, the surface area is $\frac{4}{15} \left( 1 + 9\sqrt{3}     - 8\sqrt{2} \right)$. </p>
 <hr /></body>
 </html>
