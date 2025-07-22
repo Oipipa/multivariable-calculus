@@ -1,0 +1,203 @@
+{
+  "main": {
+    "id": "6bf18507cebe4918",
+    "type": "split",
+    "children": [
+      {
+        "id": "abf849d6c17d20bb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4a999c4dc9e3e7d0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "A01_Vectors.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "A01_Vectors"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c060f5d720c2a33a",
+    "type": "split",
+    "children": [
+      {
+        "id": "271b830d2f918715",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e70561ccbc34271e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "dc9a89192597f59b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "5119715ac63e93bf",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "f335641ccd58a8d4",
+    "type": "split",
+    "children": [
+      {
+        "id": "d606fd17fe6fed64",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "826f6a5268ea4cbd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "CH01_Cylinders_and_Surfaces.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for CH01_Cylinders_and_Surfaces"
+            }
+          },
+          {
+            "id": "ee12e2d0f2bb0e52",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "CH01_Cylinders_and_Surfaces.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from CH01_Cylinders_and_Surfaces"
+            }
+          },
+          {
+            "id": "61084221522f54bc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "50f7472f2e172923",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "CH01_Cylinders_and_Surfaces.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of CH01_Cylinders_and_Surfaces"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "webpage-html-export:Export Vault to HTML": false
+    }
+  },
+  "active": "4a999c4dc9e3e7d0",
+  "lastOpenFiles": [
+    "A02_Multivariable_Differenciation.md",
+    "A04_Navigating_3D_Space.md",
+    "CH01_Cylinders_and_Surfaces.md",
+    "CH02_Vectors_and_Functions.md",
+    "CH04_Multivariable_Integration.md",
+    "CH05_Navigating_3D_Space.md",
+    "CH03_Multivariable_Differenciation.md",
+    "A03_Multivariable_Integration.md",
+    "A01_Vectors.md",
+    "index.md",
+    "Untitled.md",
+    "assets/Pasted image 20250718191743.png",
+    "assets/Pasted image 20250317155547.png",
+    "assets/P1.pdf",
+    "Problem_Appendix",
+    "Integration.md",
+    "Vector_Operations.md",
+    "Welcome.md",
+    "assets/images/ellipticalcone.gif",
+    "assets/images/Ellipsoids.gif",
+    "assets/images/hyperbolidonesheet.gif",
+    "assets/images/general.gif",
+    "assets/images/plot1.png",
+    "assets/images/hyperbolidtwosheets.gif",
+    "assets/images/hyperbolicparaboloid.gif",
+    "assets/images/ellipticparaboloid.gif",
+    "assets/images",
+    "assets"
+  ]
+}
