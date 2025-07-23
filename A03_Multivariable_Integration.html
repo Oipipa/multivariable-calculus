@@ -151,44 +151,44 @@ $$
     z = 4     - x^2     - y^2
 $$
 which lies above the first octant; and let$C$be the closed curve$C = C_1 + C_2 + C_3$, where the curves $C_1$, $C_2$, and $C_3$ are the three curves formed by intersecting $S$ with the $xy$, $yz$, and $xz$ planes respectively (so that $C$ is the boundary of $S$). Orient $C$ so that it is traversed counterclockwise when seen from above in the first octant.<ul>
-<li>Use Stokes’ Theorem to compute
-   $$
-\oint_C \mathbf{F} \cdot d \mathbf{r}
-   $$
-by using the surface integral over the capping surface $S$.</li>
-<li>Set up and evaluate the loop integral $\oint_C \textbf{F} \cdot d\textbf{r}$ directly by parametrizing each piece of the curve $C$ and then adding up the three line integrals. </li>
+<li>Use Stokes’ Theorem to compute</li>
 </ul>
 </li>
 </ol>
+<p>$$
+\oint_C \mathbf{F} \cdot d \mathbf{r}
+$$</p>
+<p>by using the surface integral over the capping surface $S$.
+    - Set up and evaluate the loop integral $\oint_C \textbf{F} \cdot d\textbf{r}$ directly by parametrizing each piece of the curve $C$ and then adding up the three line integrals. </p>
 <p><strong>Solution:</strong></p>
 <p>To compute $\oint_C \mathbf{F} \cdot d\mathbf{r}$ using Stokes' Theorem, where $\mathbf{F}(x,y,z) = yz  \mathbf{i}     - xz  \mathbf{j} + \mathbf{k}$ and $C$ is the boundary of the surface $S$ (the portion of the paraboloid $z = 4     - x^2     - y^2$ in the first octant), oriented counterclockwise when viewed from above in the first octant, Stokes' Theorem states that:</p>
 <p>$$
 \oint_C \mathbf{F} \cdot d\mathbf{r} = \iint_S (\nabla \times \mathbf{F}) \cdot d\mathbf{S}.
 $$</p>
 <p>Here, $S$ is oriented with the upward-pointing normal vector, consistent with the counterclockwise orientation of$C$when viewed from above.</p>
-<p>First, compute the curl of $\mathbf{F}$:
-$$
+<p>First, compute the curl of $\mathbf{F}$:</p>
+<p>$$
 \nabla \times \mathbf{F} = \begin{vmatrix}
 \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
 \frac{\partial}{\partial x} &amp; \frac{\partial}{\partial y} &amp; \frac{\partial}{\partial z} \\
 yz &amp; -xz &amp; 1
 \end{vmatrix} = \left( \frac{\partial (1)}{\partial y}     - \frac{\partial (-xz)}{\partial z}, \frac{\partial (yz)}{\partial z}     - \frac{\partial (1)}{\partial x}, \frac{\partial (-xz)}{\partial x}     - \frac{\partial (yz)}{\partial y} \right).
-$$
-Evaluating each component:
+$$</p>
+<p>Evaluating each component:
 -$\frac{\partial (1)}{\partial y}     - \frac{\partial (-xz)}{\partial z} = 0     - (-x) = x$,
 -$\frac{\partial (yz)}{\partial z}     - \frac{\partial (1)}{\partial x} = y     - 0 = y$,
 -$\frac{\partial (-xz)}{\partial x}     - \frac{\partial (yz)}{\partial y} = -z     - z = -2z$.</p>
 <p>Thus, $\nabla \times \mathbf{F} = (x, y, -2z)$.</p>
-<p>Next, parametrize the surface $S$. Since$S$is given by $z = 4     - x^2     - y^2$, use $x$ and $y$ as parameters:
-$$
+<p>Next, parametrize the surface $S$. Since$S$is given by $z = 4     - x^2     - y^2$, use $x$ and $y$ as parameters:</p>
+<p>$$
 \mathbf{r}(x,y) = (x, y, 4     - x^2     - y^2), \quad \text{where } (x,y) \in D,
-$$
-and $D$ is the projection of$S$onto the$xy$-plane, which is the quarter disk $x \geq 0$, $y \geq 0$, $x^2 + y^2 \leq 4$.</p>
-<p>The surface element $d\mathbf{S}$ is given by $\mathbf{r}_x \times \mathbf{r}_y  dx  dy$. Compute:
-$$
+$$</p>
+<p>and $D$ is the projection of$S$onto the $xy$-plane, which is the quarter disk $x \geq 0$, $y \geq 0$, $x^2 + y^2 \leq 4$.</p>
+<p>The surface element $d\mathbf{S}$ is given by $\mathbf{r}_x \times \mathbf{r}_y  dx  dy$. Compute:</p>
+<p>$$
 \mathbf{r}_x = \left(1, 0, -2x\right), \quad \mathbf{r}_y = \left(0, 1, -2y\right),
-$$
-$$
+$$</p>
+<p>$$
 \mathbf{r}_x \times \mathbf{r}_y = \begin{vmatrix}
 \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
 1 &amp; 0 &amp; -2x \\
@@ -196,52 +196,52 @@ $$
 \end{vmatrix}
 $$</p>
 <p>$$= \mathbf{i}(0 \cdot (-2y)     - (-2x) \cdot 1)     - \mathbf{j}(1 \cdot (-2y)     - (-2x) \cdot 0) + \mathbf{k}(1 \cdot 1     - 0 \cdot 0) = (2x, 2y, 1).$$</p>
-<p>The normal vector $(2x, 2y, 1)$ has a positive$z$-component, confirming it is upward-pointing. Thus,
-$$
+<p>The normal vector $(2x, 2y, 1)$ has a positive$z$-component, confirming it is upward-pointing. Thus,</p>
+<p>$$
 d\mathbf{S} = (2x, 2y, 1)  dx  dy.
 $$</p>
-<p>Now, compute the dot product:
-$$
+<p>Now, compute the dot product:</p>
+<p>$$
 (\nabla \times \mathbf{F}) \cdot d\mathbf{S} = (x, y, -2z) \cdot (2x, 2y, 1) = 2x^2 + 2y^2     - 2z.
-$$
-Substitute$z = 4     - x^2     - y^2$:
-$$
+$$</p>
+<p>Substitute$z = 4     - x^2     - y^2$:</p>
+<p>$$
 2x^2 + 2y^2     - 2(4     - x^2     - y^2) = 2x^2 + 2y^2     - 8 + 2x^2 + 2y^2 = 4x^2 + 4y^2     - 8.
-$$
-The surface integral becomes:
-$$
+$$</p>
+<p>The surface integral becomes:</p>
+<p>$$
 \iint_S (\nabla \times \mathbf{F}) \cdot d\mathbf{S} = \iint_D (4x^2 + 4y^2     - 8)  dx  dy,
-$$
-where$D$is the quarter disk$x \geq 0$,$y \geq 0$,$x^2 + y^2 \leq 4$.</p>
-<p>To evaluate this integral, use polar coordinates. Set $x = r \cos \theta$, $y = r \sin \theta$, so $dx  dy = r  dr  d\theta$, and $x^2 + y^2 = r^2$. The region$D$corresponds to $0 \leq r \leq 2$, $0 \leq \theta \leq \pi/2$. The integrand is:
-$$
+$$</p>
+<p>where $D$ is the quarter disk $x \geq 0$, $y \geq 0$, $x^2 + y^2 \leq 4$.</p>
+<p>To evaluate this integral, use polar coordinates. Set $x = r \cos \theta$, $y = r \sin \theta$, so $dx  dy = r  dr  d\theta$, and $x^2 + y^2 = r^2$. The region$D$corresponds to $0 \leq r \leq 2$, $0 \leq \theta \leq \pi/2$. The integrand is:</p>
+<p>$$
 4x^2 + 4y^2     - 8 = 4r^2     - 8.
 $$
-Thus, the integral is:
-$$
+Thus, the integral is:</p>
+<p>$$
 \int_{\theta=0}^{\pi/2} \int_{r=0}^{2} (4r^2     - 8) r  dr  d\theta = \int_{0}^{\pi/2} \int_{0}^{2} (4r^3     - 8r)  dr  d\theta.
+$$</p>
+<p>First, evaluate the inner integral:</p>
+<p>$$
+\int_{0}^{2} (4r^3-8r)  dr = \left[ r^4- 4r^2 \right]_{0}^{2} = (16-16)-(0) = 0.
+$$</p>
+<p>Then, evaluate the outer integral:</p>
+<p>$$
+\int_{0}^{\pi/2} 0  d\theta = 0.
 $$
-First, evaluate the inner integral:
-$$
-\int_{0}^{2} (4r^3     - 8r)  dr = \left[ r^4     - 4r^2 \right]<em>{0}^{2} = (16     - 16)     - (0) = 0.
-$$
-Then, evaluate the outer integral:
-$$
-\int</em>{0}^{\pi/2} 0  d\theta = 0.
-$$
-Therefore, the surface integral is 0, and by Stokes' Theorem:
-$$
+Therefore, the surface integral is 0, and by Stokes' Theorem:</p>
+<p>$$
 \oint_C \mathbf{F} \cdot d\mathbf{r} = 0.
 $$</p>
 <p>To compute the line integral $\oint_C \mathbf{F} \cdot d\mathbf{r}$ directly, parametrize each piece of the curve$C = C_1 + C_2 + C_3$, where $C_1$is the intersection of the paraboloid $z = 4     - x^2     - y^2$ with the $xy$-plane ($z = 0$), $C_2$ with the $yz$-plane ($x = 0$), and $C_3$ with the $xz$-plane ($y = 0$), all in the first octant. The curve is oriented counterclockwise when viewed from above in the first octant, so the traversal is from $(2,0,0)$ to $(0,2,0)$ along$C_1$, then to$(0,0,4)$along$C_2$, and finally back to $(2,0,0)$ along $C_3$.</p>
-<p>The vector field is$\mathbf{F}(x,y,z) = (yz) \mathbf{i} + (-xz) \mathbf{j} + \mathbf{k}$.
+<p>The vector field is $\mathbf{F}(x,y,z) = (yz) \mathbf{i} + (-xz) \mathbf{j} + \mathbf{k}$.
     - $C_1$lies in the$xy$-plane ($z = 0$) and is the quarter-circle $x^2 + y^2 = 4$ from $(2,0,0)$ to $(0,2,0)$.
-    - Parametrize using$t \in [0, \pi/2]$:
+    - Parametrize using$t \in [0, \pi/2]$:</p>
+<p>$$
+  \mathbf{r}_1(t) = (2\cos t, 2\sin t, 0)
  $$
-  \mathbf{r}<em>1(t) = (2\cos t, 2\sin t, 0)
- $$
-    - Derivative:
- $$
+    - Derivative:</p>
+<p>$$
   \mathbf{r}_1'(t) = (-2\sin t, 2\cos t, 0)
  $$
     - Vector field along $C_1$ (since$z = 0$):
@@ -252,54 +252,54 @@ $$</p>
  $$
   \mathbf{F} \cdot \mathbf{r}_1'(t) = (0, 0, 1) \cdot (-2\sin t, 2\cos t, 0) = 0
  $$
-    - Line integral:
+    - Line integral:</p>
+<p>$$
+  \int_{C_1} \mathbf{F} \cdot d\mathbf{r} = \int_0^{\pi/2} 0  dt = 0
  $$
-  \int</em>{C_1} \mathbf{F} \cdot d\mathbf{r} = \int_0^{\pi/2} 0  dt = 0
+-$C_2$ lies in the $yz$-plane ($x = 0$) with $z = 4-y^2$ from $(0,2,0)$ to $(0,0,4)$.
+    - Parametrize using$t \in [0, 2]$(so $y = 2     - t$, $z = 4     - (2     - t)^2 = 4t     - t^2$):</p>
+<p>$$
+  \mathbf{r}_2(t) = (0, 2     - t, 4t     - t^2)
  $$
--$C_2$lies in the$yz$-plane ($x = 0$) with$z = 4     - y^2$from $(0,2,0)$ to $(0,0,4)$.
-    - Parametrize using$t \in [0, 2]$(so $y = 2     - t$, $z = 4     - (2     - t)^2 = 4t     - t^2$):
- $$
-  \mathbf{r}<em>2(t) = (0, 2     - t, 4t     - t^2)
- $$
-    - Derivative:
- $$
+    - Derivative:</p>
+<p>$$
   \mathbf{r}_2'(t) = (0, -1, 4     - 2t)
  $$
-    - Vector field along $C_2$ (since $x = 0$):
- $$
+    - Vector field along $C_2$ (since $x = 0$):</p>
+<p>$$
   \mathbf{F}(\mathbf{r}_2(t)) = ( (2     - t)(4t     - t^2), -(0)(4t     - t^2), 1 ) = ((2     - t)(4t     - t^2), 0, 1)
  $$
-    - Dot product:
- $$
+    - Dot product:</p>
+<p>$$
   \mathbf{F} \cdot \mathbf{r}_2'(t) = ((2     - t)(4t     - t^2)) \cdot 0 + 0 \cdot (-1) + 1 \cdot (4     - 2t) = 4     - 2t
  $$
-    - Line integral:
- $$
-  \int</em>{C_2} \mathbf{F} \cdot d\mathbf{r} = \int_0^2 (4     - 2t)  dt = \left[ 4t     - t^2 \right]<em>0^2 = (8     - 4)     - 0 = 4
+    - Line integral:</p>
+<p>$$
+  \int_{C_2} \mathbf{F} \cdot d\mathbf{r} = \int_0^2 (4     - 2t)  dt = \left[ 4t     - t^2 \right]_0^2 = (8     - 4)     - 0 = 4
  $$
 -$C_3$ lies in the $xz$-plane ($y = 0$) with $z = 4     - x^2$ from $(0,0,4)$ to $(2,0,0)$.
-    - Parametrize using$t \in [0, 2]$:
- $$
+    - Parametrize using $t \in [0, 2]$:</p>
+<p>$$
   \mathbf{r}_3(t) = (t, 0, 4     - t^2)
  $$
-    - Derivative:
- $$
+    - Derivative:</p>
+<p>$$
   \mathbf{r}_3'(t) = (1, 0, -2t)
  $$
-    - Vector field along $C_3$(since$y = 0$):
- $$
+    - Vector field along $C_3$(since$y = 0$):</p>
+<p>$$
   \mathbf{F}(\mathbf{r}_3(t)) = ( (0)(4     - t^2), -t(4     - t^2), 1 ) = (0, -4t + t^3, 1)
  $$
-    - Dot product:
- $$
+    - Dot product:</p>
+<p>$$
   \mathbf{F} \cdot \mathbf{r}_3'(t) = 0 \cdot 1 + (-4t + t^3) \cdot 0 + 1 \cdot (-2t) = -2t
  $$
-    - Line integral:
- $$
-  \int</em>{C_3} \mathbf{F} \cdot d\mathbf{r} = \int_0^2 -2t  dt = \left[ -t^2 \right]_0^2 = -4
+    - Line integral:</p>
+<p>$$
+  \int_{C_3} \mathbf{F} \cdot d\mathbf{r} = \int_0^2 -2t  dt = \left[ -t^2 \right]_0^2 = -4
  $$</p>
-<p>Sum the line integrals over each segment:
-$$
+<p>Sum the line integrals over each segment:</p>
+<p>$$
 \oint_C \mathbf{F} \cdot d\mathbf{r} = \int_{C_1} \mathbf{F} \cdot d\mathbf{r} + \int_{C_2} \mathbf{F} \cdot d\mathbf{r} + \int_{C_3} \mathbf{F} \cdot d\mathbf{r} = 0 + 4 + (-4) = 0
 $$</p>
 <p>The line integral is 0, which matches the result obtained using Stokes' Theorem.</p>
