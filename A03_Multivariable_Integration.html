@@ -156,7 +156,7 @@ which implies that the flux through the other four faces is $0$.</p>
 $$
     z = 4     - x^2     - y^2
 $$
-which lies above the first octant; and let$C$be the closed curve$C = C_1 + C_2 + C_3$, where the curves $C_1$, $C_2$, and $C_3$ are the three curves formed by intersecting $S$ with the $xy$, $yz$, and $xz$ planes respectively (so that $C$ is the boundary of $S$). Orient $C$ so that it is traversed counterclockwise when seen from above in the first octant.<ul>
+which lies above the first octant; and let $C$ be the closed curve $C = C_1 + C_2 + C_3$, where the curves $C_1$, $C_2$, and $C_3$ are the three curves formed by intersecting $S$ with the $xy$, $yz$, and $xz$ planes respectively (so that $C$ is the boundary of $S$). Orient $C$ so that it is traversed counterclockwise when seen from above in the first octant.<ul>
 <li>Use Stokes’ Theorem to compute</li>
 </ul>
 </li>
@@ -171,7 +171,7 @@ $$</p>
 <p>$$
 \oint_C \mathbf{F} \cdot d\mathbf{r} = \iint_S (\nabla \times \mathbf{F}) \cdot d\mathbf{S}.
 $$</p>
-<p>Here, $S$ is oriented with the upward-pointing normal vector, consistent with the counterclockwise orientation of$C$when viewed from above.</p>
+<p>Here, $S$ is oriented with the upward-pointing normal vector, consistent with the counterclockwise orientation of $C$ when viewed from above.</p>
 <p>First, compute the curl of $\mathbf{F}$:</p>
 <p>$$
 \nabla \times \mathbf{F} = \begin{vmatrix}
@@ -185,7 +185,7 @@ $$</p>
 -$\frac{\partial (yz)}{\partial z}     - \frac{\partial (1)}{\partial x} = y     - 0 = y$,
 -$\frac{\partial (-xz)}{\partial x}     - \frac{\partial (yz)}{\partial y} = -z     - z = -2z$.</p>
 <p>Thus, $\nabla \times \mathbf{F} = (x, y, -2z)$.</p>
-<p>Next, parametrize the surface $S$. Since$S$is given by $z = 4     - x^2     - y^2$, use $x$ and $y$ as parameters:</p>
+<p>Next, parametrize the surface $S$. Since $S$ is given by $z = 4     - x^2     - y^2$, use $x$ and $y$ as parameters:</p>
 <p>$$
 \mathbf{r}(x,y) = (x, y, 4     - x^2     - y^2), \quad \text{where } (x,y) \in D,
 $$</p>
@@ -202,7 +202,7 @@ $$</p>
 \end{vmatrix}
 $$</p>
 <p>$$= \mathbf{i}(0 \cdot (-2y)     - (-2x) \cdot 1)     - \mathbf{j}(1 \cdot (-2y)     - (-2x) \cdot 0) + \mathbf{k}(1 \cdot 1     - 0 \cdot 0) = (2x, 2y, 1).$$</p>
-<p>The normal vector $(2x, 2y, 1)$ has a positive$z$-component, confirming it is upward-pointing. Thus,</p>
+<p>The normal vector $(2x, 2y, 1)$ has a positive $z$-component, confirming it is upward-pointing. Thus,</p>
 <p>$$
 d\mathbf{S} = (2x, 2y, 1)  dx  dy.
 $$</p>
@@ -210,7 +210,7 @@ $$</p>
 <p>$$
 (\nabla \times \mathbf{F}) \cdot d\mathbf{S} = (x, y, -2z) \cdot (2x, 2y, 1) = 2x^2 + 2y^2     - 2z.
 $$</p>
-<p>Substitute$z = 4     - x^2     - y^2$:</p>
+<p>Substitute $z = 4     - x^2     - y^2$:</p>
 <p>$$
 2x^2 + 2y^2     - 2(4     - x^2     - y^2) = 2x^2 + 2y^2     - 8 + 2x^2 + 2y^2 = 4x^2 + 4y^2     - 8.
 $$</p>
@@ -219,7 +219,7 @@ $$</p>
 \iint_S (\nabla \times \mathbf{F}) \cdot d\mathbf{S} = \iint_D (4x^2 + 4y^2     - 8)  dx  dy,
 $$</p>
 <p>where $D$ is the quarter disk $x \geq 0$, $y \geq 0$, $x^2 + y^2 \leq 4$.</p>
-<p>To evaluate this integral, use polar coordinates. Set $x = r \cos \theta$, $y = r \sin \theta$, so $dx  dy = r  dr  d\theta$, and $x^2 + y^2 = r^2$. The region$D$corresponds to $0 \leq r \leq 2$, $0 \leq \theta \leq \pi/2$. The integrand is:</p>
+<p>To evaluate this integral, use polar coordinates. Set $x = r \cos \theta$, $y = r \sin \theta$, so $dx  dy = r  dr  d\theta$, and $x^2 + y^2 = r^2$. The region $D$ corresponds to $0 \leq r \leq 2$, $0 \leq \theta \leq \pi/2$. The integrand is:</p>
 <p>$$
 4x^2 + 4y^2     - 8 = 4r^2     - 8.
 $$
@@ -239,10 +239,10 @@ Therefore, the surface integral is 0, and by Stokes' Theorem:</p>
 <p>$$
 \oint_C \mathbf{F} \cdot d\mathbf{r} = 0.
 $$</p>
-<p>To compute the line integral $\oint_C \mathbf{F} \cdot d\mathbf{r}$ directly, parametrize each piece of the curve$C = C_1 + C_2 + C_3$, where $C_1$is the intersection of the paraboloid $z = 4     - x^2     - y^2$ with the $xy$-plane ($z = 0$), $C_2$ with the $yz$-plane ($x = 0$), and $C_3$ with the $xz$-plane ($y = 0$), all in the first octant. The curve is oriented counterclockwise when viewed from above in the first octant, so the traversal is from $(2,0,0)$ to $(0,2,0)$ along$C_1$, then to$(0,0,4)$along$C_2$, and finally back to $(2,0,0)$ along $C_3$.</p>
+<p>To compute the line integral $\oint_C \mathbf{F} \cdot d\mathbf{r}$ directly, parametrize each piece of the curve$C = C_1 + C_2 + C_3$, where $C_1$is the intersection of the paraboloid $z = 4     - x^2     - y^2$ with the $xy$-plane ($z = 0$), $C_2$ with the $yz$-plane ($x = 0$), and $C_3$ with the $xz$-plane ($y = 0$), all in the first octant. The curve is oriented counterclockwise when viewed from above in the first octant, so the traversal is from $(2,0,0)$ to $(0,2,0)$ along $C_1$, then to $(0,0,4)$ along $C_2$, and finally back to $(2,0,0)$ along $C_3$.</p>
 <p>The vector field is $\mathbf{F}(x,y,z) = (yz) \mathbf{i} + (-xz) \mathbf{j} + \mathbf{k}$.
-    - $C_1$lies in the$xy$-plane ($z = 0$) and is the quarter-circle $x^2 + y^2 = 4$ from $(2,0,0)$ to $(0,2,0)$.
-    - Parametrize using$t \in [0, \pi/2]$:</p>
+    - $C_1$ lies in the $xy$-plane ($z = 0$) and is the quarter-circle $x^2 + y^2 = 4$ from $(2,0,0)$ to $(0,2,0)$.
+    - Parametrize using $t \in [0, \pi/2]$:</p>
 <p>$$
   \mathbf{r}_1(t) = (2\cos t, 2\sin t, 0)
  $$
@@ -250,7 +250,7 @@ $$</p>
 <p>$$
   \mathbf{r}_1'(t) = (-2\sin t, 2\cos t, 0)
  $$
-    - Vector field along $C_1$ (since$z = 0$):
+    - Vector field along $C_1$ (since $z = 0$):
  $$
   \mathbf{F}(\mathbf{r}_1(t)) = ( (2\sin t)(0), -(2\cos t)(0), 1 ) = (0, 0, 1)
  $$
@@ -263,7 +263,7 @@ $$</p>
   \int_{C_1} \mathbf{F} \cdot d\mathbf{r} = \int_0^{\pi/2} 0  dt = 0
  $$
 -$C_2$ lies in the $yz$-plane ($x = 0$) with $z = 4-y^2$ from $(0,2,0)$ to $(0,0,4)$.
-    - Parametrize using$t \in [0, 2]$(so $y = 2     - t$, $z = 4     - (2     - t)^2 = 4t     - t^2$):</p>
+    - Parametrize using $t \in [0, 2]$ (so $y = 2     - t$, $z = 4     - (2     - t)^2 = 4t     - t^2$):</p>
 <p>$$
   \mathbf{r}_2(t) = (0, 2     - t, 4t     - t^2)
  $$
@@ -292,7 +292,7 @@ $$</p>
 <p>$$
   \mathbf{r}_3'(t) = (1, 0, -2t)
  $$
-    - Vector field along $C_3$(since$y = 0$):</p>
+    - Vector field along $C_3$ (since $y = 0$):</p>
 <p>$$
   \mathbf{F}(\mathbf{r}_3(t)) = ( (0)(4     - t^2), -t(4     - t^2), 1 ) = (0, -4t + t^3, 1)
  $$
