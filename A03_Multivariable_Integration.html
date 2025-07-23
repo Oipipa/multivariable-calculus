@@ -30,7 +30,7 @@
    $$
 \iint_S \mathbf{F} \cdot \mathbf{n} \, dS.
    $$
-(Use the normal which points ‘outward’ from $S$, i.e., on the side away from the$z$-axis.)</li>
+(Use the normal which points ‘outward’ from $S$, i.e., on the side away from the $z$-axis.)</li>
 <li>Let $G$ be the 3D solid in the first octant given by the interior of the quarter-cylinder defined above. Use the divergence theorem to compute the flux of the field $\mathbf{F} = x \mathbf{i}$ out of the region $G$.</li>
 <li>The boundary surface of$G$is comprised of $S$ together with four other faces. What is the flux outward through these four faces, and why? Use the answers to parts (b) and (c).</li>
 </ul>
@@ -84,7 +84,7 @@ $$
 4 \cdot 4 \cdot \frac{\pi}{4} = 4 \cdot \pi = 4\pi.
 $$</p>
 <p>The flux integral is $4\pi$.</p>
-<p>This result is confirmed by the divergence theorem. Close the surface by adding the bottom disk at $z = 0$ and the top disk at $z = 4$, both in the first octant. The outward normal for the bottom is $-\mathbf{k}$ and for the top is $\mathbf{k}$. Since $\mathbf{F}$ has no$z$-component, $\mathbf{F} \cdot \mathbf{n} = 0$ on both disks. Thus, the flux through the closed surface equals the flux through$S$.</p>
+<p>This result is confirmed by the divergence theorem. Close the surface by adding the bottom disk at $z = 0$ and the top disk at $z = 4$, both in the first octant. The outward normal for the bottom is $-\mathbf{k}$ and for the top is $\mathbf{k}$. Since $\mathbf{F}$ has no $z$-component, $\mathbf{F} \cdot \mathbf{n} = 0$ on both disks. Thus, the flux through the closed surface equals the flux through$S$.</p>
 <p>The divergence of $\mathbf{F}$ is:
 $$
 \nabla \cdot \mathbf{F} = \frac{\partial}{\partial x}(x) + \frac{\partial}{\partial y}(0) + \frac{\partial}{\partial z}(0) = 1.
@@ -98,12 +98,12 @@ $$
 \iiint_V \nabla \cdot \mathbf{F}  dV = \iiint_V 1  dV = 4\pi.
 $$</p>
 <p>Since the flux through the top and bottom disks is zero, the flux through $S$ is $4\pi$.</p>
-<p>The solid $G$ is the quarter-cylinder in the first octant bounded by $x^2 + y^2 = 4$, $x \geq 0$,$y \geq 0$, and$0 \leq z \leq 4$. The vector field is $\mathbf{F} = x \mathbf{i}$.</p>
+<p>The solid $G$ is the quarter-cylinder in the first octant bounded by $x^2 + y^2 = 4$, $x \geq 0$, $y \geq 0$, and $0 \leq z \leq 4$. The vector field is $\mathbf{F} = x \mathbf{i}$.</p>
 <p>The divergence theorem states that the flux of $\mathbf{F}$ out of the closed surface bounding$G$is equal to the triple integral of the divergence of $\mathbf{F}$ over $G$:</p>
 <p>$$
 \iint_{\partial G} \mathbf{F} \cdot \mathbf{n}  dS = \iiint_G (\nabla \cdot \mathbf{F})  dV,
 $$</p>
-<p>where$\partial G$is the boundary of$G$with outward-pointing normal$\mathbf{n}$.</p>
+<p>where $\partial G$ is the boundary of $G$ with outward-pointing normal$\mathbf{n}$.</p>
 <p>Compute the divergence of $\mathbf{F}$:</p>
 <p>$$
 \nabla \cdot \mathbf{F} = \frac{\partial}{\partial x}(x) + \frac{\partial}{\partial y}(0) + \frac{\partial}{\partial z}(0) = 1.
@@ -113,36 +113,42 @@ $$</p>
 \iiint_G 1  dV,
 $$</p>
 <p>which is the volume of $G$.</p>
-<p>$G$ is a quarter-cylinder of radius 2 and height 4. The volume of a full cylinder of radius$r$and height$h$is$\pi r^2 h$. Here,$r = 2$and$h = 4$, so the volume of the full cylinder is:</p>
+<p>$G$ is a quarter-cylinder of radius 2 and height 4. The volume of a full cylinder of radius $r$ and height $h$ is $\pi r^2 h$. Here, $r = 2$ and $h = 4$, so the volume of the full cylinder is:</p>
 <p>$$
 \pi (2)^2 \cdot 4 = 16\pi.
 $$</p>
-<p>Since$G$is a quarter of this cylinder, its volume is:</p>
+<p>Since $G$ is a quarter of this cylinder, its volume is:</p>
 <p>$$
 \frac{1}{4} \cdot 16\pi = 4\pi.
 $$</p>
 <p>Therefore, the flux of $\mathbf{F}$ out of $G$ is $4\pi$.</p>
-<p>The solid $G$ is a quarter-cylinder in the first octant with radius 2 and height 4, bounded by the surfaces $x^2 + y^2 = 4$ (for $x \geq 0$ , $y \geq 0$, $0 \leq z \leq 4$), $z = 0$, $z = 4$, $x = 0$, and $y = 0$. The boundary consists of five faces:
--$S$: the lateral surface $x^2 + y^2 = 4$, $x \geq 0$, $y \geq 0$, $0 \leq z \leq 4$.
-    - Bottom face:$z = 0$, $x^2 + y^2 \leq 4$, $x \geq 0$, $y \geq 0$.
-    - Top face:$z = 4$, $x^2 + y^2 \leq 4$, $x \geq 0$, $y \geq 0$.
--$x=0$face:$x = 0$, $0 \leq y \leq 2$, $0 \leq z \leq 4$.
--$y=0$face:$y = 0$, $0 \leq x \leq 2$, $0 \leq z \leq 4$.</p>
+<p>The solid $G$ is a quarter-cylinder in the first octant with radius 2 and height 4, bounded by the surfaces $x^2 + y^2 = 4$ (for $x \geq 0$ , $y \geq 0$, $0 \leq z \leq 4$), $z = 0$, $z = 4$, $x = 0$, and $y = 0$. The boundary consists of five faces:</p>
+<ul>
+<li>$S$: the lateral surface $x^2 + y^2 = 4$, $x \geq 0$, $y \geq 0$, $0 \leq z \leq 4$.<ul>
+<li>Bottom face:$z = 0$, $x^2 + y^2 \leq 4$, $x \geq 0$, $y \geq 0$.</li>
+<li>Top face:$z = 4$, $x^2 + y^2 \leq 4$, $x \geq 0$, $y \geq 0$.</li>
+</ul>
+</li>
+<li>$x=0$ face: $x = 0$, $0 \leq y \leq 2$, $0 \leq z \leq 4$.</li>
+<li>$y=0$ face: $y = 0$, $0 \leq x \leq 2$, $0 \leq z \leq 4$.</li>
+</ul>
 <p>The vector field is $\mathbf{F} = x \mathbf{i}$.</p>
-<p>From part (b), the flux of$\mathbf{F}$outward through$S$is$4\pi$. From part (c), using the divergence theorem, the total outward flux through the entire boundary of$G$is$4\pi$. The total outward flux is the sum of the fluxes through all five faces. Therefore:
+<p>From part (b), the flux of $\mathbf{F}$ outward through $S$ is $4\pi$. From part (c), using the divergence theorem, the total outward flux through the entire boundary of $G$ is $4\pi$. The total outward flux is the sum of the fluxes through all five faces. Therefore:
 $$
 \text{Flux through } S + \text{Flux through the other four faces} = 4\pi.
 $$
-Substituting the known flux through$S$:
+Substituting the known flux through $S$:
 $$
 4\pi + \text{Flux through the other four faces} = 4\pi,
 $$
-which implies that the flux through the other four faces is$0$.</p>
-<p>This result is consistent with direct computation of the flux through each of the four faces:
-    - <strong>Bottom face ($z = 0$):</strong> The outward normal is$-\mathbf{k}$. Then$\mathbf{F} \cdot (-\mathbf{k}) = (x \mathbf{i}) \cdot (-\mathbf{k}) = 0$, so the flux is$0$.
-    - <strong>Top face ($z = 4$):</strong> The outward normal is$\mathbf{k}$. Then$\mathbf{F} \cdot \mathbf{k} = (x \mathbf{i}) \cdot \mathbf{k} = 0$, so the flux is$0$.
-    - <strong>$x=0$face:</strong> The outward normal is$-\mathbf{i}$. On this face,$x = 0$, so$\mathbf{F} = \mathbf{0}$. Then$\mathbf{F} \cdot (-\mathbf{i}) = \mathbf{0} \cdot (-\mathbf{i}) = 0$, so the flux is$0$.
-    - <strong>$y=0$face:</strong> The outward normal is$-\mathbf{j}$. Then$\mathbf{F} \cdot (-\mathbf{j}) = (x \mathbf{i}) \cdot (-\mathbf{j}) = 0$, since$\mathbf{i}$and$\mathbf{j}$are orthogonal.</p>
+which implies that the flux through the other four faces is $0$.</p>
+<p>This result is consistent with direct computation of the flux through each of the four faces:</p>
+<ul>
+<li><strong>Bottom face ($z = 0$):</strong> The outward normal is$-\mathbf{k}$. Then $\mathbf{F} \cdot (-\mathbf{k}) = (x \mathbf{i}) \cdot (-\mathbf{k}) = 0$, so the flux is $0$.</li>
+<li><strong>Top face ($z = 4$):</strong> The outward normal is $\mathbf{k}$. Then $\mathbf{F} \cdot \mathbf{k} = (x \mathbf{i}) \cdot \mathbf{k} = 0$, so the flux is $0$.</li>
+<li><strong>$x=0$ face:</strong> The outward normal is $-\mathbf{i}$. On this face, $x = 0$, so $\mathbf{F} = \mathbf{0}$. Then$\mathbf{F} \cdot (-\mathbf{i}) = \mathbf{0} \cdot (-\mathbf{i}) = 0$, so the flux is $0$.</li>
+<li><strong>$y=0$ face:</strong> The outward normal is$-\mathbf{j}$. Then $\mathbf{F} \cdot (-\mathbf{j}) = (x \mathbf{i}) \cdot (-\mathbf{j}) = 0$, since $\mathbf{i}$ and $\mathbf{j}$ are orthogonal.</li>
+</ul>
 <p>Thus, the flux through each of the four faces is$0$, and the total flux through these faces is$0$.</p>
 <hr />
 <ol>
