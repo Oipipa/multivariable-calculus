@@ -395,66 +395,79 @@ $$</p>
 <p>The surface $S$ is the upper hemisphere of radius $a$. Parametrize $S$ using spherical coordinates:</p>
 <p>$$
 \mathbf{r}(\theta, \phi) = (a \sin \theta \cos \phi, a \sin \theta \sin \phi, a \cos \theta), \quad \theta \in [0, \pi/2],  \phi \in [0, 2\pi].
-$$
-Here, $\theta$ is the polar angle (from the positive $z$-axis), and $\phi$ is the azimuthal angle. The domain $D$ is $[0, \pi/2] \times [0, 2\pi]$.</p>
-<p>Compute the partial derivatives of $\mathbf{r}$:
-$$
-\mathbf{r}<em>\theta = \frac{\partial \mathbf{r}}{\partial \theta} = (a \cos \theta \cos \phi, a \cos \theta \sin \phi, -a \sin \theta),
-$$
-$$
-\mathbf{r}</em>\phi = \frac{\partial \mathbf{r}}{\partial \phi} = (-a \sin \theta \sin \phi, a \sin \theta \cos \phi, 0).
 $$</p>
-<p>The oriented area element is given by $\mathbf{r}<em>\theta \times \mathbf{r}</em>\phi$. Compute the cross product:
-$$
-\mathbf{r}<em>\theta \times \mathbf{r}</em>\phi = \begin{vmatrix}
+<p>Here, $\theta$ is the polar angle (from the positive $z$-axis), and $\phi$ is the azimuthal angle. The domain $D$ is $[0, \pi/2] \times [0, 2\pi]$.</p>
+<p>Compute the partial derivatives of $\mathbf{r}$. We have $u=\theta$, $v=\theta$:</p>
+<p>$$
+\mathbf{r}_u = \frac{\partial \mathbf{r}}{\partial u} = (a \cos u \cos v, a \cos u \sin v, -a \sin u),
+$$</p>
+<p>$$
+\mathbf{r}_v = \frac{\partial \mathbf{r}}{\partial v} = (-a \sin u \sin v, a \sin u \cos v, 0).
+$$</p>
+<p>The oriented area element is given by $\textbf{r}_u \times \textbf{r}_v$. Compute the cross product:</p>
+<p>$$
+\begin{vmatrix}
 \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
-a \cos \theta \cos \phi &amp; a \cos \theta \sin \phi &amp; -a \sin \theta \\
--a \sin \theta \sin \phi &amp; a \sin \theta \cos \phi &amp; 0
+a \cos u \cos v &amp; a \cos u \sin v &amp; -a \sin u \\
+-a \sin u \sin v &amp; a \sin u \cos v &amp; 0
 \end{vmatrix}.
 $$</p>
-<p>Expanding the determinant:
-- $\mathbf{i}$-component: $(a \cos \theta \sin \phi \cdot 0) - (-a \sin \theta \cdot a \sin \theta \cos \phi) = a^2 \sin^2 \theta \cos \phi$,
-- $\mathbf{j}$-component: $-\left[ (a \cos \theta \cos \phi \cdot 0) - (-a \sin \theta \cdot (-a \sin \theta \sin \phi)) \right] = a^2 \sin^2 \theta \sin \phi$,
-- $\mathbf{k}$-component: $(a \cos \theta \cos \phi \cdot a \sin \theta \cos \phi) - (a \cos \theta \sin \phi \cdot (-a \sin \theta \sin \phi)) = a^2 \cos \theta \sin \theta$.</p>
-<p>Thus,
-$$
-\mathbf{r}<em>\theta \times \mathbf{r}</em>\phi = (a^2 \sin^2 \theta \cos \phi, a^2 \sin^2 \theta \sin \phi, a^2 \sin \theta \cos \theta).
-$$
-This vector points outward, as required.</p>
-<p>Evaluate the vector field $\mathbf{F}$ on the surface:
-$$
-\mathbf{F}(\mathbf{r}(\theta, \phi)) = (a \sin \theta \cos \phi, a \sin \theta \sin \phi, a \cos \theta).
+<p>Expanding the determinant:</p>
+<ul>
+<li>$\mathbf{i}$-component: </li>
+</ul>
+<p>$$(a \cos u \sin v \cdot 0) - (-a \sin u \cdot a \sin u \cos v) = a^2 \sin^2 u \cos v$$</p>
+<ul>
+<li>$\mathbf{j}$-component: </li>
+</ul>
+<p>$$-\left[ (a \cos u \cos v \cdot 0) - (-a \sin u \cdot (-a \sin u \sin v)) \right] = a^2 \sin^2 u \sin v$$</p>
+<ul>
+<li>$\mathbf{k}$-component: </li>
+</ul>
+<p>$$(a \cos u \cos v \cdot a \sin u \cos v) - (a \cos u \sin v \cdot (-a \sin u \sin v)) = a^2 \cos u \sin u$$</p>
+<p>Thus, setting $\textbf{r}_\text{cross} = \textbf{r}_u \times \textbf{r}_v$</p>
+<p>$$\textbf{r}_\text{cross}=(a^2 \sin^2{u} \cos v, a^2\sin^2 u \sin v, a^2 \sin u \cos u).
 $$</p>
-<p>Compute the dot product $\mathbf{F} \cdot (\mathbf{r}<em>\theta \times \mathbf{r}</em>\phi)$:</p>
+<p>This vector points outward, as required.</p>
+<p>Evaluate the vector field $\textbf{F}$ on the surface:</p>
 <p>$$
-\mathbf{F} \cdot (\mathbf{r}<em>\theta \times \mathbf{r}</em>\phi) = (a \sin \theta \cos \phi)(a^2 \sin^2 \theta \cos \phi) + (a \sin \theta \sin \phi)(a^2 \sin^2 \theta \sin \phi) + (a \cos \theta)(a^2 \sin \theta \cos \theta).
+\textbf{F}(\mathbf{r}(u, v)) = (a \sin u \cos v, a \sin u \sin v, a \cos u).
+$$</p>
+<p>Compute the dot product:</p>
+<p>$$
+\textbf{F} \cdot \textbf{r}_\text{cross} =
+(a \sin u \cos v)(a^2 \sin^2 u \cos v) + (a \sin u \sin v)(a^2 \sin^2 u \sin v) + (a \cos u)(a^2 \sin u \cos u).
 $$</p>
 <p>Simplify:</p>
 <p>$$
-= a^3 \sin^3 \theta \cos^2 \phi + a^3 \sin^3 \theta \sin^2 \phi + a^3 \sin \theta \cos^2 \theta
-= a^3 \sin^3 \theta (\cos^2 \phi + \sin^2 \phi) + a^3 \sin \theta \cos^2 \theta
+= a^3 \sin^3 u \cos^2 v + a^3 \sin^3 u \sin^2 v + a^3 \sin u \cos^2 u
+= a^3 \sin^3 u (\cos^2 v + \sin^2 v) + a^3 \sin u \cos^2 u
 $$</p>
 <p>$$
-= a^3 \sin^3 \theta (1) + a^3 \sin \theta \cos^2 \theta
-= a^3 \sin \theta (\sin^2 \theta + \cos^2 \theta)
-= a^3 \sin \theta (1)
-= a^3 \sin \theta.
+= a^3 \sin^3 u (1) + a^3 \sin u \cos^2 u
+= a^3 \sin u (\sin^2 u + \cos^2 u)
+= a^3 \sin u (1)
+= a^3 \sin u.
 $$</p>
-<p>The flux is the double integral over $D$:
-$$
-\Phi = \iint_D \mathbf{F} \cdot (\mathbf{r}<em>\theta \times \mathbf{r}</em>\phi)  d\theta  d\phi = \int_{\phi=0}^{2\pi} \int_{\theta=0}^{\pi/2} a^3 \sin \theta  d\theta  d\phi.
-$$
-First, integrate with respect to $\theta$:
-$$
-\int_0^{\pi/2} a^3 \sin \theta  d\theta = a^3 \left[ -\cos \theta \right]_0^{\pi/2} = a^3 \left( -\cos(\pi/2) + \cos(0) \right) = a^3 (0 + 1) = a^3.
-$$
-Next, integrate with respect to $\phi$:
-$$
-\int_0^{2\pi} a^3  d\phi = a^3 \left[ \phi \right]_0^{2\pi} = a^3 (2\pi) = 2\pi a^3.
-$$
-Thus,
-$$
-\Phi = 2\pi a^3.
+<p>The flux is the double integral over $D$ using</p>
+<p>$$
+v
+=\iint_{D}\mathbf{F}\bigl(\mathbf r(u,v)\bigr)\;\cdot\;\bigl(\mathbf r_u\times\mathbf r_v\bigr)\;du\,dv.
+$$</p>
+<p>$$
+= \int_{v=0}^{2\pi} \int_{u=0}^{\pi/2} a^3 \sin u  du  dv.
+$$</p>
+<p>First, integrate with respect to $u$:</p>
+<p>$$
+\int_0^{\pi/2} a^3 \sin u  du = a^3 \left[ -\cos u \right]_0^{\pi/2} = a^3 \left( -\cos(\pi/2) + \cos(0) \right) = a^3 (0 + 1) = a^3.
+$$</p>
+<p>Next, integrate with respect to $v$:</p>
+<p>$$
+\int_0^{2\pi} a^3  dv = a^3 \left[ v \right]_0^{2\pi} = a^3 (2\pi) = 2\pi a^3.
+$$</p>
+<p>Thus,</p>
+<p>$$
+v = 2\pi a^3.
 $$</p>
 <p>The flux of $\mathbf{F}$ through the upper hemisphere is $\boxed{2\pi a^3}$.</p>
 <h4 id="graphs-of-the-form-z-gxy">Graphs of the Form $z = g(x,y)$</h4>
