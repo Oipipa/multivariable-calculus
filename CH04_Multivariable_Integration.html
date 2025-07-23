@@ -24,32 +24,7 @@
   tbody tr:nth-child(even) { background: #fafafa; }
 </style>
 <title>CH04_Multivariable_Integration.md</title></head>
-  <body><a href='index.html'>← Back</a><hr/><h2 id="volume-under-a-surface">Volume under a surface</h2>
-<ul>
-<li>Volume is surface area times height.</li>
-<li>Unlike calculating the area under the curve, we have to push our perspective up by one dimension. That is to say, we have to calculate the volume under a surface.</li>
-<li>For some surface $f(x, y) = z$, this idea will first need us to set an interval for both $x$ and $y$.</li>
-<li>These two intervals will give us a rectangle on the $xy$ plane shadowing the section of the surface we want to calculate the volume under.</li>
-<li>So, if we have $x \in [a, b]$ and $y \in [c, d]$, we get a rectangle on the $xy$ plane with the area $(b - a) \times (d - c)$.</li>
-<li>If we cut the rectangle up into $m$ sections along the $x$ axis and $n$ sections along the $y$ axis to give smaller rectangles with uniform width and height, we get these small lengths and breadths $\Delta x$ and $\Delta y$ as:</li>
-</ul>
-<p>$$\Delta x = \frac{b - a}{m}$$</p>
-<p>$$\Delta y = \frac{d - c}{n}$$</p>
-<ul>
-<li>The area of each rectangle is $\Delta x \Delta y$.</li>
-<li>Thus, the volume of each tiny section is this surface area times the $z$ value at those particular points. That is to say,</li>
-</ul>
-<p>$$
-V \approx \sum_{i = 1}^m \sum_{j = 1}^n f(x_i, y_j) \Delta x_i \Delta y_j
-$$</p>
-<ul>
-<li>The more smaller we make the number of tiny sections, the more we can approximate the area under the section.</li>
-<li>If we have, say, an infinite number of sections (i.e. $m, n \to \infty$), we'd have the exact value of the volume:</li>
-</ul>
-<p>$$
-V = \lim_{m, n \to \infty} \sum_{i = 1}^m \sum_{j = 1}^n f(x_i, y_j) \Delta x_i \Delta y_j = \int_R \int f(x, y) \cdot dx \cdot dy
-$$</p>
-<h2 id="setting-up-a-double-integral">Setting up a Double Integral</h2>
+  <body><a href='index.html'>← Back</a><hr/><h2 id="setting-up-a-double-integral">Setting up a Double Integral</h2>
 <ul>
 <li>The region we calculate volume along can either be rectangular or non-rectangular.</li>
 <li>In a rectangular case, we'd have:</li>
@@ -415,6 +390,73 @@ $$</p>
 \Phi
 =\iint_{D}\mathbf{F}\bigl(\mathbf r(u,v)\bigr)\;\cdot\;\bigl(\mathbf r_u\times\mathbf r_v\bigr)\;du\,dv.
 $$</p>
+<h5 id="example-problem-flux-through-a-hemisphere">Example Problem: Flux Through a Hemisphere</h5>
+<p>Compute the flux of the vector field $\mathbf{F}(x, y, z) = (x, y, z)$ through the upper hemisphere of the sphere $x^2 + y^2 + z^2 = a^2$ for $z \geq 0$, with the outward-pointing normal.</p>
+<p>The surface $S$ is the upper hemisphere of radius $a$. Parametrize $S$ using spherical coordinates:</p>
+<p>$$
+\mathbf{r}(\theta, \phi) = (a \sin \theta \cos \phi, a \sin \theta \sin \phi, a \cos \theta), \quad \theta \in [0, \pi/2],  \phi \in [0, 2\pi].
+$$
+Here, $\theta$ is the polar angle (from the positive $z$-axis), and $\phi$ is the azimuthal angle. The domain $D$ is $[0, \pi/2] \times [0, 2\pi]$.</p>
+<p>Compute the partial derivatives of $\mathbf{r}$:
+$$
+\mathbf{r}<em>\theta = \frac{\partial \mathbf{r}}{\partial \theta} = (a \cos \theta \cos \phi, a \cos \theta \sin \phi, -a \sin \theta),
+$$
+$$
+\mathbf{r}</em>\phi = \frac{\partial \mathbf{r}}{\partial \phi} = (-a \sin \theta \sin \phi, a \sin \theta \cos \phi, 0).
+$$</p>
+<p>The oriented area element is given by $\mathbf{r}<em>\theta \times \mathbf{r}</em>\phi$. Compute the cross product:
+$$
+\mathbf{r}<em>\theta \times \mathbf{r}</em>\phi = \begin{vmatrix}
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+a \cos \theta \cos \phi &amp; a \cos \theta \sin \phi &amp; -a \sin \theta \\
+-a \sin \theta \sin \phi &amp; a \sin \theta \cos \phi &amp; 0
+\end{vmatrix}.
+$$</p>
+<p>Expanding the determinant:
+- $\mathbf{i}$-component: $(a \cos \theta \sin \phi \cdot 0) - (-a \sin \theta \cdot a \sin \theta \cos \phi) = a^2 \sin^2 \theta \cos \phi$,
+- $\mathbf{j}$-component: $-\left[ (a \cos \theta \cos \phi \cdot 0) - (-a \sin \theta \cdot (-a \sin \theta \sin \phi)) \right] = a^2 \sin^2 \theta \sin \phi$,
+- $\mathbf{k}$-component: $(a \cos \theta \cos \phi \cdot a \sin \theta \cos \phi) - (a \cos \theta \sin \phi \cdot (-a \sin \theta \sin \phi)) = a^2 \cos \theta \sin \theta$.</p>
+<p>Thus,
+$$
+\mathbf{r}<em>\theta \times \mathbf{r}</em>\phi = (a^2 \sin^2 \theta \cos \phi, a^2 \sin^2 \theta \sin \phi, a^2 \sin \theta \cos \theta).
+$$
+This vector points outward, as required.</p>
+<p>Evaluate the vector field $\mathbf{F}$ on the surface:
+$$
+\mathbf{F}(\mathbf{r}(\theta, \phi)) = (a \sin \theta \cos \phi, a \sin \theta \sin \phi, a \cos \theta).
+$$</p>
+<p>Compute the dot product $\mathbf{F} \cdot (\mathbf{r}<em>\theta \times \mathbf{r}</em>\phi)$:</p>
+<p>$$
+\mathbf{F} \cdot (\mathbf{r}<em>\theta \times \mathbf{r}</em>\phi) = (a \sin \theta \cos \phi)(a^2 \sin^2 \theta \cos \phi) + (a \sin \theta \sin \phi)(a^2 \sin^2 \theta \sin \phi) + (a \cos \theta)(a^2 \sin \theta \cos \theta).
+$$</p>
+<p>Simplify:</p>
+<p>$$
+= a^3 \sin^3 \theta \cos^2 \phi + a^3 \sin^3 \theta \sin^2 \phi + a^3 \sin \theta \cos^2 \theta
+= a^3 \sin^3 \theta (\cos^2 \phi + \sin^2 \phi) + a^3 \sin \theta \cos^2 \theta
+$$</p>
+<p>$$
+= a^3 \sin^3 \theta (1) + a^3 \sin \theta \cos^2 \theta
+= a^3 \sin \theta (\sin^2 \theta + \cos^2 \theta)
+= a^3 \sin \theta (1)
+= a^3 \sin \theta.
+$$</p>
+<p>The flux is the double integral over $D$:
+$$
+\Phi = \iint_D \mathbf{F} \cdot (\mathbf{r}<em>\theta \times \mathbf{r}</em>\phi)  d\theta  d\phi = \int_{\phi=0}^{2\pi} \int_{\theta=0}^{\pi/2} a^3 \sin \theta  d\theta  d\phi.
+$$
+First, integrate with respect to $\theta$:
+$$
+\int_0^{\pi/2} a^3 \sin \theta  d\theta = a^3 \left[ -\cos \theta \right]_0^{\pi/2} = a^3 \left( -\cos(\pi/2) + \cos(0) \right) = a^3 (0 + 1) = a^3.
+$$
+Next, integrate with respect to $\phi$:
+$$
+\int_0^{2\pi} a^3  d\phi = a^3 \left[ \phi \right]_0^{2\pi} = a^3 (2\pi) = 2\pi a^3.
+$$
+Thus,
+$$
+\Phi = 2\pi a^3.
+$$</p>
+<p>The flux of $\mathbf{F}$ through the upper hemisphere is $\boxed{2\pi a^3}$.</p>
 <h4 id="graphs-of-the-form-z-gxy">Graphs of the Form $z = g(x,y)$</h4>
 <p>If $S$ is the graph of $z=g(x,y)$ over a domain $R$ in the $xy$‐plane, then we can parametrize by</p>
 <p>$$
