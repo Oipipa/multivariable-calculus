@@ -51,8 +51,8 @@ $$</p>
 <p>The cross product is:
 $$
 \frac{\partial \mathbf{r}}{\partial \theta} \times \frac{\partial \mathbf{r}}{\partial z} = \begin{vmatrix}
-\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \
--2 \sin \theta &amp; 2 \cos \theta &amp; 0 \
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+-2 \sin \theta &amp; 2 \cos \theta &amp; 0 \\
 0 &amp; 0 &amp; 1
 \end{vmatrix}
 $$</p>
@@ -169,8 +169,8 @@ $$</p>
 <p>First, compute the curl of $\mathbf{F}$:
 $$
 \nabla \times \mathbf{F} = \begin{vmatrix}
-\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \
-\frac{\partial}{\partial x} &amp; \frac{\partial}{\partial y} &amp; \frac{\partial}{\partial z} \
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+\frac{\partial}{\partial x} &amp; \frac{\partial}{\partial y} &amp; \frac{\partial}{\partial z} \\
 yz &amp; -xz &amp; 1
 \end{vmatrix} = \left( \frac{\partial (1)}{\partial y}     - \frac{\partial (-xz)}{\partial z}, \frac{\partial (yz)}{\partial z}     - \frac{\partial (1)}{\partial x}, \frac{\partial (-xz)}{\partial x}     - \frac{\partial (yz)}{\partial y} \right).
 $$
@@ -190,8 +190,8 @@ $$
 $$
 $$
 \mathbf{r}_x \times \mathbf{r}_y = \begin{vmatrix}
-\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \
-1 &amp; 0 &amp; -2x \
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+1 &amp; 0 &amp; -2x \\
 0 &amp; 1 &amp; -2y
 \end{vmatrix}
 $$</p>
@@ -785,7 +785,7 @@ where $d\vec{S} = \hat{n}  dS$.</p>
 $$
 \nabla f \cdot \hat{n} = 
 \begin{cases} 
-|\nabla f| &amp; \text{if } \nabla f \text{ points outward}, \
+|\nabla f| &amp; \text{if } \nabla f \text{ points outward}, \\
 -|\nabla f| &amp; \text{if } \nabla f \text{ points inward}.
 \end{cases}
 $$<br />

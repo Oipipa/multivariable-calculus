@@ -71,7 +71,7 @@ x = t + \frac{1}{t}, \quad y = t, \quad z = 2 + \frac{1}{t^2}.
 $$
 This parameterization is valid for all real $t \neq 0$, and it satisfies both surface equations. The curve is defined for $|x| \geq 2$, which is consistent with the parameterization.</p>
 <p>The parametric form of the curve of intersection is:</p>
-<p>$$\boxed{\begin{cases} x = t + \dfrac{1}{t} \ y = t \ z = 2 + \dfrac{1}{t^{2}} \end{cases} \quad \text{for} \quad t \in \mathbb{R} \setminus {0}}$$</p>
+<p>$$\boxed{\begin{cases} x = t + \dfrac{1}{t} \\ y = t \\ z = 2 + \dfrac{1}{t^{2}} \end{cases} \quad \text{for} \quad t \in \mathbb{R} \setminus {0}}$$</p>
 <p>The angle of intersection of the two surfaces $z = x^2     - y^2$ and $z = 2 + (x     - y)^2$ at the point $(2, 1, 3)$ is defined as the angle between their tangent planes at that point. This angle is found using the normal vectors to the surfaces.</p>
 <p>Define the surfaces as level surfaces:
     - First surface: $F(x, y, z) = x^2     - y^2     - z = 0$
@@ -159,7 +159,7 @@ $$</p>
 $$
 \vec{r}(t) = \left\langle \sqrt{a^2     - t^2},  t \right\rangle, \quad 0 \leq t \leq a
 $$</p>
-<p>$$\boxed{\begin{array}{c} x = \sqrt{a^{2}     - t^{2}} \ y = t \ \text{for } 0 \leq t \leq a \end{array}}$$</p>
+<p>$$\boxed{\begin{array}{c} x = \sqrt{a^{2}     - t^{2}} \\ y = t \\ \text{for } 0 \leq t \leq a \end{array}}$$</p>
 <p>To parametrize the first quadrant part of the circle $x^2 + y^2 = a^2$ in terms of the angle between the tangent line and the positive $x$-axis, let $t$ be this angle. The parametric equations are derived as follows.</p>
 <p>The slope of the tangent line to the circle at any point is given by the derivative. For $x^2 + y^2 = a^2$, implicit differentiation yields:
 $$
@@ -313,7 +313,7 @@ Since $e^4 &gt; 1$ and $\frac{80}{81} &gt; 0$, the difference is positive, so th
     - The particle is moving downwards for $t \in (0,1) \cup (2,3)$.
     - The particle is moving faster at $t = 1$ than at $t = 3$.</p>
 <p>$$
-\boxed{\begin{array}{c} \text{Upwards: } t \in (1,2) \cup (3,\infty) \ \ \text{Downwards: } t \in (0,1) \cup (2,3) \ \ \text{Faster at } t=1 \end{array}}
+\boxed{\begin{array}{c} \text{Upwards: } t \in (1,2) \cup (3,\infty) \\ \\ \text{Downwards: } t \in (0,1) \cup (2,3) \\ \\ \text{Faster at } t=1 \end{array}}
 $$</p>
 <hr />
 <ol>
@@ -484,14 +484,14 @@ $$</p>
 <p>The parametric equations of the tangent line at the point $(-2\pi, 0, \frac{\pi^3}{3})$ with direction vector $(-2, -2\pi, \pi^2)$ are given by:</p>
 <p>$$
 \begin{cases}
-x = -2\pi + s \cdot (-2) = -2\pi     - 2s, \
-y = 0 + s \cdot (-2\pi) = -2\pi s, \
+x = -2\pi + s \cdot (-2) = -2\pi     - 2s, \\
+y = 0 + s \cdot (-2\pi) = -2\pi s, \\
 z = \frac{\pi^3}{3} + s \cdot \pi^2 = \frac{\pi^3}{3} + \pi^2 s,
 \end{cases}
 $$</p>
 <p>where $s$ is a real parameter.</p>
 <p>$$
-\boxed{\begin{array}{l} x = -2\pi     - 2s \ y = -2\pi s \ z = \dfrac{\pi^{3}}{3} + \pi^{2} s \end{array}}
+\boxed{\begin{array}{l} x = -2\pi     - 2s \\ y = -2\pi s \\ z = \dfrac{\pi^{3}}{3} + \pi^{2} s \end{array}}
 $$</p>
 <hr />
 <ol>
@@ -662,7 +662,7 @@ $$</p>
 <p>The particle flies off the path at time $t = 1$ and moves along the line $L$ with constant velocity. The position at $t = 1$ is $(0, 1, 1)$, and the velocity vector at this point is $\langle -\frac{\pi}{2}, 1, 1 \rangle$.</p>
 <p>The position as a function of time for $t \geq 1$ is given by:
 $$
-\mathbf{r}(t) = \begin{pmatrix} x(t) \ y(t) \ z(t) \end{pmatrix} = \begin{pmatrix} 0 \ 1 \ 1 \end{pmatrix} + \begin{pmatrix} -\frac{\pi}{2} \ 1 \ 1 \end{pmatrix} (t     - 1)
+\mathbf{r}(t) = \begin{pmatrix} x(t) \\ y(t) \\ z(t) \end{pmatrix} = \begin{pmatrix} 0 \\ 1 \\ 1 \end{pmatrix} + \begin{pmatrix} -\frac{\pi}{2} \\ 1 \\ 1 \end{pmatrix} (t     - 1)
 $$
 So the components are:
 $$
@@ -719,9 +719,9 @@ $$</p>
 <p>The direction vector $\mathbf{D}$ of the line of intersection is the cross product of $\mathbf{n_1}$ and $\mathbf{n_2}$:</p>
 <p>$$
 \mathbf{D} = \mathbf{n_1} \times \mathbf{n_2} = \begin{vmatrix}
-\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \
-1 &amp; 1 &amp; 0 \
-2 &amp; 0 &amp; -1 \
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+1 &amp; 1 &amp; 0 \\
+2 &amp; 0 &amp; -1 \\
 \end{vmatrix} = \mathbf{i}(1 \cdot (-1)     - 0 \cdot 0)     - \mathbf{j}(1 \cdot (-1)     - 0 \cdot 2) + \mathbf{k}(1 \cdot 0     - 1 \cdot 2) = \langle -1, 1, -2 \rangle.
 $$</p>
 <p>A point on the line of intersection is found by solving the system of equations. Setting $z = 0$:
@@ -748,9 +748,9 @@ $$</p>
 <p>Vector $\overrightarrow{AB} = B     - A = \langle 0     - 2, -1     - 0, 1     - 0 \rangle = \langle -2, -1, 1 \rangle$. Cross product $\mathbf{D} \times \mathbf{E}$:
   $$
   \mathbf{D} \times \mathbf{E} = \begin{vmatrix}
-  \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \
-  -1 &amp; 1 &amp; -2 \
-  1 &amp; 2 &amp; 3 \
+  \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+  -1 &amp; 1 &amp; -2 \\
+  1 &amp; 2 &amp; 3 \\
   \end{vmatrix} = \mathbf{i}(1 \cdot 3     - (-2) \cdot 2)     - \mathbf{j}(-1 \cdot 3     - (-2) \cdot 1) + \mathbf{k}(-1 \cdot 2     - 1 \cdot 1) = \langle 7, 1, -3 \rangle.
   $$</p>
 <p>Magnitude of $\mathbf{D} \times \mathbf{E}$: 
@@ -825,7 +825,7 @@ $$</p>
 <p>The critical points are confirmed by the derivative of $u(t)$: $u'(t) = -20 \cos t$, which is zero at $t = \pi/2$ (minimum by second derivative test), and the maximum occurs at the endpoints $t = 0$ and $t = \pi$.</p>
 <p>Therefore, the minimum speed of 9 occurs at the point $(5\pi, 1)$, and the maximum speed of $\sqrt{101}$ occurs at the points $(1, 0)$ and $(10\pi     - 1, 0)$.</p>
 <p>$$
-\boxed{\begin{array}{c} \text{Minimum speed: } 9 \ \text{at } (5\pi,\ 1) \ \ \text{Maximum speed: } \sqrt{101} \ \text{at } (1,\ 0) \text{ and } (10\pi     - 1,\ 0) \end{array}}
+\boxed{\begin{array}{c} \text{Minimum speed: } 9 \\ \text{at } (5\pi,\ 1) \\ \\ \text{Maximum speed: } \sqrt{101} \\ \text{at } (1,\ 0) \text{ and } (10\pi     - 1,\ 0) \end{array}}
 $$</p>
 <hr />
 <ol>

@@ -29,7 +29,7 @@
 <ul>
 <li>A vector is a directed line segment with magnitude and direction  </li>
 </ul>
-<p>$$\vec{\textbf{v}} = \langle v_1, v_2, v_3,... v_n\rangle = \begin{pmatrix}v_1 \ v_2 \ v_3 \ .. \ v_n\end{pmatrix} = \sum_{i=0}^n v_i \hat{\textbf{e}_i}$$</p>
+<p>$$\vec{\textbf{v}} = \langle v_1, v_2, v_3,... v_n\rangle = \begin{pmatrix}v_1 \\ v_2 \\ v_3 \\ .. \\ v_n\end{pmatrix} = \sum_{i=0}^n v_i \hat{\textbf{e}_i}$$</p>
 <p>Here, $n$ is the number of dimensions, $v_i$ is a scalar and $\hat{\textbf{e}_i}$ is a unit basis vector along an axis (a vector that moves exactly 1 unit distance from the origin to a point in an axis like $\hat{\textbf{i}}=\langle 1,0,0\rangle$ for $n=3$). </p>
 <ul>
 <li>The magnitude of a vector denotes its length, which is equal to its Euclidean distance from the origin.</li>
@@ -38,16 +38,16 @@
 - Unit Vector: Vector of length 1 in direction of $\vec{v}$ </p>
 <p>$$\hat{\textbf{u}} = \frac{\vec{\textbf{v}}}{|\vec{\vec{\textbf{v}}}|}$$<br />
 - Position Vector: Vector from origin $(0,0,0,..,0)$ to point $P(x_1,x_2,..,x_n)$  </p>
-<p>$$\vec{OP} = \begin{pmatrix}x_1 \ x_2 \ .. \ x_n\end{pmatrix}= \langle x_1, x_2,..,x_n \rangle$$</p>
+<p>$$\vec{OP} = \begin{pmatrix}x_1 \\ x_2 \\ .. \\ x_n\end{pmatrix}= \langle x_1, x_2,..,x_n \rangle$$</p>
 <h3 id="core-operations">Core Operations</h3>
 <ul>
 <li>Addition and subtraction:</li>
 </ul>
-<p>$$\vec{a} \pm \vec{b} = \begin{pmatrix}a_1\pm b_1 \ a_2\pm b_2 \ .. \ a_n\pm b_n\end{pmatrix}$$ </p>
+<p>$$\vec{a} \pm \vec{b} = \begin{pmatrix}a_1\pm b_1 \\ a_2\pm b_2 \\ .. \\ a_n\pm b_n\end{pmatrix}$$ </p>
 <ul>
 <li>Scalar multiplication: essentially scales magnitude by $|k|$ and preserves direction if $k &gt; 0$, reverses if $k &lt; 0$,</li>
 </ul>
-<p>$$k\vec{v} = \begin{pmatrix}kv_1 \ kv_2 \ kv_3 \ .. \ kv_n\end{pmatrix}$$ </p>
+<p>$$k\vec{v} = \begin{pmatrix}kv_1 \\ kv_2 \\ kv_3 \\ .. \\ kv_n\end{pmatrix}$$ </p>
 <ul>
 <li>Dot product measures the degree to which vectors are parallel (so, by definition, $\vec{a} \cdot \vec{b} = 0 \iff \vec{a} \perp \vec{b}$). Its computed as:</li>
 </ul>
@@ -57,8 +57,8 @@
 <li>In 3D, the cross product can be computed using the determinant of a $3\times 3$ matrix, where the first row contains the basis vectors of the space, and the next two rows contain the components of the input vectors.</li>
 </ul>
 <p>$$\vec{a} \times \vec{b} = \begin{vmatrix}
-\hat{i} &amp; \hat{j} &amp; \hat{k} \
-a_x &amp; a_y &amp; a_z \
+\hat{i} &amp; \hat{j} &amp; \hat{k} \\
+a_x &amp; a_y &amp; a_z \\
 b_x &amp; b_y &amp; b_z
 \end{vmatrix} = (a_yb_z - a_zb_y)\hat{i} - (a_xb_z - a_zb_x)\hat{j} + (a_xb_y - a_yb_x)\hat{k}$$  </p>
 <p>Its magnitude can be calculated as $|\vec{a} \times \vec{b}| = |\vec{a}||\vec{b}|\sin\theta$  <em>(it can be interpreted as the area of parallelogram spanned by $\vec{a}$ and $\vec{b}$)</em>. It is anticommutative: $\vec{a} \times \vec{b} = -(\vec{b} \times \vec{a})$    </p>
@@ -83,8 +83,8 @@ b_x &amp; b_y &amp; b_z
    $$k(\vec{a} \times \vec{b}) = (k\vec{a}) \times \vec{b} = \vec{a} \times (k\vec{b})$$</li>
 </ol>
 <p>$$\vec{a} \cdot (\vec{b} \times \vec{c}) = \begin{vmatrix}
-a_x &amp; a_y &amp; a_z \
-b_x &amp; b_y &amp; b_z \
+a_x &amp; a_y &amp; a_z \\
+b_x &amp; b_y &amp; b_z \\
 c_x &amp; c_y &amp; c_z
 \end{vmatrix}$$  </p>
 <p><strong>Key Properties</strong>:<br />
@@ -101,12 +101,12 @@ c_x &amp; c_y &amp; c_z
 <h4 id="lines">Lines</h4>
 <p>Parametric equation through $P_0(x_0,y_0,z_0)$ with direction $\vec{d} = \langle a,b,c \rangle$:  </p>
 <p>$$\vec{r}(t) = \vec{r_0} + t\vec{d}<br />
-\Rightarrow \begin{cases} x = x_0 + at \ y = y_0 + bt \ z = z_0 + ct \end{cases}, \quad t \in \mathbb{R}$$</p>
+\Rightarrow \begin{cases} x = x_0 + at \\ y = y_0 + bt \\ z = z_0 + ct \end{cases}, \quad t \in \mathbb{R}$$</p>
 <h4 id="planes">Planes</h4>
 <ul>
 <li>Defined by a point $P_0(x_0,y_0,z_0)$ and normal vector $\vec{n} = \langle a,b,c \rangle$. Unlike a line, its defined by two direction vectors, and hence spans a two dimensional region in space. In vector form:</li>
 </ul>
-<p>$$\vec{r}(t,\mu) = \begin{pmatrix}x_o \ y_o \ z_o\end{pmatrix} + t \begin{pmatrix}d_x \ d_y \ d_z\end{pmatrix}+ \mu \begin{pmatrix}e_x \ e_y \ e_z\end{pmatrix}$$</p>
+<p>$$\vec{r}(t,\mu) = \begin{pmatrix}x_o \\ y_o \\ z_o\end{pmatrix} + t \begin{pmatrix}d_x \\ d_y \\ d_z\end{pmatrix}+ \mu \begin{pmatrix}e_x \\ e_y \\ e_z\end{pmatrix}$$</p>
 <ul>
 <li>Its standard form, for normal vector coefficients $\hat{n}=\langle a, b, c\rangle$ is given by: </li>
 </ul>
