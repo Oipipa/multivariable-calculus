@@ -333,22 +333,22 @@ $$</p>
 -$\hat{\mathbf{i}}$-component:$\frac{\partial R}{\partial y}     - \frac{\partial Q}{\partial z} = (-1 + 2xy)     - (-1 + 2xy) = 0$,
 -$\hat{\mathbf{j}}$-component:$-\left( \frac{\partial R}{\partial x}     - \frac{\partial P}{\partial z} \right) = -(y^2     - y^2) = 0$,
 -$\hat{\mathbf{k}}$-component:$\frac{\partial Q}{\partial x}     - \frac{\partial P}{\partial y} = (1 + 2yz)     - (1 + 2yz) = 0$.</p>
-<p>Since all components are zero,$\nabla \times \mathbf{F} = \mathbf{0}$. Therefore,$\mathbf{F}$is conservative and hence a gradient field.</p>
-<p>To find a potential function$f(x, y, z)$such that$\nabla f = \mathbf{F}(x, y, z) = (y + y^2 z) \hat{\mathbf{i}} + (x     - z + 2xyz) \hat{\mathbf{j}} + (-y + x y^2) \hat{\mathbf{k}}$, integrate the components of$\mathbf{F}$step by step, ensuring consistency with all partial derivatives.</p>
+<p>Since all components are zero, $\nabla \times \mathbf{F} = \mathbf{0}$. Therefore, $\mathbf{F}$ is conservative and hence a gradient field.</p>
+<p>To find a potential function $f(x, y, z)$ such that $\nabla f = \mathbf{F}(x, y, z) = (y + y^2 z) \hat{\mathbf{i}} + (x     - z + 2xyz) \hat{\mathbf{j}} + (-y + x y^2) \hat{\mathbf{k}}$, integrate the components of$\mathbf{F}$step by step, ensuring consistency with all partial derivatives.</p>
 <p>Start with the$x$-component:
 $$
 \frac{\partial f}{\partial x} = y + y^2 z.
 $$
-Integrate with respect to$x$, treating$y$and$z$as constants:
+Integrate with respect to $x$, treating$y$and$z$as constants:
 $$
 f(x, y, z) = \int (y + y^2 z)  dx = xy + x y^2 z + g(y, z),
 $$
 where $g(y, z)$ is an arbitrary function of $y$ and $z$.</p>
-<p>Next, use the$y$-component:
+<p>Next, use the $y$-component:
 $$
 \frac{\partial f}{\partial y} = x     - z + 2xyz.
 $$
-Compute the partial derivative of$f$with respect to$y$:
+Compute the partial derivative of $f$ with respect to $y$:
 $$
 \frac{\partial f}{\partial y} = \frac{\partial}{\partial y} (xy + x y^2 z + g(y, z)) = x + 2x y z + \frac{\partial g}{\partial y}.
 $$
@@ -364,7 +364,7 @@ Integrate with respect to$y$, treating$z$as constant:
 $$
 g(y, z) = \int (-z)  dy = -y z + h(z),
 $$
-where $h(z)$ is an arbitrary function of$z$. Substitute back into$f$:
+where $h(z)$ is an arbitrary function of$z$. Substitute back into $f$:
 $$
 f(x, y, z) = xy + x y^2 z     - y z + h(z).
 $$</p>
@@ -392,7 +392,7 @@ Since potential functions are defined up to an additive constant, set $C = 0$ fo
 $$
 f(x, y, z) = xy + x y^2 z     - y z.
 $$</p>
-<p>The vector field $\mathbf{F}(x,y,z) = (y + y^2 z) \hat{\mathbf{i}} + (x     - z + 2xyz) \hat{\mathbf{j}} + (-y + x y^2) \hat{\mathbf{k}}$ is conservative, as previously established by showing that its curl is zero. A potential function $f(x,y,z)$such that $\nabla f = \mathbf{F}$ is given by $f(x,y,z) = xy + x y^2 z     - y z$.</p>
+<p>The vector field $\mathbf{F}(x,y,z) = (y + y^2 z) \hat{\mathbf{i}} + (x     - z + 2xyz) \hat{\mathbf{j}} + (-y + x y^2) \hat{\mathbf{k}}$ is conservative, as previously established by showing that its curl is zero. A potential function $f(x,y,z)$ such that $\nabla f = \mathbf{F}$ is given by $f(x,y,z) = xy + x y^2 z     - y z$.</p>
 <p>To compute the line integral $\int_C \mathbf{F} \cdot d\mathbf{r}$ along the straight line path $C$ from $(2,2,1)$ to $(1,-1,2)$, the fundamental theorem for line integrals is applied. This theorem states that for a conservative vector field, the line integral depends only on the endpoints of the path and is given by the difference in the potential function evaluated at these points:</p>
 <p>$$
 \int_C \mathbf{F} \cdot d\mathbf{r} = f(1,-1,2)     - f(2,2,1).
