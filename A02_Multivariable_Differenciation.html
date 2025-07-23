@@ -510,12 +510,12 @@ $$
 $$
 $$= \mathbf{i}((-2) \cdot (-2)     - (-1) \cdot 0)     - \mathbf{j}(0 \cdot (-2)     - (-1) \cdot (-1)) + \mathbf{k}(0 \cdot 0     - (-2) \cdot (-1)).$$</p>
 <p>Computing the components:
-    - $\mathbf{i}$-component: $(-2) \cdot (-2)     - (-1) \cdot 0 = 4     - 0 = 4$,
-    - $\mathbf{j}$-component: $-(0 \cdot (-2)     - (-1) \cdot (-1)) = -(0     - 1) = -(-1) = 1$,
-    - $\mathbf{k}$-component: $0 \cdot 0     - (-2) \cdot (-1) = 0     - 2 = -2$.</p>
+-  $\mathbf{i}$-component: $(-2) \cdot (-2)     - (-1) \cdot 0 = 4     - 0 = 4$,
+- $\mathbf{j}$-component: $-(0 \cdot (-2)     - (-1) \cdot (-1)) = -(0     - 1) = -(-1) = 1$,
+- $\mathbf{k}$-component: $0 \cdot 0     - (-2) \cdot (-1) = 0     - 2 = -2$.</p>
 <p>Thus, the cross product is $(4, 1, -2)$.</p>
-<p>This vector is perpendicular to both gradients, as verified by the dot products:
-$$
+<p>This vector is perpendicular to both gradients, as verified by the dot products:</p>
+<p>$$
 (4, 1, -2) \cdot (0, -2, -1) = 4 \cdot 0 + 1 \cdot (-2) + (-2) \cdot (-1) = 0     - 2 + 2 = 0,
 $$
 $$
@@ -523,52 +523,52 @@ $$
 $$</p>
 <p>Therefore, the direction vector $(4, 1, -2)$ ensures that both $P$ and $T$ remain constant at the point $(0, -1, 1)$.</p>
 <p>The ant is constrained to the surface $z^3 + zx + y^2 = 2$, and the goal is to maximize the increase of the temperature function $T(x, y, z) = 5 + xy     - z^2$ at the point $(0, -1, 1)$.</p>
-<p>The direction of steepest ascent for $T$ on the surface is given by the component of the gradient of $T$ that is tangent to the surface. The gradient of $T$ is:
-$$
+<p>The direction of steepest ascent for $T$ on the surface is given by the component of the gradient of $T$ that is tangent to the surface. The gradient of $T$ is:</p>
+<p>$$
 \nabla T = \left( \frac{\partial T}{\partial x}, \frac{\partial T}{\partial y}, \frac{\partial T}{\partial z} \right) = (y, x, -2z).
-$$
-At the point $(0, -1, 1)$:
-$$
+$$</p>
+<p>At the point $(0, -1, 1)$:</p>
+<p>$$
 \nabla T = (-1, 0, -2).
 $$</p>
-<p>The surface is defined by $g(x, y, z) = z^3 + zx + y^2     - 2 = 0$. The gradient of $g$ is:
-$$
+<p>The surface is defined by $g(x, y, z) = z^3 + zx + y^2     - 2 = 0$. The gradient of $g$ is:</p>
+<p>$$
 \nabla g = \left( \frac{\partial g}{\partial x}, \frac{\partial g}{\partial y}, \frac{\partial g}{\partial z} \right) = (z, 2y, 3z^2 + x).
-$$
-At the point $(0, -1, 1)$:
-$$
+$$</p>
+<p>At the point $(0, -1, 1)$:</p>
+<p>$$
 \nabla g = (1, -2, 3).
 $$</p>
-<p>The tangential component of $\nabla T$ is found by subtracting the projection of $\nabla T$ onto $\nabla g$:
-$$
-\text{proj}<em>{\nabla g} \nabla T = \frac{\nabla T \cdot \nabla g}{|\nabla g|^2} \nabla g.
-$$
-First, compute the dot product:
-$$
+<p>The tangential component of $\nabla T$ is found by subtracting the projection of $\nabla T$ onto $\nabla g$:</p>
+<p>$$
+\text{proj}_{\nabla g} \nabla T = \frac{\nabla T \cdot \nabla g}{|\nabla g|^2} \nabla g.
+$$</p>
+<p>First, compute the dot product:</p>
+<p>$$
 \nabla T \cdot \nabla g = (-1)(1) + (0)(-2) + (-2)(3) = -1     - 6 = -7.
-$$
-Then, $|\nabla g|^2 = 1^2 + (-2)^2 + 3^2 = 1 + 4 + 9 = 14$, so:
-$$
+$$</p>
+<p>Then, $|\nabla g|^2 = 1^2 + (-2)^2 + 3^2 = 1 + 4 + 9 = 14$, so:</p>
+<p>$$
 \frac{\nabla T \cdot \nabla g}{|\nabla g|^2} = \frac{-7}{14} = -\frac{1}{2}.
 $$
-The projection is:
-$$
-\text{proj}</em>{\nabla g} \nabla T = -\frac{1}{2} (1, -2, 3) = \left( -\frac{1}{2}, 1, -\frac{3}{2} \right).
-$$
-The tangential component is:
-$$
+The projection is:</p>
+<p>$$
+\text{proj}_{\nabla g} \nabla T = -\frac{1}{2} (1, -2, 3) = \left( -\frac{1}{2}, 1, -\frac{3}{2} \right).
+$$</p>
+<p>The tangential component is:</p>
+<p>$$
 \nabla T     - \text{proj}_{\nabla g} \nabla T = (-1, 0, -2)     - \left( -\frac{1}{2}, 1, -\frac{3}{2} \right) = \left( -1 + \frac{1}{2}, 0     - 1, -2 + \frac{3}{2} \right) = \left( -\frac{1}{2}, -1, -\frac{1}{2} \right).
-$$
-To avoid fractions, multiply by $-2$ to get:
-$$
+$$</p>
+<p>To avoid fractions, multiply by $-2$ to get:</p>
+<p>$$
 \langle -1, -2, -1 \rangle.
 $$</p>
-<p>This vector is tangent to the surface, as verified by the dot product with $\nabla g$:
-$$
+<p>This vector is tangent to the surface, as verified by the dot product with $\nabla g$:</p>
+<p>$$
 (1, -2, 3) \cdot (-1, -2, -1) = 1(-1) + (-2)(-2) + 3(-1) = -1 + 4     - 3 = 0.
-$$
-The directional derivative of $T$ in this direction is positive, confirming it is the direction of maximum increase:
-$$
+$$</p>
+<p>The directional derivative of $T$ in this direction is positive, confirming it is the direction of maximum increase:</p>
+<p>$$
 \nabla T \cdot \langle -1, -2, -1 \rangle = (-1)(-1) + (0)(-2) + (-2)(-1) = 1 + 0 + 2 = 3 &gt; 0.
 $$</p>
 <p>Thus, the direction for maximum increase of temperature is $\langle -1, -2, -1 \rangle$.</p>
